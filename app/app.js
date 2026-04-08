@@ -24,27 +24,41 @@ let state = {
   tab: "db", // "db" | "csv"
   editingRow: null,
   searchDB: "",
-  csv: { headers: [], rows: [], processed: null, missingSets: [] },
-  colMap: { price: "price", comment: "comment", location: "location", setCode: "setCode", cn: "cn" },
+  csv: { headers: [], rows: [], processed: null, missingSets: [], codeMismatches: [], nameMismatches: [] },
+  colMap: { price: "price", comment: "comment", location: "location", setCode: "setCode", cn: "cn", setName: "" },
   outputFormat: "{setCode} - {MM-YYYY}",
   fillLocation: false,
   roundThreshold: 0.75,
+  showErrorsOnly: false,
+  tableScrollTop: 0,
 };
 
 // ─── Utils ───────────────────────────────────
+
+// Migration : anciens fichiers ont "name", nouveaux ont "nameFR"/"nameEN"
+function normEntry(s) {
+  return {
+    setCode:     s.setCode     || "",
+    nameFR:      s.nameFR      ?? s.name ?? "",
+    nameEN:      s.nameEN      ?? "",
+    releaseDate: s.releaseDate || "",
+  };
+}
+
 function roundToHalf(p, t = state.roundThreshold) {
   const lower = Math.floor(p / 0.5) * 0.5;
   return (p - lower) >= 0.5 * t ? lower + 0.5 : lower;
 }
 
-function formatOutput(template, setCode, cn, releaseDate, setName) {
-  // releaseDate is DD-MM-YYYY
+function formatOutput(template, setCode, cn, releaseDate, nameFR, nameEN) {
   const parts = releaseDate.split("-");
   const dd = parts[0] || "", mm = parts[1] || "", yyyy = parts[2] || "";
   return template
     .replace(/\{setCode\}/g, setCode)
     .replace(/\{cn\}/g, cn)
-    .replace(/\{setName\}/g, setName || "")
+    .replace(/\{setName\}/g, nameFR || nameEN || "")
+    .replace(/\{nameFR\}/g, nameFR || "")
+    .replace(/\{nameEN\}/g, nameEN || "")
     .replace(/\{DD-MM-YYYY\}/g, `${dd}-${mm}-${yyyy}`)
     .replace(/\{MM-YYYY\}/g, `${mm}-${yyyy}`)
     .replace(/\{YYYY-MM-DD\}/g, `${yyyy}-${mm}-${dd}`)
@@ -79,6 +93,15 @@ function parseCSV(text) {
 function toCSVField(v) { const s = String(v ?? ""); return '"' + s.replace(/"/g, '""') + '"'; }
 function esc(s) { const d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
 
+function showSpinner(label = "Chargement…") {
+  const el = document.getElementById("spinner");
+  document.getElementById("spinner-label").textContent = label;
+  el.classList.add("show");
+}
+function hideSpinner() {
+  document.getElementById("spinner").classList.remove("show");
+}
+
 function toast(msg) {
   const el = document.getElementById("toast");
   el.textContent = msg;
@@ -86,8 +109,48 @@ function toast(msg) {
   setTimeout(() => el.classList.remove("show"), 2500);
 }
 
+// ─── Virtual scroll ──────────────────────────
+const ROW_H = 29;      // hauteur fixe par ligne (px)
+const TABLE_VH = 400;  // hauteur visible du conteneur (px)
+const V_BUFFER = 30;   // lignes tampon au-dessus/en-dessous
+
+let _tableCache = null; // { data, headers, missingCodes, si }
+
+function renderTableRows(scrollTop) {
+  if (!_tableCache) return "";
+  const { data, headers, missingCodes, si } = _tableCache;
+  const total = data.length;
+  const processed = state.csv.processed !== null;
+  const start = Math.max(0, Math.floor(scrollTop / ROW_H) - V_BUFFER);
+  const end   = Math.min(total, Math.ceil((scrollTop + TABLE_VH) / ROW_H) + V_BUFFER);
+  const padTop = start * ROW_H;
+  const padBot = (total - end) * ROW_H;
+  const cols = headers.length;
+
+  return `
+    ${padTop > 0 ? `<tr><td colspan="${cols}" style="height:${padTop}px;padding:0;border:none;"></td></tr>` : ""}
+    ${data.slice(start, end).map((r, i) => {
+      const ri = start + i;
+      const isMissing = processed && si >= 0 && missingCodes.has(r[si]);
+      const bg = isMissing ? "#e8545418" : (ri % 2 ? T.surface2 + "44" : "transparent");
+      const bord = isMissing ? `border-left:2px solid ${T.red};` : "";
+      return `<tr style="height:${ROW_H}px;background:${bg};${bord}">
+        ${r.map((c, ci) => {
+          const isP = headers[ci] === state.colMap.price && processed;
+          const isC = headers[ci] === state.colMap.comment && processed;
+          const isL = headers[ci] === state.colMap.location && processed;
+          const isS = ci === si && isMissing;
+          return `<td style="${tdStyle()}white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis;color:${isS?T.red:isP?T.green:(isC||isL)?T.accent:T.text};font-weight:${(isP||isC||isL||isS)?600:400};">${esc(c)}</td>`;
+        }).join("")}
+      </tr>`;
+    }).join("")}
+    ${padBot > 0 ? `<tr><td colspan="${cols}" style="height:${padBot}px;padding:0;border:none;"></td></tr>` : ""}
+  `;
+}
+
 // ─── Render Engine ───────────────────────────
 function render() {
+  const scrollTop = document.getElementById("content")?.scrollTop ?? 0;
   const root = document.getElementById("root");
   root.innerHTML = `
     <div style="display:flex;flex-direction:column;height:100vh;font-family:${T.font};background:${T.bg};color:${T.text};font-size:13px;">
@@ -101,6 +164,8 @@ function render() {
     </div>
   `;
   bindEvents();
+  const content = document.getElementById("content");
+  if (content) content.scrollTop = scrollTop;
 }
 
 function renderHeader() {
@@ -155,17 +220,19 @@ function renderGameDB() {
       <table style="width:100%;border-collapse:collapse;font-size:12px;">
         <thead><tr>
           <th style="${thStyle()}">Set Code</th>
-          <th style="${thStyle()}">Nom de l'extension</th>
+          <th style="${thStyle()}">Nom FR</th>
+          <th style="${thStyle()}">Nom EN</th>
           <th style="${thStyle()}">Date de sortie</th>
           <th style="${thStyle()}width:120px;">Actions</th>
         </tr></thead>
         <tbody>
           ${sets.map((s, i) => {
+            const e = normEntry(s);
             if (state.searchDB) {
               const q = state.searchDB.toLowerCase();
-              if (!s.name.toLowerCase().includes(q) && !s.setCode.toLowerCase().includes(q)) return "";
+              if (!e.nameFR.toLowerCase().includes(q) && !e.nameEN.toLowerCase().includes(q) && !e.setCode.toLowerCase().includes(q)) return "";
             }
-            return state.editingRow === i ? renderEditRow(s) : renderViewRow(s, i);
+            return state.editingRow === i ? renderEditRow(e) : renderViewRow(e, i);
           }).join("")}
           ${renderAddRow()}
         </tbody>
@@ -174,12 +241,13 @@ function renderGameDB() {
   `;
 }
 
-function renderViewRow(s, i) {
+function renderViewRow(e, i) {
   return `
     <tr style="background:${i % 2 ? T.surface2 + '44' : 'transparent'};">
-      <td style="${tdStyle()}color:${T.accent};font-weight:600;">${esc(s.setCode)}</td>
-      <td style="${tdStyle()}">${esc(s.name)}</td>
-      <td style="${tdStyle()}color:${T.dim};">${esc(s.releaseDate || "—")}</td>
+      <td style="${tdStyle()}color:${T.accent};font-weight:600;">${esc(e.setCode)}</td>
+      <td style="${tdStyle()}">${esc(e.nameFR)}</td>
+      <td style="${tdStyle()}color:${T.dim};">${esc(e.nameEN)}</td>
+      <td style="${tdStyle()}color:${T.dim};">${esc(e.releaseDate || "—")}</td>
       <td style="${tdStyle()}">
         <div style="display:flex;gap:4px;">
           <button class="edit-btn" data-idx="${i}" style="${btnStyle(false)}">✎</button>
@@ -190,12 +258,13 @@ function renderViewRow(s, i) {
   `;
 }
 
-function renderEditRow(s) {
+function renderEditRow(e) {
   return `
     <tr style="background:${T.surface2}88;">
-      <td style="${tdStyle()}"><input class="edit-field" data-field="setCode" value="${esc(s.setCode)}" style="${inputStyle()}width:70px;"></td>
-      <td style="${tdStyle()}"><input class="edit-field" data-field="name" value="${esc(s.name)}" style="${inputStyle()}width:100%;"></td>
-      <td style="${tdStyle()}"><input class="edit-field" data-field="releaseDate" value="${esc(s.releaseDate)}" placeholder="JJ-MM-AAAA" style="${inputStyle()}width:110px;"></td>
+      <td style="${tdStyle()}"><input class="edit-field" data-field="setCode" value="${esc(e.setCode)}" style="${inputStyle()}width:70px;"></td>
+      <td style="${tdStyle()}"><input class="edit-field" data-field="nameFR" value="${esc(e.nameFR)}" placeholder="Nom FR" style="${inputStyle()}width:100%;"></td>
+      <td style="${tdStyle()}"><input class="edit-field" data-field="nameEN" value="${esc(e.nameEN)}" placeholder="Nom EN" style="${inputStyle()}width:100%;"></td>
+      <td style="${tdStyle()}"><input class="edit-field" data-field="releaseDate" value="${esc(e.releaseDate)}" placeholder="JJ-MM-AAAA" style="${inputStyle()}width:110px;"></td>
       <td style="${tdStyle()}"><button id="save-edit-btn" style="${btnStyle(true)}">✓</button></td>
     </tr>
   `;
@@ -205,7 +274,8 @@ function renderAddRow() {
   return `
     <tr style="background:${T.surface2}88;">
       <td style="${tdStyle()}"><input id="new-code" placeholder="Code" style="${inputStyle()}width:70px;"></td>
-      <td style="${tdStyle()}"><input id="new-name" placeholder="Nom de l'extension" style="${inputStyle()}width:100%;"></td>
+      <td style="${tdStyle()}"><input id="new-name-fr" placeholder="Nom FR" style="${inputStyle()}width:100%;"></td>
+      <td style="${tdStyle()}"><input id="new-name-en" placeholder="Nom EN" style="${inputStyle()}width:100%;"></td>
       <td style="${tdStyle()}"><input id="new-date" placeholder="JJ-MM-AAAA" style="${inputStyle()}width:110px;"></td>
       <td style="${tdStyle()}"><button id="add-row-btn" style="${btnStyle(true)}">+</button></td>
     </tr>
@@ -235,12 +305,19 @@ function renderCSV() {
             </select>
           </div>`;
         }).join("")}
+        <div>
+          <label style="${labelStyle()}">Nom Extension</label>
+          <select class="col-select" data-col="setName" style="${inputStyle()}">
+            <option value="" ${!state.colMap.setName ? "selected" : ""}>— Aucune —</option>
+            ${headers.map(h => `<option value="${esc(h)}" ${state.colMap.setName === h ? "selected" : ""}>${esc(h)}</option>`).join("")}
+          </select>
+        </div>
       </div>
       <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-bottom:28px;">
         <div style="flex:1;min-width:280px;">
           <label style="${labelStyle()}">Format Comment & Location</label>
           <input id="output-format" type="text" value="${esc(state.outputFormat)}" style="${inputStyle()}width:100%;padding:8px 12px;">
-          <div style="font-size:10px;color:${T.dim};margin-top:4px;">Variables : <span style="color:${T.accent};">{setCode}</span> <span style="color:${T.accent};">{cn}</span> <span style="color:${T.accent};">{DD-MM-YYYY}</span> <span style="color:${T.accent};">{MM-YYYY}</span> <span style="color:${T.accent};">{YYYY-MM-DD}</span> <span style="color:${T.accent};">{DD/MM/YYYY}</span> <span style="color:${T.accent};">{YYYY}</span> <span style="color:${T.accent};">{setName}</span></div>
+          <div style="font-size:10px;color:${T.dim};margin-top:4px;">Variables : <span style="color:${T.accent};">{setCode}</span> <span style="color:${T.accent};">{cn}</span> <span style="color:${T.accent};">{nameFR}</span> <span style="color:${T.accent};">{nameEN}</span> <span style="color:${T.accent};">{setName}</span> <span style="color:${T.accent};">{DD-MM-YYYY}</span> <span style="color:${T.accent};">{MM-YYYY}</span> <span style="color:${T.accent};">{YYYY-MM-DD}</span> <span style="color:${T.accent};">{DD/MM/YYYY}</span> <span style="color:${T.accent};">{YYYY}</span></div>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start;">
           <label id="fill-location-label" style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:12px;color:${T.dim};user-select:none;">
@@ -256,32 +333,97 @@ function renderCSV() {
       </div>
 
       <div style="margin-bottom:28px;">
-        <label style="${labelStyle()}">${processed ? "Aperçu résultat" : "Aperçu import"} (${data.length} lignes)</label>
-        <div style="overflow-x:auto;max-height:400px;overflow-y:auto;border-radius:8px;border:1px solid ${T.brd};">
-          <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+          <label style="${labelStyle()}margin-bottom:0;">${processed ? "Aperçu résultat" : "Aperçu import"} (${state.showErrorsOnly && processed ? state.csv.missingSets.reduce((s,m)=>s+m.count,0) + "/" : ""}${data.length} lignes)</label>
+          ${processed && state.csv.missingSets.length > 0 ? `
+            <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:12px;color:${T.red};user-select:none;font-family:${T.font};">
+              <input type="checkbox" id="show-errors-only" ${state.showErrorsOnly ? "checked" : ""} style="accent-color:${T.red};width:14px;height:14px;cursor:pointer;">
+              N'afficher que les erreurs
+            </label>
+          ` : ""}
+        </div>
+        <div id="table-scroll" style="overflow-x:auto;overflow-y:auto;max-height:${TABLE_VH}px;border-radius:8px;border:1px solid ${T.brd};">
+          <table style="width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed;">
             <thead><tr>${headers.map(h => `<th style="${thStyle()}position:sticky;top:0;background:${T.surface};white-space:nowrap;">${esc(h)}</th>`).join("")}</tr></thead>
-            <tbody>
-              ${data.slice(0, 100).map((r, ri) => `
-                <tr style="background:${ri % 2 ? T.surface2 + '44' : 'transparent'};">
-                  ${r.map((c, ci) => {
-                    const isP = headers[ci] === state.colMap.price && processed;
-                    const isC = headers[ci] === state.colMap.comment && processed;
-                    const isL = headers[ci] === state.colMap.location && processed;
-                    return `<td style="${tdStyle()}white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis;color:${isP ? T.green : (isC || isL) ? T.accent : T.text};font-weight:${(isP || isC || isL) ? 600 : 400};">${esc(c)}</td>`;
-                  }).join("")}
-                </tr>
-              `).join("")}
+            <tbody id="table-body">
+              ${(() => {
+                const missingCodes = new Set(state.csv.missingSets.map(m => m.code));
+                const si = headers.indexOf(state.colMap.setCode);
+                const visibleData = state.showErrorsOnly && processed
+                  ? data.filter(r => si >= 0 && missingCodes.has(r[si]))
+                  : data;
+                _tableCache = { data: visibleData, headers, missingCodes, si };
+                return renderTableRows(state.tableScrollTop);
+              })()}
             </tbody>
           </table>
         </div>
       </div>
+
+      ${processed && state.csv.codeMismatches.length > 0 ? `
+        <div style="background:#4ade8018;border:1px solid ${T.green};border-radius:8px;padding:14px 18px;margin-bottom:16px;">
+          <div style="font-weight:700;font-size:13px;color:${T.green};margin-bottom:4px;">🔀 ${state.csv.codeMismatches.length} correspondance(s) par nom — code différent</div>
+          <div style="font-size:12px;color:${T.dim};margin-bottom:12px;">Le nom existe dans la BDD mais avec un code différent. Mettre à jour le code dans la BDD ?</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            ${state.csv.codeMismatches.map(m => `
+              <div style="display:flex;align-items:center;gap:10px;background:${T.surface2};border-radius:6px;padding:8px 12px;">
+                <span style="color:${T.dim};font-size:12px;font-weight:600;min-width:50px;">${esc(m.dbCode)}</span>
+                <span style="color:${T.dim};font-size:12px;">→</span>
+                <span style="color:${T.green};font-size:12px;font-weight:700;min-width:50px;">${esc(m.csvCode)}</span>
+                <span style="color:${T.text};font-size:12px;flex:1;">${esc(m.dbName)}</span>
+                <button class="codematch-update-btn" data-dbcode="${esc(m.dbCode)}" data-csvcode="${esc(m.csvCode)}" style="${btnStyle(true)}padding:4px 12px;font-size:11px;background:${T.green};">Mettre à jour</button>
+                <button class="codematch-ignore-btn" data-csvcode="${esc(m.csvCode)}" style="${btnStyle(false)}padding:4px 12px;font-size:11px;">Ignorer</button>
+              </div>
+            `).join("")}
+          </div>
+          ${state.csv.codeMismatches.length > 1 ? `
+            <div style="margin-top:10px;display:flex;gap:8px;">
+              <button id="codematch-update-all" style="${btnStyle(true)}font-size:11px;background:${T.green};">Tout mettre à jour</button>
+              <button id="codematch-ignore-all" style="${btnStyle(false)}font-size:11px;">Tout ignorer</button>
+            </div>
+          ` : ""}
+        </div>
+      ` : ""}
+
+      ${processed && state.csv.nameMismatches.length > 0 ? `
+        <div style="background:#e85d2618;border:1px solid ${T.accent};border-radius:8px;padding:14px 18px;margin-bottom:16px;">
+          <div style="font-weight:700;font-size:13px;color:${T.accent};margin-bottom:4px;">📝 ${state.csv.nameMismatches.length} nom(s) d'extension différent(s) dans la BDD</div>
+          <div style="font-size:12px;color:${T.dim};margin-bottom:8px;">Mettre à jour Nom FR ou Nom EN dans la base de données ?</div>
+          <div style="background:#e8545422;border:1px solid #e8545466;border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:11px;color:#e85454;">⚠ PowerTool peut se tromper sur le nom des extensions — vérifiez chaque correspondance avant d'accepter.</div>
+          ${state.csv.nameMismatches.length > 1 ? `
+            <div style="display:flex;gap:8px;margin-bottom:12px;">
+              <button id="nmmatch-all-fr" style="${btnStyle(false)}font-size:11px;">→ FR tous</button>
+              <button id="nmmatch-all-en" style="${btnStyle(true)}font-size:11px;">→ EN tous</button>
+            </div>
+          ` : ""}
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            ${state.csv.nameMismatches.map(m => `
+              <div style="display:flex;align-items:center;gap:8px;background:${T.surface2};border-radius:6px;padding:8px 12px;flex-wrap:wrap;">
+                <span style="color:${T.accent};font-weight:700;font-size:12px;min-width:55px;">${esc(m.setCode)}</span>
+                <span style="color:${T.green};font-size:12px;font-weight:600;">CSV: ${esc(m.csvName)}</span>
+                <span style="color:${T.dim};font-size:11px;">BDD FR: ${esc(m.nameFR)||'—'} · EN: ${esc(m.nameEN)||'—'}</span>
+                <div style="display:flex;gap:4px;margin-left:auto;">
+                  <button class="nmmatch-fr-btn" data-code="${esc(m.setCode)}" data-name="${esc(m.csvName)}" style="${btnStyle(false)}padding:3px 10px;font-size:11px;">→ FR</button>
+                  <button class="nmmatch-en-btn" data-code="${esc(m.setCode)}" data-name="${esc(m.csvName)}" style="${btnStyle(true)}padding:3px 10px;font-size:11px;">→ EN</button>
+                  <button class="nmmatch-ignore-btn" data-code="${esc(m.setCode)}" style="${btnStyle(false)}padding:3px 10px;font-size:11px;">✕</button>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      ` : ""}
 
       ${processed && state.csv.missingSets.length > 0 ? `
         <div style="background:#e8545422;border:1px solid #e85454;border-radius:8px;padding:14px 18px;margin-bottom:16px;">
           <div style="font-weight:700;font-size:13px;color:#e85454;margin-bottom:8px;">⚠ ${state.csv.missingSets.length} extension(s) non trouvée(s) dans la base "${esc(state.selectedGame)}"</div>
           <div style="font-size:12px;color:${T.text};margin-bottom:10px;">Ces codes n'ont pas de correspondance — la colonne comment ne sera pas remplie pour ces lignes.</div>
           <div style="display:flex;flex-wrap:wrap;gap:6px;">
-            ${state.csv.missingSets.map(m => `<span style="background:${T.surface2};border:1px solid #e8545466;border-radius:4px;padding:3px 10px;font-size:11px;font-weight:600;color:#e85454;">${esc(m.code)} <span style="color:${T.dim};font-weight:400;">(${m.count} carte${m.count > 1 ? 's' : ''})</span></span>`).join("")}
+            ${state.csv.missingSets.map(m => `
+              <div style="display:flex;align-items:center;gap:6px;">
+                <span style="background:${T.surface2};border:1px solid #e8545466;border-radius:4px;padding:3px 10px;font-size:11px;font-weight:600;color:#e85454;">${esc(m.code)} <span style="color:${T.dim};font-weight:400;">(${m.count} carte${m.count > 1 ? 's' : ''})</span></span>
+                <button class="missing-create-btn" data-code="${esc(m.code)}" style="${btnStyle(false)}padding:3px 10px;font-size:11px;color:${T.green};border-color:${T.green}44;">+ Créer</button>
+              </div>
+            `).join("")}
           </div>
         </div>
       ` : ""}
@@ -409,13 +551,15 @@ function bindEvents() {
     btn.onclick = () => { state.editingRow = parseInt(btn.dataset.idx); render(); };
   });
 
-  // Save edit
+  // Save edit — normalise les champs avant sauvegarde
   const saveEditBtn = document.getElementById("save-edit-btn");
   if (saveEditBtn) {
     saveEditBtn.onclick = async () => {
       const fields = document.querySelectorAll(".edit-field");
       const sets = state.db[state.selectedGame];
-      fields.forEach(f => { sets[state.editingRow][f.dataset.field] = f.value; });
+      const entry = normEntry(sets[state.editingRow]);
+      fields.forEach(f => { entry[f.dataset.field] = f.value; });
+      sets[state.editingRow] = entry;
       await window.api.saveGame(state.selectedGame, sets);
       state.editingRow = null;
       render();
@@ -438,14 +582,91 @@ function bindEvents() {
   const addBtn = document.getElementById("add-row-btn");
   if (addBtn) {
     addBtn.onclick = async () => {
-      const code = document.getElementById("new-code").value.trim();
-      const name = document.getElementById("new-name").value.trim();
-      const date = document.getElementById("new-date").value.trim();
-      if (!code || !name) return;
-      state.db[state.selectedGame].push({ setCode: code, name, releaseDate: date });
+      const code   = document.getElementById("new-code").value.trim();
+      const nameFR = document.getElementById("new-name-fr").value.trim();
+      const nameEN = document.getElementById("new-name-en").value.trim();
+      const date   = document.getElementById("new-date").value.trim();
+      if (!code || (!nameFR && !nameEN)) return;
+      state.db[state.selectedGame].push({ setCode: code, nameFR, nameEN, releaseDate: date });
       await window.api.saveGame(state.selectedGame, state.db[state.selectedGame]);
       render();
       toast("Extension ajoutée ✓");
+    };
+  }
+
+  // Name mismatch — → FR
+  document.querySelectorAll(".nmmatch-fr-btn").forEach(btn => {
+    btn.onclick = async () => {
+      const { code, name } = btn.dataset;
+      const sets = state.db[state.selectedGame];
+      const entry = sets.find(s => s.setCode === code);
+      if (entry) {
+        const e = normEntry(entry);
+        e.nameFR = name;
+        Object.assign(entry, e);
+        await window.api.saveGame(state.selectedGame, sets);
+        state.csv.nameMismatches = state.csv.nameMismatches.filter(m => m.setCode !== code);
+        render();
+        toast(`Nom FR "${code}" mis à jour ✓`);
+      }
+    };
+  });
+
+  // Name mismatch — → EN
+  document.querySelectorAll(".nmmatch-en-btn").forEach(btn => {
+    btn.onclick = async () => {
+      const { code, name } = btn.dataset;
+      const sets = state.db[state.selectedGame];
+      const entry = sets.find(s => s.setCode === code);
+      if (entry) {
+        const e = normEntry(entry);
+        e.nameEN = name;
+        Object.assign(entry, e);
+        await window.api.saveGame(state.selectedGame, sets);
+        state.csv.nameMismatches = state.csv.nameMismatches.filter(m => m.setCode !== code);
+        render();
+        toast(`Nom EN "${code}" mis à jour ✓`);
+      }
+    };
+  });
+
+  // Name mismatch — ignore
+  document.querySelectorAll(".nmmatch-ignore-btn").forEach(btn => {
+    btn.onclick = () => {
+      state.csv.nameMismatches = state.csv.nameMismatches.filter(m => m.setCode !== btn.dataset.code);
+      render();
+    };
+  });
+
+  // Name mismatch — tout accepter FR
+  const nmmatchAllFr = document.getElementById("nmmatch-all-fr");
+  if (nmmatchAllFr) {
+    nmmatchAllFr.onclick = async () => {
+      const sets = state.db[state.selectedGame];
+      state.csv.nameMismatches.forEach(({ setCode, csvName }) => {
+        const entry = sets.find(s => s.setCode === setCode);
+        if (entry) { const e = normEntry(entry); e.nameFR = csvName; Object.assign(entry, e); }
+      });
+      await window.api.saveGame(state.selectedGame, sets);
+      state.csv.nameMismatches = [];
+      render();
+      toast("Tous les noms FR mis à jour ✓");
+    };
+  }
+
+  // Name mismatch — tout accepter EN
+  const nmmatchAllEn = document.getElementById("nmmatch-all-en");
+  if (nmmatchAllEn) {
+    nmmatchAllEn.onclick = async () => {
+      const sets = state.db[state.selectedGame];
+      state.csv.nameMismatches.forEach(({ setCode, csvName }) => {
+        const entry = sets.find(s => s.setCode === setCode);
+        if (entry) { const e = normEntry(entry); e.nameEN = csvName; Object.assign(entry, e); }
+      });
+      await window.api.saveGame(state.selectedGame, sets);
+      state.csv.nameMismatches = [];
+      render();
+      toast("Tous les noms EN mis à jour ✓");
     };
   }
 
@@ -478,12 +699,104 @@ function bindEvents() {
     fillLocCb.onchange = (e) => { state.fillLocation = e.target.checked; };
   }
 
+  // Code mismatch — update individual (change setCode in DB)
+  document.querySelectorAll(".codematch-update-btn").forEach(btn => {
+    btn.onclick = async () => {
+      const { dbcode, csvcode } = btn.dataset;
+      const sets = state.db[state.selectedGame];
+      const entry = sets.find(s => s.setCode === dbcode);
+      if (entry) {
+        entry.setCode = csvcode;
+        await window.api.saveGame(state.selectedGame, sets);
+        state.csv.codeMismatches = state.csv.codeMismatches.filter(m => m.csvCode !== csvcode);
+        state.csv.missingSets = state.csv.missingSets.filter(m => m.code !== csvcode);
+        render();
+        toast(`Code "${dbcode}" → "${csvcode}" ✓`);
+      }
+    };
+  });
+
+  // Code mismatch — ignore individual
+  document.querySelectorAll(".codematch-ignore-btn").forEach(btn => {
+    btn.onclick = () => {
+      state.csv.codeMismatches = state.csv.codeMismatches.filter(m => m.csvCode !== btn.dataset.csvcode);
+      render();
+    };
+  });
+
+  // Code mismatch — update all
+  const codematchUpdateAll = document.getElementById("codematch-update-all");
+  if (codematchUpdateAll) {
+    codematchUpdateAll.onclick = async () => {
+      const sets = state.db[state.selectedGame];
+      const updatedCsvCodes = new Set();
+      state.csv.codeMismatches.forEach(({ dbCode, csvCode }) => {
+        const entry = sets.find(s => s.setCode === dbCode);
+        if (entry) { entry.setCode = csvCode; updatedCsvCodes.add(csvCode); }
+      });
+      await window.api.saveGame(state.selectedGame, sets);
+      state.csv.missingSets = state.csv.missingSets.filter(m => !updatedCsvCodes.has(m.code));
+      state.csv.codeMismatches = [];
+      render();
+      toast("Tous les codes mis à jour ✓");
+    };
+  }
+
+  // Code mismatch — ignore all
+  const codematchIgnoreAll = document.getElementById("codematch-ignore-all");
+  if (codematchIgnoreAll) {
+    codematchIgnoreAll.onclick = () => { state.csv.codeMismatches = []; render(); };
+  }
+
+  // Missing sets — create without date
+  document.querySelectorAll(".missing-create-btn").forEach(btn => {
+    btn.onclick = async () => {
+      const code = btn.dataset.code;
+      const sets = state.db[state.selectedGame];
+      if (sets.find(s => s.setCode === code)) return;
+      // Récupère le nom CSV si disponible (EN en priorité)
+      const csvRow = state.csv.rows.find(r => {
+        const si = state.csv.headers.indexOf(state.colMap.setCode);
+        return si >= 0 && r[si] === code;
+      });
+      const sni = state.csv.headers.indexOf(state.colMap.setName);
+      const csvName = (csvRow && sni >= 0) ? csvRow[sni] : "";
+      sets.push({ setCode: code, nameFR: "", nameEN: csvName, releaseDate: "" });
+      await window.api.saveGame(state.selectedGame, sets);
+      state.db[state.selectedGame] = sets;
+      state.csv.missingSets = state.csv.missingSets.filter(m => m.code !== code);
+      render();
+      toast(`"${code}" créé dans la base ✓`);
+    };
+  });
+
+  // Show errors only
+  const showErrorsOnlyCb = document.getElementById("show-errors-only");
+  if (showErrorsOnlyCb) {
+    showErrorsOnlyCb.onchange = (e) => {
+      state.showErrorsOnly = e.target.checked;
+      showSpinner("Filtrage…");
+      setTimeout(() => { render(); hideSpinner(); }, 0);
+    };
+  }
+
   // Round threshold
   const roundThresholdInput = document.getElementById("round-threshold");
   if (roundThresholdInput) {
     roundThresholdInput.oninput = (e) => {
       const v = parseFloat(e.target.value);
       if (!isNaN(v) && v > 0 && v <= 1) state.roundThreshold = v;
+    };
+  }
+
+  // Virtual scroll
+  const tableScroll = document.getElementById("table-scroll");
+  if (tableScroll) {
+    tableScroll.scrollTop = state.tableScrollTop;
+    tableScroll.onscroll = () => {
+      state.tableScrollTop = tableScroll.scrollTop;
+      const tbody = document.getElementById("table-body");
+      if (tbody) tbody.innerHTML = renderTableRows(state.tableScrollTop);
     };
   }
 
@@ -499,67 +812,110 @@ function bindEvents() {
 // ─── CSV Logic ───────────────────────────────
 function handleCSVFile(file) {
   if (!file) return;
+  showSpinner("Lecture du fichier…");
   const reader = new FileReader();
   reader.onload = (e) => {
-    const parsed = parseCSV(e.target.result);
-    if (parsed.length < 2) return;
-    const h = parsed[0].map(s => s.replace(/^\uFEFF/, ""));
-    state.csv.headers = h;
-    state.csv.rows = parsed.slice(1).filter(r => r.some(c => c.trim()));
-    state.csv.processed = null;
-    state.csv.missingSets = [];
-    // Auto-detect columns
-    if (h.includes("price")) state.colMap.price = "price";
-    if (h.includes("comment")) state.colMap.comment = "comment";
-    if (h.includes("location")) state.colMap.location = "location";
-    if (h.includes("setCode")) state.colMap.setCode = "setCode";
-    if (h.includes("cn")) state.colMap.cn = "cn";
-    render();
-    toast(`${state.csv.rows.length} lignes importées`);
+    setTimeout(() => {
+      const parsed = parseCSV(e.target.result);
+      if (parsed.length < 2) { hideSpinner(); return; }
+      const h = parsed[0].map(s => s.replace(/^\uFEFF/, ""));
+      state.csv.headers = h;
+      state.csv.rows = parsed.slice(1).filter(r => r.some(c => c.trim()));
+      state.csv.processed = null;
+      state.csv.missingSets = [];
+      state.csv.codeMismatches = [];
+      state.csv.nameMismatches = [];
+      // Auto-detect columns
+      if (h.includes("price")) state.colMap.price = "price";
+      if (h.includes("comment")) state.colMap.comment = "comment";
+      if (h.includes("location")) state.colMap.location = "location";
+      if (h.includes("setCode")) state.colMap.setCode = "setCode";
+      if (h.includes("cn")) state.colMap.cn = "cn";
+      if (h.includes("set")) state.colMap.setName = "set";
+      else if (h.includes("expansionName")) state.colMap.setName = "expansionName";
+      else if (h.includes("setName")) state.colMap.setName = "setName";
+      render();
+      hideSpinner();
+      toast(`${state.csv.rows.length} lignes importées`);
+    }, 0);
   };
   reader.readAsText(file);
 }
 
 function processCSV() {
-  const { headers, rows } = state.csv;
-  const sets = state.db[state.selectedGame] || [];
-  const setMap = {}; sets.forEach(s => { setMap[s.setCode] = s; });
-  const { price, comment, location, setCode, cn } = state.colMap;
-  const pi = headers.indexOf(price), ci = headers.indexOf(comment),
-    li = headers.indexOf(location), si = headers.indexOf(setCode), ni = headers.indexOf(cn);
+  showSpinner("Traitement en cours…");
+  setTimeout(() => {
+    const { headers, rows } = state.csv;
+    const sets = state.db[state.selectedGame] || [];
+    const setMap = {}; sets.forEach(s => { setMap[s.setCode] = s; });
+    const { price, comment, location, setCode, cn, setName } = state.colMap;
+    const pi = headers.indexOf(price), ci = headers.indexOf(comment),
+      li = headers.indexOf(location), si = headers.indexOf(setCode),
+      ni = headers.indexOf(cn), sni = setName ? headers.indexOf(setName) : -1;
 
-  const missingMap = {};
-  const processed = rows.map(row => {
-    const r = [...row];
-    // Round price
-    if (pi >= 0) { const v = parseFloat(r[pi]); if (!isNaN(v)) r[pi] = String(roundToHalf(v)); }
-    // Build formatted string for comment & location
-    if (si >= 0) {
-      const code = r[si], cnVal = ni >= 0 ? r[ni] : "", info = setMap[code];
-      if (info && info.releaseDate) {
-        const formatted = formatOutput(state.outputFormat, code, cnVal, info.releaseDate, info.name);
-        if (ci >= 0) r[ci] = formatted;
-        if (li >= 0 && state.fillLocation) r[li] = formatted;
-      } else if (code) {
-        if (!missingMap[code]) missingMap[code] = 0;
-        missingMap[code]++;
-      }
-    }
-    return r;
-  });
-
-  // Sort by setCode (group by extension)
-  if (si >= 0) {
-    processed.sort((a, b) => {
-      const codeA = a[si] || "", codeB = b[si] || "";
-      return codeA.localeCompare(codeB);
+    // Index par nom (normalisé, FR et EN) pour détection des codes différents
+    const setMapByName = {};
+    sets.forEach(s => {
+      const e = normEntry(s);
+      if (e.nameFR) setMapByName[e.nameFR.toLowerCase().trim()] = s;
+      if (e.nameEN) setMapByName[e.nameEN.toLowerCase().trim()] = s;
     });
-  }
 
-  state.csv.missingSets = Object.entries(missingMap).map(([code, count]) => ({ code, count })).sort((a, b) => a.code.localeCompare(b.code));
-  state.csv.processed = processed;
-  render();
-  toast("CSV traité ✓");
+    const missingMap = {}, codeMismatchMap = {}, nameMismatchMap = {};
+    const processed = rows.map(row => {
+      const r = [...row];
+      if (pi >= 0) { const v = parseFloat(r[pi]); if (!isNaN(v)) r[pi] = String(roundToHalf(v)); }
+      if (si >= 0) {
+        const code = r[si], cnVal = ni >= 0 ? r[ni] : "", info = setMap[code];
+        if (info) {
+          const e = normEntry(info);
+          const formatted = e.releaseDate
+            ? formatOutput(state.outputFormat, code, cnVal, e.releaseDate, e.nameFR, e.nameEN)
+            : "";
+          if (formatted) {
+            if (ci >= 0) r[ci] = formatted;
+            if (li >= 0 && state.fillLocation) r[li] = formatted;
+          }
+          // Détection nom CSV ≠ nameFR et ≠ nameEN
+          if (sni >= 0 && r[sni] && !nameMismatchMap[code]) {
+            const csvName = r[sni];
+            if (csvName !== e.nameFR && csvName !== e.nameEN) {
+              nameMismatchMap[code] = { setCode: code, csvName, nameFR: e.nameFR, nameEN: e.nameEN };
+            }
+          }
+        } else if (code) {
+          // Code absent — chercher par nom dans la BDD
+          let isCodeMismatch = false;
+          if (sni >= 0 && r[sni] && !codeMismatchMap[code]) {
+            const dbEntry = setMapByName[r[sni].toLowerCase().trim()];
+            if (dbEntry) {
+              codeMismatchMap[code] = { csvCode: code, csvName: r[sni], dbCode: dbEntry.setCode, dbName: dbEntry.name };
+              isCodeMismatch = true;
+            }
+          } else if (codeMismatchMap[code]) {
+            isCodeMismatch = true;
+          }
+          if (!isCodeMismatch) {
+            if (!missingMap[code]) missingMap[code] = 0;
+            missingMap[code]++;
+          }
+        }
+      }
+      return r;
+    });
+
+    if (si >= 0) {
+      processed.sort((a, b) => (a[si] || "").localeCompare(b[si] || ""));
+    }
+
+    state.csv.missingSets = Object.entries(missingMap).map(([code, count]) => ({ code, count })).sort((a, b) => a.code.localeCompare(b.code));
+    state.csv.codeMismatches = Object.values(codeMismatchMap).sort((a, b) => a.csvCode.localeCompare(b.csvCode));
+    state.csv.nameMismatches = Object.values(nameMismatchMap).sort((a, b) => a.setCode.localeCompare(b.setCode));
+    state.csv.processed = processed;
+    render();
+    hideSpinner();
+    toast("CSV traité ✓");
+  }, 0);
 }
 
 function downloadCSV() {

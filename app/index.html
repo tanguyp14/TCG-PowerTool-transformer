@@ -33,11 +33,37 @@
     pointer-events: none; z-index: 9999;
   }
   .toast.show { opacity: 1; transform: translateY(0); }
+
+  /* Spinner overlay */
+  #spinner {
+    display: none;
+    position: fixed; inset: 0;
+    background: #0e0e10cc;
+    z-index: 9998;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+  #spinner.show { display: flex; }
+  .spinner-ring {
+    width: 48px; height: 48px;
+    border: 3px solid #2e2e36;
+    border-top-color: #e85d26;
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spinner-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: #8a8a94;
+  }
 </style>
 </head>
 <body>
 <div id="root"></div>
 <div id="toast" class="toast"></div>
+<div id="spinner"><div class="spinner-ring"></div><div class="spinner-label" id="spinner-label">Chargement…</div></div>
 <script src="app.js"></script>
 </body>
 </html>

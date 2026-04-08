@@ -1,757 +1,908 @@
 [
   {
     "setCode": "POR",
-    "name": "Perfect Order",
+    "nameFR": "",
+    "nameEN": "Perfect Order",
     "releaseDate": "27-03-2026"
   },
   {
     "setCode": "ASC",
-    "name": "Ascended Heroes",
+    "nameFR": "",
+    "nameEN": "Ascended Heroes",
     "releaseDate": "30-01-2026"
   },
   {
     "setCode": "PFL",
-    "name": "Phantasmal Flames",
+    "nameFR": "",
+    "nameEN": "Phantasmal Flames",
     "releaseDate": "14-11-2025"
   },
   {
     "setCode": "MEG",
-    "name": "Mega Evolution",
+    "nameFR": "",
+    "nameEN": "Mega Evolution",
     "releaseDate": "26-09-2025"
   },
   {
     "setCode": "MEE",
-    "name": "Mega Evolution Energy",
+    "nameFR": "",
+    "nameEN": "Mega Evolution Energy",
     "releaseDate": "25-09-2025"
   },
   {
     "setCode": "MEP",
-    "name": "Mega Promos",
+    "nameFR": "",
+    "nameEN": "Mega Promos",
     "releaseDate": ""
   },
   {
     "setCode": "BLK",
-    "name": "Black Bolt",
+    "nameFR": "",
+    "nameEN": "Black Bolt",
     "releaseDate": "18-07-2025"
   },
   {
     "setCode": "WHT",
-    "name": "White Flare",
+    "nameFR": "",
+    "nameEN": "White Flare",
     "releaseDate": "18-07-2025"
   },
   {
     "setCode": "DRI",
-    "name": "Destined Rivals",
+    "nameFR": "",
+    "nameEN": "Destined Rivals",
     "releaseDate": "30-05-2025"
   },
   {
     "setCode": "JTG",
-    "name": "Journey Together",
+    "nameFR": "",
+    "nameEN": "Journey Together",
     "releaseDate": "28-03-2025"
   },
   {
     "setCode": "PRE",
-    "name": "Prismatic Evolutions",
+    "nameFR": "",
+    "nameEN": "Prismatic Evolutions",
     "releaseDate": "17-01-2025"
   },
   {
     "setCode": "SSP",
-    "name": "Surging Sparks",
+    "nameFR": "",
+    "nameEN": "Surging Sparks",
     "releaseDate": "08-11-2024"
   },
   {
     "setCode": "SCR",
-    "name": "Stellar Crown",
+    "nameFR": "",
+    "nameEN": "Stellar Crown",
     "releaseDate": "13-09-2024"
   },
   {
     "setCode": "SFA",
-    "name": "Shrouded Fable",
+    "nameFR": "",
+    "nameEN": "Shrouded Fable",
     "releaseDate": "02-08-2024"
   },
   {
     "setCode": "TWM",
-    "name": "Twilight Masquerade",
+    "nameFR": "",
+    "nameEN": "Twilight Masquerade",
     "releaseDate": "24-05-2024"
   },
   {
     "setCode": "TEF",
-    "name": "Temporal Forces",
+    "nameFR": "",
+    "nameEN": "Temporal Forces",
     "releaseDate": "22-03-2024"
   },
   {
     "setCode": "PAF",
-    "name": "Paldean Fates",
+    "nameFR": "",
+    "nameEN": "Paldean Fates",
     "releaseDate": "26-01-2024"
   },
   {
     "setCode": "PAR",
-    "name": "Paradox Rift",
+    "nameFR": "",
+    "nameEN": "Paradox Rift",
     "releaseDate": "03-11-2023"
   },
   {
     "setCode": "MEW",
-    "name": "Pokémon 151",
+    "nameFR": "",
+    "nameEN": "Pokémon 151",
     "releaseDate": "22-09-2023"
   },
   {
     "setCode": "OBF",
-    "name": "Obsidian Flames",
+    "nameFR": "",
+    "nameEN": "Obsidian Flames",
     "releaseDate": "11-08-2023"
   },
   {
     "setCode": "PAL",
-    "name": "Paldea Evolved",
+    "nameFR": "",
+    "nameEN": "Paldea Evolved",
     "releaseDate": "09-06-2023"
   },
   {
     "setCode": "SVI",
-    "name": "Scarlet & Violet",
+    "nameFR": "",
+    "nameEN": "Scarlet & Violet",
     "releaseDate": "31-03-2023"
   },
   {
     "setCode": "SVE",
-    "name": "Scarlet & Violet Energy",
+    "nameFR": "",
+    "nameEN": "Scarlet & Violet Energy",
     "releaseDate": "30-03-2023"
   },
   {
-    "setCode": "SVP",
-    "name": "Scarlet & Violet Promos",
+    "setCode": "SV-P",
+    "nameFR": "",
+    "nameEN": "Scarlet & Violet Promos",
     "releaseDate": ""
   },
   {
     "setCode": "CRZ",
-    "name": "Crown Zenith",
+    "nameFR": "",
+    "nameEN": "Crown Zenith",
     "releaseDate": "20-01-2023"
   },
   {
     "setCode": "SIT",
-    "name": "Silver Tempest",
+    "nameFR": "",
+    "nameEN": "Silver Tempest",
     "releaseDate": "11-11-2022"
   },
   {
     "setCode": "LOR",
-    "name": "Lost Origin",
+    "nameFR": "",
+    "nameEN": "Lost Origin",
     "releaseDate": "09-09-2022"
   },
   {
     "setCode": "PGO",
-    "name": "Pokémon GO",
+    "nameFR": "",
+    "nameEN": "Pokémon GO",
     "releaseDate": "01-07-2022"
   },
   {
     "setCode": "ASR",
-    "name": "Astral Radiance",
+    "nameFR": "",
+    "nameEN": "Astral Radiance",
     "releaseDate": "27-05-2022"
   },
   {
     "setCode": "BRS",
-    "name": "Brilliant Stars",
+    "nameFR": "",
+    "nameEN": "Brilliant Stars",
     "releaseDate": "25-02-2022"
   },
   {
     "setCode": "FST",
-    "name": "Fusion Strike",
+    "nameFR": "",
+    "nameEN": "Fusion Strike",
     "releaseDate": "12-11-2021"
   },
   {
     "setCode": "CEL",
-    "name": "Celebrations",
+    "nameFR": "",
+    "nameEN": "Celebrations",
     "releaseDate": "08-10-2021"
   },
   {
     "setCode": "EVS",
-    "name": "Evolving Skies",
+    "nameFR": "",
+    "nameEN": "Evolving Skies",
     "releaseDate": "27-08-2021"
   },
   {
     "setCode": "CRE",
-    "name": "Chilling Reign",
+    "nameFR": "",
+    "nameEN": "Chilling Reign",
     "releaseDate": "18-06-2021"
   },
   {
     "setCode": "BST",
-    "name": "Battle Styles",
+    "nameFR": "",
+    "nameEN": "Battle Styles",
     "releaseDate": "19-03-2021"
   },
   {
     "setCode": "SHF",
-    "name": "Shining Fates",
+    "nameFR": "",
+    "nameEN": "Shining Fates",
     "releaseDate": "19-02-2021"
   },
   {
     "setCode": "VIV",
-    "name": "Vivid Voltage",
+    "nameFR": "",
+    "nameEN": "Vivid Voltage",
     "releaseDate": "13-11-2020"
   },
   {
     "setCode": "CPA",
-    "name": "Champion's Path",
+    "nameFR": "",
+    "nameEN": "Champion's Path",
     "releaseDate": "25-09-2020"
   },
   {
     "setCode": "DAA",
-    "name": "Darkness Ablaze",
+    "nameFR": "",
+    "nameEN": "Darkness Ablaze",
     "releaseDate": "14-08-2020"
   },
   {
     "setCode": "RCL",
-    "name": "Rebel Clash",
+    "nameFR": "",
+    "nameEN": "Rebel Clash",
     "releaseDate": "01-05-2020"
   },
   {
     "setCode": "SSH",
-    "name": "Sword & Shield",
+    "nameFR": "",
+    "nameEN": "Sword & Shield",
     "releaseDate": "07-02-2020"
   },
   {
     "setCode": "SP",
-    "name": "Sword & Shield Promos",
+    "nameFR": "",
+    "nameEN": "Sword & Shield Promos",
     "releaseDate": ""
   },
   {
     "setCode": "CEC",
-    "name": "Cosmic Eclipse",
+    "nameFR": "",
+    "nameEN": "Cosmic Eclipse",
     "releaseDate": "01-11-2019"
   },
   {
     "setCode": "HIF",
-    "name": "Hidden Fates",
+    "nameFR": "",
+    "nameEN": "Hidden Fates",
     "releaseDate": "23-08-2019"
   },
   {
     "setCode": "UNM",
-    "name": "Unified Minds",
+    "nameFR": "",
+    "nameEN": "Unified Minds",
     "releaseDate": "02-08-2019"
   },
   {
     "setCode": "UNB",
-    "name": "Unbroken Bonds",
+    "nameFR": "",
+    "nameEN": "Unbroken Bonds",
     "releaseDate": "03-05-2019"
   },
   {
     "setCode": "DET",
-    "name": "Detective Pikachu",
+    "nameFR": "",
+    "nameEN": "Detective Pikachu",
     "releaseDate": "29-03-2019"
   },
   {
     "setCode": "TEU",
-    "name": "Team Up",
+    "nameFR": "",
+    "nameEN": "Team Up",
     "releaseDate": "01-02-2019"
   },
   {
     "setCode": "LOT",
-    "name": "Lost Thunder",
+    "nameFR": "",
+    "nameEN": "Lost Thunder",
     "releaseDate": "02-11-2018"
   },
   {
     "setCode": "DRM",
-    "name": "Dragon Majesty",
+    "nameFR": "",
+    "nameEN": "Dragon Majesty",
     "releaseDate": "07-09-2018"
   },
   {
     "setCode": "CES",
-    "name": "Celestial Storm",
+    "nameFR": "",
+    "nameEN": "Celestial Storm",
     "releaseDate": "03-08-2018"
   },
   {
     "setCode": "FLI",
-    "name": "Forbidden Light",
+    "nameFR": "",
+    "nameEN": "Forbidden Light",
     "releaseDate": "04-05-2018"
   },
   {
     "setCode": "UPR",
-    "name": "Ultra Prism",
+    "nameFR": "",
+    "nameEN": "Ultra Prism",
     "releaseDate": "02-02-2018"
   },
   {
     "setCode": "CIN",
-    "name": "Crimson Invasion",
+    "nameFR": "",
+    "nameEN": "Crimson Invasion",
     "releaseDate": "03-11-2017"
   },
   {
     "setCode": "SLG",
-    "name": "Shining Legends",
+    "nameFR": "",
+    "nameEN": "Shining Legends",
     "releaseDate": "06-10-2017"
   },
   {
     "setCode": "BUS",
-    "name": "Burning Shadows",
+    "nameFR": "",
+    "nameEN": "Burning Shadows",
     "releaseDate": "04-08-2017"
   },
   {
     "setCode": "GRI",
-    "name": "Guardians Rising",
+    "nameFR": "",
+    "nameEN": "Guardians Rising",
     "releaseDate": "05-05-2017"
   },
   {
     "setCode": "SUM",
-    "name": "Sun & Moon",
+    "nameFR": "",
+    "nameEN": "Sun & Moon",
     "releaseDate": "03-02-2017"
   },
   {
     "setCode": "SMP",
-    "name": "Sun & Moon Promos",
+    "nameFR": "",
+    "nameEN": "Sun & Moon Promos",
     "releaseDate": ""
   },
   {
     "setCode": "EVO",
-    "name": "Evolutions",
+    "nameFR": "",
+    "nameEN": "Evolutions",
     "releaseDate": "02-11-2016"
   },
   {
     "setCode": "STS",
-    "name": "Steam Siege",
+    "nameFR": "",
+    "nameEN": "Steam Siege",
     "releaseDate": "03-08-2016"
   },
   {
     "setCode": "FCO",
-    "name": "Fates Collide",
+    "nameFR": "",
+    "nameEN": "Fates Collide",
     "releaseDate": "02-05-2016"
   },
   {
     "setCode": "GEN",
-    "name": "Generations",
+    "nameFR": "",
+    "nameEN": "Generations",
     "releaseDate": "22-02-2016"
   },
   {
     "setCode": "BKP",
-    "name": "BREAKpoint",
+    "nameFR": "",
+    "nameEN": "BREAKpoint",
     "releaseDate": "03-02-2016"
   },
   {
     "setCode": "BKT",
-    "name": "BREAKthrough",
+    "nameFR": "",
+    "nameEN": "BREAKthrough",
     "releaseDate": "04-11-2015"
   },
   {
     "setCode": "AOR",
-    "name": "Ancient Origins",
+    "nameFR": "",
+    "nameEN": "Ancient Origins",
     "releaseDate": "12-08-2015"
   },
   {
     "setCode": "ROS",
-    "name": "Roaring Skies",
+    "nameFR": "",
+    "nameEN": "Roaring Skies",
     "releaseDate": "06-05-2015"
   },
   {
     "setCode": "DCR",
-    "name": "Double Crisis",
+    "nameFR": "",
+    "nameEN": "Double Crisis",
     "releaseDate": "25-03-2015"
   },
   {
     "setCode": "PRC",
-    "name": "Primal Clash",
+    "nameFR": "",
+    "nameEN": "Primal Clash",
     "releaseDate": "04-02-2015"
   },
   {
     "setCode": "PHF",
-    "name": "Phantom Forces",
+    "nameFR": "",
+    "nameEN": "Phantom Forces",
     "releaseDate": "05-11-2014"
   },
   {
     "setCode": "FFI",
-    "name": "Furious Fists",
+    "nameFR": "",
+    "nameEN": "Furious Fists",
     "releaseDate": "13-08-2014"
   },
   {
     "setCode": "FLF",
-    "name": "Flashfire",
+    "nameFR": "",
+    "nameEN": "Flashfire",
     "releaseDate": "07-05-2014"
   },
   {
     "setCode": "XY",
-    "name": "XY",
+    "nameFR": "",
+    "nameEN": "XY",
     "releaseDate": "05-02-2014"
   },
   {
     "setCode": "KSS",
-    "name": "Kalos Starter Set",
+    "nameFR": "",
+    "nameEN": "Kalos Starter Set",
     "releaseDate": "08-11-2013"
   },
   {
-    "setCode": "XYP",
-    "name": "XY Promos",
+    "setCode": "XY-P",
+    "nameFR": "",
+    "nameEN": "XY Promos",
     "releaseDate": ""
   },
   {
     "setCode": "LTR",
-    "name": "Legendary Treasures",
+    "nameFR": "",
+    "nameEN": "Legendary Treasures",
     "releaseDate": "06-11-2013"
   },
   {
     "setCode": "PLB",
-    "name": "Plasma Blast",
+    "nameFR": "",
+    "nameEN": "Plasma Blast",
     "releaseDate": "14-08-2013"
   },
   {
     "setCode": "PLF",
-    "name": "Plasma Freeze",
+    "nameFR": "",
+    "nameEN": "Plasma Freeze",
     "releaseDate": "08-05-2013"
   },
   {
     "setCode": "PLS",
-    "name": "Plasma Storm",
+    "nameFR": "",
+    "nameEN": "Plasma Storm",
     "releaseDate": "06-02-2013"
   },
   {
     "setCode": "BCR",
-    "name": "Boundaries Crossed",
+    "nameFR": "",
+    "nameEN": "Boundaries Crossed",
     "releaseDate": "07-11-2012"
   },
   {
     "setCode": "DRV",
-    "name": "Dragon Vault",
+    "nameFR": "",
+    "nameEN": "Dragon Vault",
     "releaseDate": "05-10-2012"
   },
   {
     "setCode": "DRX",
-    "name": "Dragons Exalted",
+    "nameFR": "",
+    "nameEN": "Dragons Exalted",
     "releaseDate": "15-08-2012"
   },
   {
     "setCode": "DEX",
-    "name": "Dark Explorers",
+    "nameFR": "",
+    "nameEN": "Dark Explorers",
     "releaseDate": "09-05-2012"
   },
   {
     "setCode": "NXD",
-    "name": "Next Destinies",
+    "nameFR": "",
+    "nameEN": "Next Destinies",
     "releaseDate": "08-02-2012"
   },
   {
     "setCode": "NVI",
-    "name": "Noble Victories",
+    "nameFR": "",
+    "nameEN": "Noble Victories",
     "releaseDate": "16-11-2011"
   },
   {
     "setCode": "EPO",
-    "name": "Emerging Powers",
+    "nameFR": "",
+    "nameEN": "Emerging Powers",
     "releaseDate": "31-08-2011"
   },
   {
     "setCode": "BLW",
-    "name": "Black & White",
+    "nameFR": "",
+    "nameEN": "Black & White",
     "releaseDate": "25-04-2011"
   },
   {
     "setCode": "BWP",
-    "name": "Black & White Promos",
+    "nameFR": "",
+    "nameEN": "Black & White Promos",
     "releaseDate": ""
   },
   {
     "setCode": "CL",
-    "name": "Call of Legends",
+    "nameFR": "",
+    "nameEN": "Call of Legends",
     "releaseDate": "09-02-2011"
   },
   {
     "setCode": "TM",
-    "name": "Triumphant",
+    "nameFR": "",
+    "nameEN": "Triumphant",
     "releaseDate": "03-11-2010"
   },
   {
     "setCode": "UD",
-    "name": "Undaunted",
+    "nameFR": "",
+    "nameEN": "Undaunted",
     "releaseDate": "18-08-2010"
   },
   {
     "setCode": "UL",
-    "name": "Unleashed",
+    "nameFR": "",
+    "nameEN": "Unleashed",
     "releaseDate": "12-05-2010"
   },
   {
     "setCode": "HS",
-    "name": "HeartGold & SoulSilver",
+    "nameFR": "",
+    "nameEN": "HeartGold & SoulSilver",
     "releaseDate": "10-02-2010"
   },
   {
     "setCode": "HSP",
-    "name": "HeartGold & SoulSilver Promos",
+    "nameFR": "",
+    "nameEN": "HeartGold & SoulSilver Promos",
     "releaseDate": ""
   },
   {
     "setCode": "RM",
-    "name": "Pokémon Rumble",
+    "nameFR": "",
+    "nameEN": "Pokémon Rumble",
     "releaseDate": "02-12-2009"
   },
   {
     "setCode": "AR",
-    "name": "Arceus",
+    "nameFR": "",
+    "nameEN": "Arceus",
     "releaseDate": "04-11-2009"
   },
   {
     "setCode": "SV",
-    "name": "Supreme Victors",
+    "nameFR": "",
+    "nameEN": "Supreme Victors",
     "releaseDate": "19-08-2009"
   },
   {
     "setCode": "RR",
-    "name": "Rising Rivals",
+    "nameFR": "",
+    "nameEN": "Rising Rivals",
     "releaseDate": "20-05-2009"
   },
   {
     "setCode": "P9",
-    "name": "POP Series 9",
+    "nameFR": "",
+    "nameEN": "POP Series 9",
     "releaseDate": "01-03-2009"
   },
   {
     "setCode": "PL",
-    "name": "Platinum",
+    "nameFR": "",
+    "nameEN": "Platinum",
     "releaseDate": "11-02-2009"
   },
   {
-    "setCode": "SF",
-    "name": "Stormfront",
+    "setCode": "STF",
+    "nameFR": "",
+    "nameEN": "Stormfront",
     "releaseDate": "05-11-2008"
   },
   {
     "setCode": "P8",
-    "name": "POP Series 8",
+    "nameFR": "",
+    "nameEN": "POP Series 8",
     "releaseDate": "01-09-2008"
   },
   {
     "setCode": "LA",
-    "name": "Legends Awakened",
+    "nameFR": "",
+    "nameEN": "Legends Awakened",
     "releaseDate": "20-08-2008"
   },
   {
     "setCode": "MD",
-    "name": "Majestic Dawn",
+    "nameFR": "",
+    "nameEN": "Majestic Dawn",
     "releaseDate": "21-05-2008"
   },
   {
-    "setCode": "P7",
-    "name": "POP Series 7",
+    "setCode": "POP7",
+    "nameFR": "",
+    "nameEN": "POP Series 7",
     "releaseDate": "01-03-2008"
   },
   {
     "setCode": "GE",
-    "name": "Great Encounters",
+    "nameFR": "",
+    "nameEN": "Great Encounters",
     "releaseDate": "13-02-2008"
   },
   {
     "setCode": "SW",
-    "name": "Secret Wonders",
+    "nameFR": "",
+    "nameEN": "Secret Wonders",
     "releaseDate": "07-11-2007"
   },
   {
     "setCode": "P6",
-    "name": "POP Series 6",
+    "nameFR": "",
+    "nameEN": "POP Series 6",
     "releaseDate": "01-09-2007"
   },
   {
     "setCode": "MT",
-    "name": "Mysterious Treasures",
+    "nameFR": "",
+    "nameEN": "Mysterious Treasures",
     "releaseDate": "22-08-2007"
   },
   {
     "setCode": "DP",
-    "name": "Diamond & Pearl",
+    "nameFR": "",
+    "nameEN": "Diamond & Pearl",
     "releaseDate": "23-05-2007"
   },
   {
     "setCode": "DPP",
-    "name": "Diamond & Pearl Promos",
+    "nameFR": "",
+    "nameEN": "Diamond & Pearl Promos",
     "releaseDate": ""
   },
   {
     "setCode": "P5",
-    "name": "POP Series 5",
+    "nameFR": "",
+    "nameEN": "POP Series 5",
     "releaseDate": "01-03-2007"
   },
   {
     "setCode": "PK",
-    "name": "Power Keepers",
+    "nameFR": "",
+    "nameEN": "Power Keepers",
     "releaseDate": "14-02-2007"
   },
   {
     "setCode": "DF",
-    "name": "Dragon Frontiers",
+    "nameFR": "",
+    "nameEN": "Dragon Frontiers",
     "releaseDate": "08-11-2006"
   },
   {
     "setCode": "CG",
-    "name": "Crystal Guardians",
+    "nameFR": "",
+    "nameEN": "Crystal Guardians",
     "releaseDate": "30-08-2006"
   },
   {
     "setCode": "P4",
-    "name": "POP Series 4",
+    "nameFR": "",
+    "nameEN": "POP Series 4",
     "releaseDate": "01-08-2006"
   },
   {
     "setCode": "HP",
-    "name": "Holon Phantoms",
+    "nameFR": "",
+    "nameEN": "Holon Phantoms",
     "releaseDate": "03-05-2006"
   },
   {
     "setCode": "P3",
-    "name": "POP Series 3",
+    "nameFR": "",
+    "nameEN": "POP Series 3",
     "releaseDate": "01-04-2006"
   },
   {
     "setCode": "LM",
-    "name": "Legend Maker",
+    "nameFR": "",
+    "nameEN": "Legend Maker",
     "releaseDate": "13-02-2006"
   },
   {
     "setCode": "DS",
-    "name": "Delta Species",
+    "nameFR": "",
+    "nameEN": "Delta Species",
     "releaseDate": "31-10-2005"
   },
   {
     "setCode": "UF",
-    "name": "Unseen Forces",
+    "nameFR": "",
+    "nameEN": "Unseen Forces",
     "releaseDate": "22-08-2005"
   },
   {
     "setCode": "P2",
-    "name": "POP Series 2",
+    "nameFR": "",
+    "nameEN": "POP Series 2",
     "releaseDate": "01-08-2005"
   },
   {
     "setCode": "EM",
-    "name": "Emerald",
+    "nameFR": "",
+    "nameEN": "Emerald",
     "releaseDate": "09-05-2005"
   },
   {
     "setCode": "DX",
-    "name": "Deoxys",
+    "nameFR": "",
+    "nameEN": "Deoxys",
     "releaseDate": "14-02-2005"
   },
   {
     "setCode": "TRR",
-    "name": "Team Rocket Returns",
+    "nameFR": "",
+    "nameEN": "Team Rocket Returns",
     "releaseDate": "08-11-2004"
   },
   {
-    "setCode": "P1",
-    "name": "POP Series 1",
+    "setCode": "POP1",
+    "nameFR": "",
+    "nameEN": "POP Series 1",
     "releaseDate": "01-09-2004"
   },
   {
     "setCode": "RG",
-    "name": "FireRed & LeafGreen",
+    "nameFR": "",
+    "nameEN": "FireRed & LeafGreen",
     "releaseDate": "30-08-2004"
   },
   {
     "setCode": "HL",
-    "name": "Hidden Legends",
+    "nameFR": "",
+    "nameEN": "Hidden Legends",
     "releaseDate": "14-06-2004"
   },
   {
     "setCode": "MA",
-    "name": "Team Magma vs Team Aqua",
+    "nameFR": "",
+    "nameEN": "Team Magma vs Team Aqua",
     "releaseDate": "15-03-2004"
   },
   {
     "setCode": "DR",
-    "name": "Dragon",
+    "nameFR": "",
+    "nameEN": "Dragon",
     "releaseDate": "24-11-2003"
   },
   {
     "setCode": "SS",
-    "name": "Sandstorm",
+    "nameFR": "",
+    "nameEN": "Sandstorm",
     "releaseDate": "18-09-2003"
   },
   {
     "setCode": "RS",
-    "name": "Ruby & Sapphire",
+    "nameFR": "",
+    "nameEN": "Ruby & Sapphire",
     "releaseDate": "18-06-2003"
   },
   {
     "setCode": "NP",
-    "name": "Nintendo Promos",
+    "nameFR": "",
+    "nameEN": "Nintendo Promos",
     "releaseDate": ""
   },
   {
     "setCode": "E3",
-    "name": "Skyridge",
+    "nameFR": "",
+    "nameEN": "Skyridge",
     "releaseDate": "12-05-2003"
   },
   {
-    "setCode": "E2",
-    "name": "Aquapolis",
+    "setCode": "AQ",
+    "nameFR": "",
+    "nameEN": "Aquapolis",
     "releaseDate": "15-01-2003"
   },
   {
     "setCode": "BG",
-    "name": "Best of Game",
+    "nameFR": "",
+    "nameEN": "Best of Game",
     "releaseDate": "01-12-2002"
   },
   {
     "setCode": "E1",
-    "name": "Expedition",
+    "nameFR": "",
+    "nameEN": "Expedition",
     "releaseDate": "15-09-2002"
   },
   {
     "setCode": "LC",
-    "name": "Legendary Collection",
+    "nameFR": "",
+    "nameEN": "Legendary Collection",
     "releaseDate": "24-05-2002"
   },
   {
-    "setCode": "N4",
-    "name": "Neo Destiny",
+    "setCode": "NDE",
+    "nameFR": "",
+    "nameEN": "Neo Destiny",
     "releaseDate": "28-02-2002"
   },
   {
-    "setCode": "N3",
-    "name": "Neo Revelation",
+    "setCode": "NR",
+    "nameFR": "",
+    "nameEN": "Neo Revelation",
     "releaseDate": "21-09-2001"
   },
   {
     "setCode": "SI",
-    "name": "Southern Islands",
+    "nameFR": "",
+    "nameEN": "Southern Islands",
     "releaseDate": "31-07-2001"
   },
   {
-    "setCode": "N2",
-    "name": "Neo Discovery",
+    "setCode": "NDI",
+    "nameFR": "",
+    "nameEN": "Neo Discovery",
     "releaseDate": "01-06-2001"
   },
   {
-    "setCode": "N1",
-    "name": "Neo Genesis",
+    "setCode": "NG",
+    "nameFR": "",
+    "nameEN": "Neo Genesis",
     "releaseDate": "16-12-2000"
   },
   {
     "setCode": "G2",
-    "name": "Gym Challenge",
+    "nameFR": "",
+    "nameEN": "Gym Challenge",
     "releaseDate": "16-10-2000"
   },
   {
-    "setCode": "G1",
-    "name": "Gym Heroes",
+    "setCode": "GH",
+    "nameFR": "",
+    "nameEN": "Gym Heroes",
     "releaseDate": "14-08-2000"
   },
   {
     "setCode": "TR",
-    "name": "Team Rocket",
+    "nameFR": "",
+    "nameEN": "Team Rocket",
     "releaseDate": "24-04-2000"
   },
   {
     "setCode": "BS2",
-    "name": "Base Set 2",
+    "nameFR": "",
+    "nameEN": "Base Set 2",
     "releaseDate": "24-02-2000"
   },
   {
     "setCode": "FO",
-    "name": "Fossil",
+    "nameFR": "",
+    "nameEN": "Fossil",
     "releaseDate": "10-10-1999"
   },
   {
     "setCode": "JU",
-    "name": "Jungle",
+    "nameFR": "",
+    "nameEN": "Jungle",
     "releaseDate": "16-06-1999"
   },
   {
     "setCode": "BS",
-    "name": "Base Set",
+    "nameFR": "",
+    "nameEN": "Base Set",
     "releaseDate": "09-01-1999"
   },
   {
     "setCode": "WP",
-    "name": "WotC Promos",
+    "nameFR": "",
+    "nameEN": "WotC Promos",
     "releaseDate": ""
   }
 ]
