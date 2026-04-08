@@ -218,6 +218,7 @@ function renderSidebar() {
         ${games.map(g => `
           <div style="display:flex;align-items:center;">
             <div class="side-item" data-game="${esc(g)}" style="${sideItemStyle(state.selectedGame === g)}flex:1;cursor:pointer;">${esc(g)}</div>
+            <button class="ren-game-btn" data-game="${esc(g)}" style="background:transparent;border:none;color:${T.dim};cursor:pointer;padding:4px 4px;font-size:11px;font-family:${T.font};" title="Renommer">✏</button>
             ${games.length > 1 ? `<button class="del-game-btn" data-game="${esc(g)}" style="background:transparent;border:none;color:${T.red}88;cursor:pointer;padding:4px 6px;font-size:12px;font-family:${T.font};">✕</button>` : ""}
           </div>
         `).join("")}
@@ -619,6 +620,40 @@ function bindEvents() {
     };
   }
 
+  // Renommer jeu
+  document.querySelectorAll(".ren-game-btn").forEach(btn => {
+    btn.onclick = () => {
+      const oldName = btn.dataset.game;
+      const row = btn.closest("div");
+      row.innerHTML = `
+        <input id="rename-game-input" value="${esc(oldName)}" style="${inputStyle()}flex:1;padding:3px 6px;font-size:11px;">
+        <button id="confirm-rename-game" style="${btnStyle(true)}padding:3px 7px;">✓</button>
+      `;
+      row.style.display = "flex";
+      row.style.gap = "4px";
+      row.style.padding = "0 8px 4px";
+      const input = document.getElementById("rename-game-input");
+      input.focus();
+      input.select();
+      const confirm = async () => {
+        const newName = input.value.trim();
+        if (!newName || newName === oldName) { render(); return; }
+        if (state.db[newName]) { toast("Un jeu avec ce nom existe déjà"); return; }
+        await window.api.renameGame(oldName, newName);
+        state.db[newName] = state.db[oldName];
+        delete state.db[oldName];
+        state.selectedGame = newName;
+        render();
+        toast(`"${oldName}" → "${newName}"`);
+      };
+      document.getElementById("confirm-rename-game").onclick = confirm;
+      input.onkeydown = (e) => {
+        if (e.key === "Enter") confirm();
+        if (e.key === "Escape") render();
+      };
+    };
+  });
+
   // Import JSON
   const importBtn = document.getElementById("btn-import-json");
   if (importBtn) {
@@ -630,6 +665,25 @@ function bindEvents() {
       state.selectedGame = result.name;
       render();
       toast(`"${result.name}" importé`);
+    };
+  }
+
+  // Export jeu sélectionné
+  const exportGameBtn = document.getElementById("btn-export-game");
+  if (exportGameBtn) {
+    exportGameBtn.onclick = () => {
+      const name = state.selectedGame;
+      const sets = state.db[name] || [];
+      const blob = new Blob([JSON.stringify(sets, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      const now = new Date();
+      const date = now.toLocaleDateString("fr-FR").replace(/\//g, "-");
+      const time = now.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" }).replace(":", "h");
+      a.download = `${name}_${date}_${time}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+      toast(`"${name}" exporté ⬇`);
     };
   }
 

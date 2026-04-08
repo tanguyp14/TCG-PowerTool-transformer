@@ -1,9 +1,5 @@
 [
   {
-    "name": "Pokémon",
-    "file": "pokémon.json"
-  },
-  {
     "name": "One Piece",
     "file": "one-piece.json"
   },
@@ -12,11 +8,15 @@
     "file": "yu-gi-oh.json"
   },
   {
-    "name": "Lorcana",
-    "file": "lorcana.json"
-  },
-  {
     "name": "Riftbound",
     "file": "riftbound.json"
+  },
+  {
+    "name": "Pokémon",
+    "file": "pokémon.json"
+  },
+  {
+    "name": "Lorcana",
+    "file": "lorcana.json"
   }
 ]
