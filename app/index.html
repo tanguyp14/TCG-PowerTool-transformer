@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';">
+<title>CSV Powertool Transformer</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body, #root { height: 100%; }
+  body {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    background: #0e0e10; color: #e8e6e1;
+    -webkit-app-region: no-drag;
+    user-select: none;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #18181c; }
+  ::-webkit-scrollbar-thumb { background: #2e2e36; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #e85d26; }
+  select option { background: #222228; color: #e8e6e1; }
+  input, select, textarea, button { user-select: auto; }
+
+  /* Toast notification */
+  .toast {
+    position: fixed; bottom: 20px; right: 20px;
+    background: #222228; border: 1px solid #e85d26; color: #e8e6e1;
+    padding: 10px 18px; border-radius: 8px; font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0; transform: translateY(10px);
+    transition: all .3s ease;
+    pointer-events: none; z-index: 9999;
+  }
+  .toast.show { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

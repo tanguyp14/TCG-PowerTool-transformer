@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Pokémon",
+    "file": "pokemon.json"
+  },
+  {
+    "name": "One Piece",
+    "file": "one-piece.json"
+  },
+  {
+    "name": "Yu-Gi-Oh!",
+    "file": "yu-gi-oh.json"
+  },
+  {
+    "name": "Lorcana",
+    "file": "lorcana.json"
+  },
+  {
+    "name": "Riftbound",
+    "file": "riftbound.json"
+  }
+]

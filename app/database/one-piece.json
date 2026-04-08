@@ -1,0 +1,247 @@
+[
+  {
+    "setCode": "OP15",
+    "name": "Adventure on Kami's Island",
+    "releaseDate": "03-04-2026"
+  },
+  {
+    "setCode": "EB03",
+    "name": "One Piece Heroines Edition",
+    "releaseDate": "20-02-2026"
+  },
+  {
+    "setCode": "OP14",
+    "name": "The Azure Sea's Seven",
+    "releaseDate": "16-01-2026"
+  },
+  {
+    "setCode": "OP13",
+    "name": "Carrying on His Will",
+    "releaseDate": "07-11-2025"
+  },
+  {
+    "setCode": "PRB02",
+    "name": "One Piece Card The Best Vol.2",
+    "releaseDate": "03-10-2025"
+  },
+  {
+    "setCode": "OP12",
+    "name": "Legacy of the Master",
+    "releaseDate": "22-08-2025"
+  },
+  {
+    "setCode": "OP11",
+    "name": "A Fist of Divine Speed",
+    "releaseDate": "06-06-2025"
+  },
+  {
+    "setCode": "EB02",
+    "name": "Anime 25th Collection",
+    "releaseDate": "09-05-2025"
+  },
+  {
+    "setCode": "OP10",
+    "name": "Royal Blood",
+    "releaseDate": "21-03-2025"
+  },
+  {
+    "setCode": "OP09",
+    "name": "Emperors in the New World",
+    "releaseDate": "13-12-2024"
+  },
+  {
+    "setCode": "PRB01",
+    "name": "One Piece The Best",
+    "releaseDate": "08-11-2024"
+  },
+  {
+    "setCode": "OP08",
+    "name": "Two Legends",
+    "releaseDate": "13-09-2024"
+  },
+  {
+    "setCode": "OP07",
+    "name": "500 Years in the Future",
+    "releaseDate": "28-06-2024"
+  },
+  {
+    "setCode": "EB01",
+    "name": "Memorial Collection",
+    "releaseDate": "03-05-2024"
+  },
+  {
+    "setCode": "OP06",
+    "name": "Wings of the Captain",
+    "releaseDate": "15-03-2024"
+  },
+  {
+    "setCode": "OP05",
+    "name": "Awakening of the New Era",
+    "releaseDate": "08-12-2023"
+  },
+  {
+    "setCode": "OP04",
+    "name": "Kingdoms of Intrigue",
+    "releaseDate": "22-09-2023"
+  },
+  {
+    "setCode": "OP03",
+    "name": "Pillars of Strength",
+    "releaseDate": "30-06-2023"
+  },
+  {
+    "setCode": "OP02",
+    "name": "Paramount War",
+    "releaseDate": "10-03-2023"
+  },
+  {
+    "setCode": "OP01",
+    "name": "Romance Dawn",
+    "releaseDate": "02-12-2022"
+  },
+  {
+    "setCode": "ST29",
+    "name": "Egghead",
+    "releaseDate": "16-01-2026"
+  },
+  {
+    "setCode": "ST22",
+    "name": "Ace & Newgate",
+    "releaseDate": "05-09-2025"
+  },
+  {
+    "setCode": "ST28",
+    "name": "GREEN/YELLOW Yamato",
+    "releaseDate": "06-06-2025"
+  },
+  {
+    "setCode": "ST27",
+    "name": "BLACK Marshall.D.Teach",
+    "releaseDate": "06-06-2025"
+  },
+  {
+    "setCode": "ST26",
+    "name": "PURPLE/BLACK Monkey.D.Luffy",
+    "releaseDate": "06-06-2025"
+  },
+  {
+    "setCode": "ST25",
+    "name": "BLUE Buggy",
+    "releaseDate": "06-06-2025"
+  },
+  {
+    "setCode": "ST24",
+    "name": "GREEN Jewelry Bonney",
+    "releaseDate": "06-06-2025"
+  },
+  {
+    "setCode": "ST23",
+    "name": "RED Shanks",
+    "releaseDate": "06-06-2025"
+  },
+  {
+    "setCode": "ST21",
+    "name": "EX Gear 5",
+    "releaseDate": "14-03-2025"
+  },
+  {
+    "setCode": "ST20",
+    "name": "YELLOW Charlotte Katakuri",
+    "releaseDate": "25-10-2024"
+  },
+  {
+    "setCode": "ST19",
+    "name": "BLACK Smoker",
+    "releaseDate": "25-10-2024"
+  },
+  {
+    "setCode": "ST18",
+    "name": "PURPLE Monkey.D.Luffy",
+    "releaseDate": "25-10-2024"
+  },
+  {
+    "setCode": "ST17",
+    "name": "BLUE Donquixote Doflamingo",
+    "releaseDate": "25-10-2024"
+  },
+  {
+    "setCode": "ST16",
+    "name": "GREEN Uta",
+    "releaseDate": "25-10-2024"
+  },
+  {
+    "setCode": "ST15",
+    "name": "RED Edward.Newgate",
+    "releaseDate": "25-10-2024"
+  },
+  {
+    "setCode": "ST14",
+    "name": "3D2Y",
+    "releaseDate": "16-08-2024"
+  },
+  {
+    "setCode": "ST13",
+    "name": "Ultra Deck: The Three Brothers",
+    "releaseDate": "19-04-2024"
+  },
+  {
+    "setCode": "ST12",
+    "name": "Zoro & Sanji",
+    "releaseDate": "15-03-2024"
+  },
+  {
+    "setCode": "ST11",
+    "name": "Uta",
+    "releaseDate": "02-02-2024"
+  },
+  {
+    "setCode": "ST10",
+    "name": "Ultra Deck: The Three Captains",
+    "releaseDate": "10-11-2023"
+  },
+  {
+    "setCode": "ST09",
+    "name": "Yamato",
+    "releaseDate": "11-08-2023"
+  },
+  {
+    "setCode": "ST08",
+    "name": "Monkey D. Luffy",
+    "releaseDate": "11-08-2023"
+  },
+  {
+    "setCode": "ST07",
+    "name": "Big Mom Pirates",
+    "releaseDate": "30-06-2023"
+  },
+  {
+    "setCode": "ST06",
+    "name": "Absolute Justice",
+    "releaseDate": "10-03-2023"
+  },
+  {
+    "setCode": "ST05",
+    "name": "ONE PIECE FILM edition",
+    "releaseDate": "03-02-2023"
+  },
+  {
+    "setCode": "ST04",
+    "name": "Animal Kingdom Pirates",
+    "releaseDate": "02-12-2022"
+  },
+  {
+    "setCode": "ST03",
+    "name": "The Seven Warlords of the Sea",
+    "releaseDate": "02-12-2022"
+  },
+  {
+    "setCode": "ST02",
+    "name": "Worst Generation",
+    "releaseDate": "02-12-2022"
+  },
+  {
+    "setCode": "ST01",
+    "name": "Straw Hat Crew",
+    "releaseDate": "02-12-2022"
+  }
+]

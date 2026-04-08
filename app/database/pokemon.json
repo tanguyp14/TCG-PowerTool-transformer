@@ -1,0 +1,757 @@
+[
+  {
+    "setCode": "POR",
+    "name": "Perfect Order",
+    "releaseDate": "27-03-2026"
+  },
+  {
+    "setCode": "ASC",
+    "name": "Ascended Heroes",
+    "releaseDate": "30-01-2026"
+  },
+  {
+    "setCode": "PFL",
+    "name": "Phantasmal Flames",
+    "releaseDate": "14-11-2025"
+  },
+  {
+    "setCode": "MEG",
+    "name": "Mega Evolution",
+    "releaseDate": "26-09-2025"
+  },
+  {
+    "setCode": "MEE",
+    "name": "Mega Evolution Energy",
+    "releaseDate": "25-09-2025"
+  },
+  {
+    "setCode": "MEP",
+    "name": "Mega Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLK",
+    "name": "Black Bolt",
+    "releaseDate": "18-07-2025"
+  },
+  {
+    "setCode": "WHT",
+    "name": "White Flare",
+    "releaseDate": "18-07-2025"
+  },
+  {
+    "setCode": "DRI",
+    "name": "Destined Rivals",
+    "releaseDate": "30-05-2025"
+  },
+  {
+    "setCode": "JTG",
+    "name": "Journey Together",
+    "releaseDate": "28-03-2025"
+  },
+  {
+    "setCode": "PRE",
+    "name": "Prismatic Evolutions",
+    "releaseDate": "17-01-2025"
+  },
+  {
+    "setCode": "SSP",
+    "name": "Surging Sparks",
+    "releaseDate": "08-11-2024"
+  },
+  {
+    "setCode": "SCR",
+    "name": "Stellar Crown",
+    "releaseDate": "13-09-2024"
+  },
+  {
+    "setCode": "SFA",
+    "name": "Shrouded Fable",
+    "releaseDate": "02-08-2024"
+  },
+  {
+    "setCode": "TWM",
+    "name": "Twilight Masquerade",
+    "releaseDate": "24-05-2024"
+  },
+  {
+    "setCode": "TEF",
+    "name": "Temporal Forces",
+    "releaseDate": "22-03-2024"
+  },
+  {
+    "setCode": "PAF",
+    "name": "Paldean Fates",
+    "releaseDate": "26-01-2024"
+  },
+  {
+    "setCode": "PAR",
+    "name": "Paradox Rift",
+    "releaseDate": "03-11-2023"
+  },
+  {
+    "setCode": "MEW",
+    "name": "Pokémon 151",
+    "releaseDate": "22-09-2023"
+  },
+  {
+    "setCode": "OBF",
+    "name": "Obsidian Flames",
+    "releaseDate": "11-08-2023"
+  },
+  {
+    "setCode": "PAL",
+    "name": "Paldea Evolved",
+    "releaseDate": "09-06-2023"
+  },
+  {
+    "setCode": "SVI",
+    "name": "Scarlet & Violet",
+    "releaseDate": "31-03-2023"
+  },
+  {
+    "setCode": "SVE",
+    "name": "Scarlet & Violet Energy",
+    "releaseDate": "30-03-2023"
+  },
+  {
+    "setCode": "SVP",
+    "name": "Scarlet & Violet Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CRZ",
+    "name": "Crown Zenith",
+    "releaseDate": "20-01-2023"
+  },
+  {
+    "setCode": "SIT",
+    "name": "Silver Tempest",
+    "releaseDate": "11-11-2022"
+  },
+  {
+    "setCode": "LOR",
+    "name": "Lost Origin",
+    "releaseDate": "09-09-2022"
+  },
+  {
+    "setCode": "PGO",
+    "name": "Pokémon GO",
+    "releaseDate": "01-07-2022"
+  },
+  {
+    "setCode": "ASR",
+    "name": "Astral Radiance",
+    "releaseDate": "27-05-2022"
+  },
+  {
+    "setCode": "BRS",
+    "name": "Brilliant Stars",
+    "releaseDate": "25-02-2022"
+  },
+  {
+    "setCode": "FST",
+    "name": "Fusion Strike",
+    "releaseDate": "12-11-2021"
+  },
+  {
+    "setCode": "CEL",
+    "name": "Celebrations",
+    "releaseDate": "08-10-2021"
+  },
+  {
+    "setCode": "EVS",
+    "name": "Evolving Skies",
+    "releaseDate": "27-08-2021"
+  },
+  {
+    "setCode": "CRE",
+    "name": "Chilling Reign",
+    "releaseDate": "18-06-2021"
+  },
+  {
+    "setCode": "BST",
+    "name": "Battle Styles",
+    "releaseDate": "19-03-2021"
+  },
+  {
+    "setCode": "SHF",
+    "name": "Shining Fates",
+    "releaseDate": "19-02-2021"
+  },
+  {
+    "setCode": "VIV",
+    "name": "Vivid Voltage",
+    "releaseDate": "13-11-2020"
+  },
+  {
+    "setCode": "CPA",
+    "name": "Champion's Path",
+    "releaseDate": "25-09-2020"
+  },
+  {
+    "setCode": "DAA",
+    "name": "Darkness Ablaze",
+    "releaseDate": "14-08-2020"
+  },
+  {
+    "setCode": "RCL",
+    "name": "Rebel Clash",
+    "releaseDate": "01-05-2020"
+  },
+  {
+    "setCode": "SSH",
+    "name": "Sword & Shield",
+    "releaseDate": "07-02-2020"
+  },
+  {
+    "setCode": "SP",
+    "name": "Sword & Shield Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CEC",
+    "name": "Cosmic Eclipse",
+    "releaseDate": "01-11-2019"
+  },
+  {
+    "setCode": "HIF",
+    "name": "Hidden Fates",
+    "releaseDate": "23-08-2019"
+  },
+  {
+    "setCode": "UNM",
+    "name": "Unified Minds",
+    "releaseDate": "02-08-2019"
+  },
+  {
+    "setCode": "UNB",
+    "name": "Unbroken Bonds",
+    "releaseDate": "03-05-2019"
+  },
+  {
+    "setCode": "DET",
+    "name": "Detective Pikachu",
+    "releaseDate": "29-03-2019"
+  },
+  {
+    "setCode": "TEU",
+    "name": "Team Up",
+    "releaseDate": "01-02-2019"
+  },
+  {
+    "setCode": "LOT",
+    "name": "Lost Thunder",
+    "releaseDate": "02-11-2018"
+  },
+  {
+    "setCode": "DRM",
+    "name": "Dragon Majesty",
+    "releaseDate": "07-09-2018"
+  },
+  {
+    "setCode": "CES",
+    "name": "Celestial Storm",
+    "releaseDate": "03-08-2018"
+  },
+  {
+    "setCode": "FLI",
+    "name": "Forbidden Light",
+    "releaseDate": "04-05-2018"
+  },
+  {
+    "setCode": "UPR",
+    "name": "Ultra Prism",
+    "releaseDate": "02-02-2018"
+  },
+  {
+    "setCode": "CIN",
+    "name": "Crimson Invasion",
+    "releaseDate": "03-11-2017"
+  },
+  {
+    "setCode": "SLG",
+    "name": "Shining Legends",
+    "releaseDate": "06-10-2017"
+  },
+  {
+    "setCode": "BUS",
+    "name": "Burning Shadows",
+    "releaseDate": "04-08-2017"
+  },
+  {
+    "setCode": "GRI",
+    "name": "Guardians Rising",
+    "releaseDate": "05-05-2017"
+  },
+  {
+    "setCode": "SUM",
+    "name": "Sun & Moon",
+    "releaseDate": "03-02-2017"
+  },
+  {
+    "setCode": "SMP",
+    "name": "Sun & Moon Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "EVO",
+    "name": "Evolutions",
+    "releaseDate": "02-11-2016"
+  },
+  {
+    "setCode": "STS",
+    "name": "Steam Siege",
+    "releaseDate": "03-08-2016"
+  },
+  {
+    "setCode": "FCO",
+    "name": "Fates Collide",
+    "releaseDate": "02-05-2016"
+  },
+  {
+    "setCode": "GEN",
+    "name": "Generations",
+    "releaseDate": "22-02-2016"
+  },
+  {
+    "setCode": "BKP",
+    "name": "BREAKpoint",
+    "releaseDate": "03-02-2016"
+  },
+  {
+    "setCode": "BKT",
+    "name": "BREAKthrough",
+    "releaseDate": "04-11-2015"
+  },
+  {
+    "setCode": "AOR",
+    "name": "Ancient Origins",
+    "releaseDate": "12-08-2015"
+  },
+  {
+    "setCode": "ROS",
+    "name": "Roaring Skies",
+    "releaseDate": "06-05-2015"
+  },
+  {
+    "setCode": "DCR",
+    "name": "Double Crisis",
+    "releaseDate": "25-03-2015"
+  },
+  {
+    "setCode": "PRC",
+    "name": "Primal Clash",
+    "releaseDate": "04-02-2015"
+  },
+  {
+    "setCode": "PHF",
+    "name": "Phantom Forces",
+    "releaseDate": "05-11-2014"
+  },
+  {
+    "setCode": "FFI",
+    "name": "Furious Fists",
+    "releaseDate": "13-08-2014"
+  },
+  {
+    "setCode": "FLF",
+    "name": "Flashfire",
+    "releaseDate": "07-05-2014"
+  },
+  {
+    "setCode": "XY",
+    "name": "XY",
+    "releaseDate": "05-02-2014"
+  },
+  {
+    "setCode": "KSS",
+    "name": "Kalos Starter Set",
+    "releaseDate": "08-11-2013"
+  },
+  {
+    "setCode": "XYP",
+    "name": "XY Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LTR",
+    "name": "Legendary Treasures",
+    "releaseDate": "06-11-2013"
+  },
+  {
+    "setCode": "PLB",
+    "name": "Plasma Blast",
+    "releaseDate": "14-08-2013"
+  },
+  {
+    "setCode": "PLF",
+    "name": "Plasma Freeze",
+    "releaseDate": "08-05-2013"
+  },
+  {
+    "setCode": "PLS",
+    "name": "Plasma Storm",
+    "releaseDate": "06-02-2013"
+  },
+  {
+    "setCode": "BCR",
+    "name": "Boundaries Crossed",
+    "releaseDate": "07-11-2012"
+  },
+  {
+    "setCode": "DRV",
+    "name": "Dragon Vault",
+    "releaseDate": "05-10-2012"
+  },
+  {
+    "setCode": "DRX",
+    "name": "Dragons Exalted",
+    "releaseDate": "15-08-2012"
+  },
+  {
+    "setCode": "DEX",
+    "name": "Dark Explorers",
+    "releaseDate": "09-05-2012"
+  },
+  {
+    "setCode": "NXD",
+    "name": "Next Destinies",
+    "releaseDate": "08-02-2012"
+  },
+  {
+    "setCode": "NVI",
+    "name": "Noble Victories",
+    "releaseDate": "16-11-2011"
+  },
+  {
+    "setCode": "EPO",
+    "name": "Emerging Powers",
+    "releaseDate": "31-08-2011"
+  },
+  {
+    "setCode": "BLW",
+    "name": "Black & White",
+    "releaseDate": "25-04-2011"
+  },
+  {
+    "setCode": "BWP",
+    "name": "Black & White Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CL",
+    "name": "Call of Legends",
+    "releaseDate": "09-02-2011"
+  },
+  {
+    "setCode": "TM",
+    "name": "Triumphant",
+    "releaseDate": "03-11-2010"
+  },
+  {
+    "setCode": "UD",
+    "name": "Undaunted",
+    "releaseDate": "18-08-2010"
+  },
+  {
+    "setCode": "UL",
+    "name": "Unleashed",
+    "releaseDate": "12-05-2010"
+  },
+  {
+    "setCode": "HS",
+    "name": "HeartGold & SoulSilver",
+    "releaseDate": "10-02-2010"
+  },
+  {
+    "setCode": "HSP",
+    "name": "HeartGold & SoulSilver Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RM",
+    "name": "Pokémon Rumble",
+    "releaseDate": "02-12-2009"
+  },
+  {
+    "setCode": "AR",
+    "name": "Arceus",
+    "releaseDate": "04-11-2009"
+  },
+  {
+    "setCode": "SV",
+    "name": "Supreme Victors",
+    "releaseDate": "19-08-2009"
+  },
+  {
+    "setCode": "RR",
+    "name": "Rising Rivals",
+    "releaseDate": "20-05-2009"
+  },
+  {
+    "setCode": "P9",
+    "name": "POP Series 9",
+    "releaseDate": "01-03-2009"
+  },
+  {
+    "setCode": "PL",
+    "name": "Platinum",
+    "releaseDate": "11-02-2009"
+  },
+  {
+    "setCode": "SF",
+    "name": "Stormfront",
+    "releaseDate": "05-11-2008"
+  },
+  {
+    "setCode": "P8",
+    "name": "POP Series 8",
+    "releaseDate": "01-09-2008"
+  },
+  {
+    "setCode": "LA",
+    "name": "Legends Awakened",
+    "releaseDate": "20-08-2008"
+  },
+  {
+    "setCode": "MD",
+    "name": "Majestic Dawn",
+    "releaseDate": "21-05-2008"
+  },
+  {
+    "setCode": "P7",
+    "name": "POP Series 7",
+    "releaseDate": "01-03-2008"
+  },
+  {
+    "setCode": "GE",
+    "name": "Great Encounters",
+    "releaseDate": "13-02-2008"
+  },
+  {
+    "setCode": "SW",
+    "name": "Secret Wonders",
+    "releaseDate": "07-11-2007"
+  },
+  {
+    "setCode": "P6",
+    "name": "POP Series 6",
+    "releaseDate": "01-09-2007"
+  },
+  {
+    "setCode": "MT",
+    "name": "Mysterious Treasures",
+    "releaseDate": "22-08-2007"
+  },
+  {
+    "setCode": "DP",
+    "name": "Diamond & Pearl",
+    "releaseDate": "23-05-2007"
+  },
+  {
+    "setCode": "DPP",
+    "name": "Diamond & Pearl Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "P5",
+    "name": "POP Series 5",
+    "releaseDate": "01-03-2007"
+  },
+  {
+    "setCode": "PK",
+    "name": "Power Keepers",
+    "releaseDate": "14-02-2007"
+  },
+  {
+    "setCode": "DF",
+    "name": "Dragon Frontiers",
+    "releaseDate": "08-11-2006"
+  },
+  {
+    "setCode": "CG",
+    "name": "Crystal Guardians",
+    "releaseDate": "30-08-2006"
+  },
+  {
+    "setCode": "P4",
+    "name": "POP Series 4",
+    "releaseDate": "01-08-2006"
+  },
+  {
+    "setCode": "HP",
+    "name": "Holon Phantoms",
+    "releaseDate": "03-05-2006"
+  },
+  {
+    "setCode": "P3",
+    "name": "POP Series 3",
+    "releaseDate": "01-04-2006"
+  },
+  {
+    "setCode": "LM",
+    "name": "Legend Maker",
+    "releaseDate": "13-02-2006"
+  },
+  {
+    "setCode": "DS",
+    "name": "Delta Species",
+    "releaseDate": "31-10-2005"
+  },
+  {
+    "setCode": "UF",
+    "name": "Unseen Forces",
+    "releaseDate": "22-08-2005"
+  },
+  {
+    "setCode": "P2",
+    "name": "POP Series 2",
+    "releaseDate": "01-08-2005"
+  },
+  {
+    "setCode": "EM",
+    "name": "Emerald",
+    "releaseDate": "09-05-2005"
+  },
+  {
+    "setCode": "DX",
+    "name": "Deoxys",
+    "releaseDate": "14-02-2005"
+  },
+  {
+    "setCode": "TRR",
+    "name": "Team Rocket Returns",
+    "releaseDate": "08-11-2004"
+  },
+  {
+    "setCode": "P1",
+    "name": "POP Series 1",
+    "releaseDate": "01-09-2004"
+  },
+  {
+    "setCode": "RG",
+    "name": "FireRed & LeafGreen",
+    "releaseDate": "30-08-2004"
+  },
+  {
+    "setCode": "HL",
+    "name": "Hidden Legends",
+    "releaseDate": "14-06-2004"
+  },
+  {
+    "setCode": "MA",
+    "name": "Team Magma vs Team Aqua",
+    "releaseDate": "15-03-2004"
+  },
+  {
+    "setCode": "DR",
+    "name": "Dragon",
+    "releaseDate": "24-11-2003"
+  },
+  {
+    "setCode": "SS",
+    "name": "Sandstorm",
+    "releaseDate": "18-09-2003"
+  },
+  {
+    "setCode": "RS",
+    "name": "Ruby & Sapphire",
+    "releaseDate": "18-06-2003"
+  },
+  {
+    "setCode": "NP",
+    "name": "Nintendo Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "E3",
+    "name": "Skyridge",
+    "releaseDate": "12-05-2003"
+  },
+  {
+    "setCode": "E2",
+    "name": "Aquapolis",
+    "releaseDate": "15-01-2003"
+  },
+  {
+    "setCode": "BG",
+    "name": "Best of Game",
+    "releaseDate": "01-12-2002"
+  },
+  {
+    "setCode": "E1",
+    "name": "Expedition",
+    "releaseDate": "15-09-2002"
+  },
+  {
+    "setCode": "LC",
+    "name": "Legendary Collection",
+    "releaseDate": "24-05-2002"
+  },
+  {
+    "setCode": "N4",
+    "name": "Neo Destiny",
+    "releaseDate": "28-02-2002"
+  },
+  {
+    "setCode": "N3",
+    "name": "Neo Revelation",
+    "releaseDate": "21-09-2001"
+  },
+  {
+    "setCode": "SI",
+    "name": "Southern Islands",
+    "releaseDate": "31-07-2001"
+  },
+  {
+    "setCode": "N2",
+    "name": "Neo Discovery",
+    "releaseDate": "01-06-2001"
+  },
+  {
+    "setCode": "N1",
+    "name": "Neo Genesis",
+    "releaseDate": "16-12-2000"
+  },
+  {
+    "setCode": "G2",
+    "name": "Gym Challenge",
+    "releaseDate": "16-10-2000"
+  },
+  {
+    "setCode": "G1",
+    "name": "Gym Heroes",
+    "releaseDate": "14-08-2000"
+  },
+  {
+    "setCode": "TR",
+    "name": "Team Rocket",
+    "releaseDate": "24-04-2000"
+  },
+  {
+    "setCode": "BS2",
+    "name": "Base Set 2",
+    "releaseDate": "24-02-2000"
+  },
+  {
+    "setCode": "FO",
+    "name": "Fossil",
+    "releaseDate": "10-10-1999"
+  },
+  {
+    "setCode": "JU",
+    "name": "Jungle",
+    "releaseDate": "16-06-1999"
+  },
+  {
+    "setCode": "BS",
+    "name": "Base Set",
+    "releaseDate": "09-01-1999"
+  },
+  {
+    "setCode": "WP",
+    "name": "WotC Promos",
+    "releaseDate": ""
+  }
+]
