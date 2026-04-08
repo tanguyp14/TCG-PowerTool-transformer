@@ -24,7 +24,7 @@ let state = {
   tab: "db", // "db" | "csv"
   editingRow: null,
   searchDB: "",
-  csv: { headers: [], rows: [], processed: null, missingSets: [], codeMismatches: [], nameMismatches: [] },
+  csv: { headers: [], rows: [], processed: null, missingSets: [], codeMismatches: [], nameMismatches: [], noDateSets: [] },
   colMap: { price: "price", comment: "comment", location: "location", setCode: "setCode", cn: "cn", setName: "" },
   outputFormat: "{setCode} - {MM-YYYY}",
   fillLocation: false,
@@ -46,19 +46,29 @@ function normEntry(s) {
 }
 
 function roundToHalf(p, t = state.roundThreshold) {
-  const lower = Math.floor(p / 0.5) * 0.5;
-  return (p - lower) >= 0.5 * t ? lower + 0.5 : lower;
+  const base = Math.floor(p);
+  const dec  = p - base;
+  let result;
+  if (dec >= t)       result = base + 1;    // 0.75 → 1.00
+  else if (dec >= 1 - t) result = base + 0.5; // 0.30 → 0.50
+  else                result = base;         // 0.10 → 0.00
+  return Math.max(result, p > 0 ? 0.5 : 0); // minimum 0.50 si prix > 0
 }
 
+const DATE_PLACEHOLDER = "DATE_NON_DEFINI";
+const DATE_TOKENS = /\{DD-MM-YYYY\}|\{MM-YYYY\}|\{YYYY-MM-DD\}|\{DD\/MM\/YYYY\}|\{YYYY\}|\{MM\}|\{DD\}/g;
+
 function formatOutput(template, setCode, cn, releaseDate, nameFR, nameEN) {
-  const parts = releaseDate.split("-");
-  const dd = parts[0] || "", mm = parts[1] || "", yyyy = parts[2] || "";
-  return template
+  const base = template
     .replace(/\{setCode\}/g, setCode)
     .replace(/\{cn\}/g, cn)
     .replace(/\{setName\}/g, nameFR || nameEN || "")
     .replace(/\{nameFR\}/g, nameFR || "")
-    .replace(/\{nameEN\}/g, nameEN || "")
+    .replace(/\{nameEN\}/g, nameEN || "");
+  if (!releaseDate) return base.replace(DATE_TOKENS, DATE_PLACEHOLDER);
+  const parts = releaseDate.split("-");
+  const dd = parts[0] || "", mm = parts[1] || "", yyyy = parts[2] || "";
+  return base
     .replace(/\{DD-MM-YYYY\}/g, `${dd}-${mm}-${yyyy}`)
     .replace(/\{MM-YYYY\}/g, `${mm}-${yyyy}`)
     .replace(/\{YYYY-MM-DD\}/g, `${yyyy}-${mm}-${dd}`)
@@ -68,22 +78,37 @@ function formatOutput(template, setCode, cn, releaseDate, nameFR, nameEN) {
     .replace(/\{DD\}/g, dd);
 }
 
+function detectDelimiter(firstLine) {
+  // Compte les délimiteurs hors guillemets sur la première ligne
+  let commas = 0, semis = 0, inQ = false;
+  for (let i = 0; i < firstLine.length; i++) {
+    const c = firstLine[i];
+    if (c === '"') { if (inQ && firstLine[i + 1] === '"') i++; else inQ = !inQ; }
+    else if (!inQ) { if (c === ',') commas++; else if (c === ';') semis++; }
+  }
+  return semis > commas ? ';' : ',';
+}
+
 function parseCSV(text) {
+  // Découpe en lignes en respectant les champs quotés — les guillemets sont CONSERVÉS
   const lines = []; let cur = "", inQ = false;
   for (let i = 0; i < text.length; i++) {
     const c = text[i];
-    if (c === '"') { if (inQ && text[i + 1] === '"') { cur += '"'; i++; } else inQ = !inQ; }
-    else if (c === "\n" && !inQ) { lines.push(cur); cur = ""; }
+    if (c === '"') {
+      if (inQ && text[i + 1] === '"') { cur += '""'; i++; } // guillemet échappé ""
+      else { inQ = !inQ; cur += c; }                         // guillemet ouvrant/fermant
+    } else if (c === "\n" && !inQ) { lines.push(cur); cur = ""; }
     else if (c === "\r" && !inQ) { }
     else cur += c;
   }
   if (cur) lines.push(cur);
+  const delim = detectDelimiter((lines[0] || "").replace(/^\uFEFF/, ""));
   return lines.map(line => {
     const f = []; let fd = "", q = false;
     for (let i = 0; i < line.length; i++) {
       const c = line[i];
       if (c === '"') { if (q && line[i + 1] === '"') { fd += '"'; i++; } else q = !q; }
-      else if (c === "," && !q) { f.push(fd); fd = ""; }
+      else if (c === delim && !q) { f.push(fd); fd = ""; }
       else fd += c;
     }
     f.push(fd); return f;
@@ -114,11 +139,11 @@ const ROW_H = 29;      // hauteur fixe par ligne (px)
 const TABLE_VH = 400;  // hauteur visible du conteneur (px)
 const V_BUFFER = 30;   // lignes tampon au-dessus/en-dessous
 
-let _tableCache = null; // { data, headers, missingCodes, si }
+let _tableCache = null; // { data, headers, missingCodes, noDateCodes, si }
 
 function renderTableRows(scrollTop) {
   if (!_tableCache) return "";
-  const { data, headers, missingCodes, si } = _tableCache;
+  const { data, headers, missingCodes, noDateCodes, si } = _tableCache;
   const total = data.length;
   const processed = state.csv.processed !== null;
   const start = Math.max(0, Math.floor(scrollTop / ROW_H) - V_BUFFER);
@@ -128,12 +153,13 @@ function renderTableRows(scrollTop) {
   const cols = headers.length;
 
   return `
-    ${padTop > 0 ? `<tr><td colspan="${cols}" style="height:${padTop}px;padding:0;border:none;"></td></tr>` : ""}
+    ${padTop > 0 ? `<tr style="height:${padTop}px;">${Array(cols).fill(`<td style="padding:0;border:none;"></td>`).join("")}</tr>` : ""}
     ${data.slice(start, end).map((r, i) => {
       const ri = start + i;
       const isMissing = processed && si >= 0 && missingCodes.has(r[si]);
-      const bg = isMissing ? "#e8545418" : (ri % 2 ? T.surface2 + "44" : "transparent");
-      const bord = isMissing ? `border-left:2px solid ${T.red};` : "";
+      const isNoDate  = processed && si >= 0 && noDateCodes.has(r[si]);
+      const bg = isMissing ? "#e8545418" : isNoDate ? "#facc1510" : (ri % 2 ? T.surface2 + "44" : "transparent");
+      const bord = isMissing ? `border-left:2px solid ${T.red};` : isNoDate ? `border-left:2px solid #facc15;` : "";
       return `<tr style="height:${ROW_H}px;background:${bg};${bord}">
         ${r.map((c, ci) => {
           const isP = headers[ci] === state.colMap.price && processed;
@@ -144,7 +170,7 @@ function renderTableRows(scrollTop) {
         }).join("")}
       </tr>`;
     }).join("")}
-    ${padBot > 0 ? `<tr><td colspan="${cols}" style="height:${padBot}px;padding:0;border:none;"></td></tr>` : ""}
+    ${padBot > 0 ? `<tr style="height:${padBot}px;">${Array(cols).fill(`<td style="padding:0;border:none;"></td>`).join("")}</tr>` : ""}
   `;
 }
 
@@ -186,19 +212,34 @@ function renderHeader() {
 function renderSidebar() {
   const games = Object.keys(state.db);
   return `
-    <div style="width:220px;background:${T.surface};border-right:1px solid ${T.brd};padding:12px 0;overflow-y:auto;flex-shrink:0;">
-      <div style="padding:4px 20px 12px;font-size:10px;font-weight:700;color:${T.dim};text-transform:uppercase;letter-spacing:1px;">Jeux</div>
-      ${games.map(g => `
-        <div style="display:flex;align-items:center;">
-          <div class="side-item" data-game="${esc(g)}" style="${sideItemStyle(state.selectedGame === g)}flex:1;cursor:pointer;">${esc(g)}</div>
-          ${games.length > 1 ? `<button class="del-game-btn" data-game="${esc(g)}" style="background:transparent;border:none;color:${T.red}88;cursor:pointer;padding:4px 8px;font-size:12px;font-family:${T.font};">✕</button>` : ""}
+    <div style="width:220px;background:${T.surface};border-right:1px solid ${T.brd};flex-shrink:0;display:flex;flex-direction:column;">
+      <div style="flex:1;overflow-y:auto;padding:12px 0;">
+        <div style="padding:4px 20px 12px;font-size:10px;font-weight:700;color:${T.dim};text-transform:uppercase;letter-spacing:1px;">Jeux</div>
+        ${games.map(g => `
+          <div style="display:flex;align-items:center;">
+            <div class="side-item" data-game="${esc(g)}" style="${sideItemStyle(state.selectedGame === g)}flex:1;cursor:pointer;">${esc(g)}</div>
+            ${games.length > 1 ? `<button class="del-game-btn" data-game="${esc(g)}" style="background:transparent;border:none;color:${T.red}88;cursor:pointer;padding:4px 6px;font-size:12px;font-family:${T.font};">✕</button>` : ""}
+          </div>
+        `).join("")}
+        <div style="padding:8px 16px;display:flex;flex-direction:column;gap:6px;">
+          <div id="new-game-area">
+            <button id="btn-new-game" style="${btnStyle(false)}width:100%;">+ Nouveau jeu</button>
+          </div>
+          <div style="height:1px;background:${T.brd};margin:4px 0;"></div>
+          ${state.selectedGame ? `<button id="btn-export-game" style="${btnStyle(false)}width:100%;font-size:10px;">⬇ Exporter "${esc(state.selectedGame)}"</button>` : ""}
+          <button id="btn-import-json" style="${btnStyle(false)}width:100%;font-size:10px;">📂 Importer un jeu</button>
+          <div style="height:1px;background:${T.brd};margin:4px 0;"></div>
+          <button id="btn-export-all" style="${btnStyle(false)}width:100%;font-size:10px;">⬇ Exporter tous les jeux</button>
+          <button id="btn-import-bundle" style="${btnStyle(false)}width:100%;font-size:10px;">📦 Importer tous les jeux</button>
+          <input type="file" id="bundle-file-input" accept=".json" style="display:none;">
         </div>
-      `).join("")}
-      <div style="padding:8px 16px;display:flex;flex-direction:column;gap:6px;">
-        <div id="new-game-area">
-          <button id="btn-new-game" style="${btnStyle(false)}width:100%;">+ Nouveau jeu</button>
-        </div>
-        <button id="btn-import-json" style="${btnStyle(false)}width:100%;font-size:10px;">📂 Importer .json</button>
+      </div>
+
+      <div style="border-top:1px solid ${T.brd};padding:14px 16px;">
+        <img src="./logo.png" alt="logo" style="width:64px;opacity:0.85;margin-bottom:10px;display:block;">
+        <div style="font-size:10px;color:${T.dim};font-style:italic;margin-bottom:8px;">Besoin d'aide ? Un ajout ?</div>
+        <a href="mailto:tanguy@le-tengu.fr" style="display:block;font-size:10px;color:${T.accent};text-decoration:none;margin-bottom:3px;">tanguy@le-tengu.fr</a>
+        <div style="font-size:10px;color:${T.dim};">06 72 10 39 93</div>
       </div>
     </div>
   `;
@@ -326,7 +367,43 @@ function renderCSV() {
           </label>
           <div style="display:flex;align-items:center;gap:8px;">
             <label style="font-size:11px;color:${T.dim};font-weight:600;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Seuil arrondi</label>
-            <input id="round-threshold" type="number" min="0.01" max="1" step="0.05" value="${state.roundThreshold}" style="${inputStyle()}width:70px;padding:6px 8px;" title="Fraction du pas 0.50 déclenchant l'arrondi supérieur (ex: 0.75 → arrondit à partir de x.375)">
+            <input id="round-threshold" type="number" min="0.01" max="0.99" step="0.05" value="${state.roundThreshold}" style="${inputStyle()}width:70px;padding:6px 8px;">
+            <div style="position:relative;display:inline-block;">
+              <div id="threshold-info-btn" style="width:18px;height:18px;border-radius:50%;background:${T.surface2};border:1px solid ${T.brd};color:${T.dim};font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:default;user-select:none;">?</div>
+              <div id="threshold-tooltip" style="display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:${T.surface};border:1px solid ${T.brd};border-radius:8px;padding:10px 14px;z-index:999;min-width:180px;box-shadow:0 4px 16px #00000066;">
+                <div style="font-size:11px;color:${T.dim};margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Exemples (seuil ${state.roundThreshold})</div>
+                <table style="border-collapse:collapse;font-size:12px;width:100%;">
+                  <thead><tr>
+                    <th style="color:${T.dim};font-weight:600;text-align:left;padding:2px 8px 4px 0;">Prix</th>
+                    <th style="color:${T.dim};font-weight:600;text-align:left;padding:2px 8px 4px;">→</th>
+                    <th style="color:${T.dim};font-weight:600;text-align:left;padding:2px 0 4px;">Résultat</th>
+                  </tr></thead>
+                  <tbody>
+                    ${(() => {
+                      const t = state.roundThreshold;
+                      const lT = +(1 - t).toFixed(2);
+                      const prices = [
+                        +(lT - 0.01).toFixed(2),
+                        lT,
+                        +(t  - 0.01).toFixed(2),
+                        +t.toFixed(2),
+                        +(1 + lT).toFixed(2),
+                        +(1 + t ).toFixed(2),
+                      ].filter((v, i, a) => v > 0 && a.indexOf(v) === i);
+                      return prices.map(p => {
+                        const r = roundToHalf(p, t);
+                        const changed = r !== p;
+                        return `<tr>
+                          <td style="padding:2px 8px 2px 0;color:${T.dim};">${p.toFixed(2)} €</td>
+                          <td style="padding:2px 8px;color:${T.dim};">→</td>
+                          <td style="padding:2px 0;color:${changed ? T.green : T.text};font-weight:${changed ? 600 : 400};">${r.toFixed(2)} €</td>
+                        </tr>`;
+                      }).join("");
+                    })()}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
           <button id="process-btn" style="${btnStyle(true)}padding:8px 20px;">⚡ Traiter</button>
         </div>
@@ -343,16 +420,17 @@ function renderCSV() {
           ` : ""}
         </div>
         <div id="table-scroll" style="overflow-x:auto;overflow-y:auto;max-height:${TABLE_VH}px;border-radius:8px;border:1px solid ${T.brd};">
-          <table style="width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed;">
+          <table style="width:100%;border-collapse:collapse;font-size:12px;">
             <thead><tr>${headers.map(h => `<th style="${thStyle()}position:sticky;top:0;background:${T.surface};white-space:nowrap;">${esc(h)}</th>`).join("")}</tr></thead>
             <tbody id="table-body">
               ${(() => {
                 const missingCodes = new Set(state.csv.missingSets.map(m => m.code));
+                const noDateCodes  = new Set(state.csv.noDateSets.map(m => m.setCode));
                 const si = headers.indexOf(state.colMap.setCode);
                 const visibleData = state.showErrorsOnly && processed
                   ? data.filter(r => si >= 0 && missingCodes.has(r[si]))
                   : data;
-                _tableCache = { data: visibleData, headers, missingCodes, si };
+                _tableCache = { data: visibleData, headers, missingCodes, noDateCodes, si };
                 return renderTableRows(state.tableScrollTop);
               })()}
             </tbody>
@@ -382,6 +460,18 @@ function renderCSV() {
               <button id="codematch-ignore-all" style="${btnStyle(false)}font-size:11px;">Tout ignorer</button>
             </div>
           ` : ""}
+        </div>
+      ` : ""}
+
+      ${processed && state.csv.noDateSets.length > 0 ? `
+        <div style="background:#facc1518;border:1px solid #facc15;border-radius:8px;padding:14px 18px;margin-bottom:16px;">
+          <div style="font-weight:700;font-size:13px;color:#facc15;margin-bottom:8px;">📅 ${state.csv.noDateSets.length} extension(s) sans date dans la BDD</div>
+          <div style="font-size:12px;color:${T.dim};margin-bottom:10px;">La colonne comment contiendra <span style="color:#facc15;font-weight:600;">${DATE_PLACEHOLDER}</span> pour ces lignes.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            ${state.csv.noDateSets.map(m => `
+              <span style="background:${T.surface2};border:1px solid #facc1566;border-radius:4px;padding:3px 10px;font-size:11px;font-weight:600;color:#facc15;">${esc(m.setCode)} <span style="color:${T.dim};font-weight:400;">${esc(m.nameEN || m.nameFR)}</span></span>
+            `).join("")}
+          </div>
         </div>
       ` : ""}
 
@@ -417,6 +507,9 @@ function renderCSV() {
         <div style="background:#e8545422;border:1px solid #e85454;border-radius:8px;padding:14px 18px;margin-bottom:16px;">
           <div style="font-weight:700;font-size:13px;color:#e85454;margin-bottom:8px;">⚠ ${state.csv.missingSets.length} extension(s) non trouvée(s) dans la base "${esc(state.selectedGame)}"</div>
           <div style="font-size:12px;color:${T.text};margin-bottom:10px;">Ces codes n'ont pas de correspondance — la colonne comment ne sera pas remplie pour ces lignes.</div>
+          ${state.csv.missingSets.length > 1 ? `
+            <button id="missing-create-all" style="${btnStyle(false)}padding:4px 14px;font-size:11px;color:${T.green};border-color:${T.green}44;margin-bottom:10px;">+ Tout créer</button>
+          ` : ""}
           <div style="display:flex;flex-wrap:wrap;gap:6px;">
             ${state.csv.missingSets.map(m => `
               <div style="display:flex;align-items:center;gap:6px;">
@@ -472,6 +565,21 @@ function bindEvents() {
     el.onclick = () => { state.selectedGame = el.dataset.game; state.editingRow = null; state.searchDB = ""; render(); };
   });
 
+  // Export single game
+  document.querySelectorAll(".export-game-btn").forEach(btn => {
+    btn.onclick = () => {
+      const name = btn.dataset.game;
+      const sets = state.db[name] || [];
+      const blob = new Blob([JSON.stringify(sets, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `${name}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+      toast(`"${name}" exporté ⬇`);
+    };
+  });
+
   // Delete game
   document.querySelectorAll(".del-game-btn").forEach(btn => {
     btn.onclick = async () => {
@@ -522,6 +630,61 @@ function bindEvents() {
       state.selectedGame = result.name;
       render();
       toast(`"${result.name}" importé`);
+    };
+  }
+
+  // Export toutes les BDD
+  const exportAllBtn = document.getElementById("btn-export-all");
+  if (exportAllBtn) {
+    exportAllBtn.onclick = () => {
+      const bundle = {
+        version: 1,
+        exportDate: new Date().toISOString(),
+        games: Object.entries(state.db).map(([name, sets]) => ({ name, sets })),
+      };
+      const blob = new Blob([JSON.stringify(bundle, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      const now = new Date();
+      const date = now.toLocaleDateString("fr-FR").replace(/\//g, "-");
+      const time = now.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" }).replace(":", "h");
+      a.download = `BDD_backup_${date}_${time}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+      toast(`${bundle.games.length} jeux exportés ⬇`);
+    };
+  }
+
+  // Import bundle
+  const importBundleBtn = document.getElementById("btn-import-bundle");
+  const bundleInput = document.getElementById("bundle-file-input");
+  if (importBundleBtn && bundleInput) {
+    importBundleBtn.onclick = () => bundleInput.click();
+    bundleInput.onchange = () => {
+      const file = bundleInput.files[0];
+      if (!file) return;
+      showSpinner("Import bundle…");
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        try {
+          const bundle = JSON.parse(e.target.result);
+          const games = bundle.version === 1 ? bundle.games : null;
+          if (!Array.isArray(games)) throw new Error("Format invalide");
+          for (const { name, sets } of games) {
+            await window.api.saveGame(name, sets);
+            state.db[name] = sets;
+          }
+          state.selectedGame = state.selectedGame || games[0]?.name || "";
+          render();
+          hideSpinner();
+          toast(`${games.length} jeux importés ✓`);
+        } catch {
+          hideSpinner();
+          toast("❌ Fichier bundle invalide");
+        }
+        bundleInput.value = "";
+      };
+      reader.readAsText(file);
     };
   }
 
@@ -748,6 +911,28 @@ function bindEvents() {
     codematchIgnoreAll.onclick = () => { state.csv.codeMismatches = []; render(); };
   }
 
+  // Missing sets — tout créer
+  const missingCreateAll = document.getElementById("missing-create-all");
+  if (missingCreateAll) {
+    missingCreateAll.onclick = async () => {
+      const sets = state.db[state.selectedGame];
+      const si  = state.csv.headers.indexOf(state.colMap.setCode);
+      const sni = state.csv.headers.indexOf(state.colMap.setName);
+      state.csv.missingSets.forEach(({ code }) => {
+        if (sets.find(s => s.setCode === code)) return;
+        const csvRow = si >= 0 ? state.csv.rows.find(r => r[si] === code) : null;
+        const csvName = (csvRow && sni >= 0) ? csvRow[sni] : "";
+        sets.push({ setCode: code, nameFR: "", nameEN: csvName, releaseDate: "" });
+      });
+      await window.api.saveGame(state.selectedGame, sets);
+      state.db[state.selectedGame] = sets;
+      const count = state.csv.missingSets.length;
+      state.csv.missingSets = [];
+      render();
+      toast(`${count} extension(s) créée(s) ✓`);
+    };
+  }
+
   // Missing sets — create without date
   document.querySelectorAll(".missing-create-btn").forEach(btn => {
     btn.onclick = async () => {
@@ -785,8 +970,39 @@ function bindEvents() {
   if (roundThresholdInput) {
     roundThresholdInput.oninput = (e) => {
       const v = parseFloat(e.target.value);
-      if (!isNaN(v) && v > 0 && v <= 1) state.roundThreshold = v;
+      if (!isNaN(v) && v > 0 && v < 1) { state.roundThreshold = v; render(); }
     };
+  }
+
+  // Threshold tooltip — repositionné pour rester dans le viewport
+  const tipBtn = document.getElementById("threshold-info-btn");
+  const tipBox = document.getElementById("threshold-tooltip");
+  if (tipBtn && tipBox) {
+    tipBtn.addEventListener("mouseenter", () => {
+      tipBox.style.display = "block";
+      tipBox.style.left = "50%";
+      tipBox.style.transform = "translateX(-50%)";
+      tipBox.style.top = "auto";
+      tipBox.style.bottom = "calc(100% + 8px)";
+
+      const tr = tipBox.getBoundingClientRect();
+      const pr = tipBox.offsetParent.getBoundingClientRect();
+      const vw = window.innerWidth;
+
+      // Vertical : si ça dépasse en haut → passer en dessous
+      if (tr.top < 8) {
+        tipBox.style.bottom = "auto";
+        tipBox.style.top = "calc(100% + 8px)";
+      }
+
+      // Horizontal : recalcule après avoir reset le left
+      const br = tipBtn.getBoundingClientRect();
+      let left = br.left + br.width / 2 - tr.width / 2 - pr.left;
+      left = Math.max(8 - pr.left, Math.min(left, vw - tr.width - 8 - pr.left));
+      tipBox.style.left = left + "px";
+      tipBox.style.transform = "none";
+    });
+    tipBtn.addEventListener("mouseleave", () => { tipBox.style.display = "none"; });
   }
 
   // Virtual scroll
@@ -825,15 +1041,17 @@ function handleCSVFile(file) {
       state.csv.missingSets = [];
       state.csv.codeMismatches = [];
       state.csv.nameMismatches = [];
+      state.csv.noDateSets = [];
       // Auto-detect columns
-      if (h.includes("price")) state.colMap.price = "price";
-      if (h.includes("comment")) state.colMap.comment = "comment";
+      if (h.includes("price"))    state.colMap.price   = "price";
+      if (h.includes("comment"))  state.colMap.comment = "comment";
       if (h.includes("location")) state.colMap.location = "location";
-      if (h.includes("setCode")) state.colMap.setCode = "setCode";
-      if (h.includes("cn")) state.colMap.cn = "cn";
-      if (h.includes("set")) state.colMap.setName = "set";
+      if (h.includes("setCode"))  state.colMap.setCode = "setCode";
+      if (h.includes("cn"))       state.colMap.cn      = "cn";
+      // Nom d'extension : colonne "set" de Cardmarket (pas "nameFR" qui est le nom de carte)
+      if (h.includes("set"))                state.colMap.setName = "set";
       else if (h.includes("expansionName")) state.colMap.setName = "expansionName";
-      else if (h.includes("setName")) state.colMap.setName = "setName";
+      else if (h.includes("setName"))       state.colMap.setName = "setName";
       render();
       hideSpinner();
       toast(`${state.csv.rows.length} lignes importées`);
@@ -861,7 +1079,7 @@ function processCSV() {
       if (e.nameEN) setMapByName[e.nameEN.toLowerCase().trim()] = s;
     });
 
-    const missingMap = {}, codeMismatchMap = {}, nameMismatchMap = {};
+    const missingMap = {}, codeMismatchMap = {}, nameMismatchMap = {}, noDateMap = {};
     const processed = rows.map(row => {
       const r = [...row];
       if (pi >= 0) { const v = parseFloat(r[pi]); if (!isNaN(v)) r[pi] = String(roundToHalf(v)); }
@@ -869,13 +1087,10 @@ function processCSV() {
         const code = r[si], cnVal = ni >= 0 ? r[ni] : "", info = setMap[code];
         if (info) {
           const e = normEntry(info);
-          const formatted = e.releaseDate
-            ? formatOutput(state.outputFormat, code, cnVal, e.releaseDate, e.nameFR, e.nameEN)
-            : "";
-          if (formatted) {
-            if (ci >= 0) r[ci] = formatted;
-            if (li >= 0 && state.fillLocation) r[li] = formatted;
-          }
+          if (!e.releaseDate && !noDateMap[code]) noDateMap[code] = { setCode: code, nameFR: e.nameFR, nameEN: e.nameEN };
+          const formatted = formatOutput(state.outputFormat, code, cnVal, e.releaseDate, e.nameFR, e.nameEN);
+          if (ci >= 0) r[ci] = formatted;
+          if (li >= 0 && state.fillLocation) r[li] = formatted;
           // Détection nom CSV ≠ nameFR et ≠ nameEN
           if (sni >= 0 && r[sni] && !nameMismatchMap[code]) {
             const csvName = r[sni];
@@ -911,6 +1126,7 @@ function processCSV() {
     state.csv.missingSets = Object.entries(missingMap).map(([code, count]) => ({ code, count })).sort((a, b) => a.code.localeCompare(b.code));
     state.csv.codeMismatches = Object.values(codeMismatchMap).sort((a, b) => a.csvCode.localeCompare(b.csvCode));
     state.csv.nameMismatches = Object.values(nameMismatchMap).sort((a, b) => a.setCode.localeCompare(b.setCode));
+    state.csv.noDateSets = Object.values(noDateMap).sort((a, b) => a.setCode.localeCompare(b.setCode));
     state.csv.processed = processed;
     render();
     hideSpinner();
@@ -926,7 +1142,10 @@ function downloadCSV() {
   const blob = new Blob(["\uFEFF" + lines.join("\n")], { type: "text/csv;charset=utf-8" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = `export-${state.selectedGame}-processed.csv`;
+  const now = new Date();
+  const date = now.toLocaleDateString("fr-FR").replace(/\//g, "-");
+  const time = now.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" }).replace(":", "h");
+  a.download = `${state.selectedGame}_${date}_${time}.csv`;
   a.click();
   URL.revokeObjectURL(a.href);
   toast("CSV téléchargé ⬇");

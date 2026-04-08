@@ -986,7 +986,7 @@
   {
     "setCode": "SDGU",
     "nameFR": "Deck de Structure : Portail du Monde Ténébreux",
-    "nameEN": "",
+    "nameEN": "Structure Deck: Gates of the Underworld",
     "releaseDate": "13-10-2011"
   },
   {
@@ -1022,7 +1022,7 @@
   {
     "setCode": "SDSC",
     "nameFR": "Deck de Structure : Ordre du Magicien",
-    "nameEN": "",
+    "nameEN": "Structure Deck: Spellcaster's Command",
     "releaseDate": "30-03-2009"
   },
   {
@@ -1304,7 +1304,7 @@
   {
     "setCode": "OP26",
     "nameFR": "OTS Pack de Tournoi 26",
-    "nameEN": "",
+    "nameEN": "OTS Tournament Pack 26",
     "releaseDate": "17-10-2024"
   },
   {
@@ -1754,7 +1754,7 @@
   {
     "setCode": "CT03",
     "nameFR": "Collector Tin : Series 3",
-    "nameEN": "",
+    "nameEN": "Collector's Tins 2006",
     "releaseDate": "01-01-2006"
   },
   {
@@ -2314,5 +2314,713 @@
     "nameFR": "Edition du Crépuscule",
     "nameEN": "",
     "releaseDate": "14-01-2010"
+  },
+  {
+    "setCode": "25LP",
+    "nameFR": "",
+    "nameEN": "Limited Pack World Championship 2025",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AC19",
+    "nameFR": "",
+    "nameEN": "Advent Calendar 2019",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AMDE",
+    "nameFR": "",
+    "nameEN": "Amazing Defenders",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ANGU",
+    "nameFR": "",
+    "nameEN": "Ancient Guardians",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP04",
+    "nameFR": "",
+    "nameEN": "Astral Pack Four",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP05",
+    "nameFR": "",
+    "nameEN": "Astral Pack Five",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP06",
+    "nameFR": "",
+    "nameEN": "Astral Pack Six",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP07",
+    "nameFR": "",
+    "nameEN": "Astral Pack Seven",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP08",
+    "nameFR": "",
+    "nameEN": "Astral Pack Eight",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLAR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Armageddon",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLC1",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Chapter 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLCR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Crystal Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLHR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Hero's Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLLR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Light's Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLMM",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Monster Mayhem",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLMR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Monstrous Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLRR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Relentless Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLTR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Terminal Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLVO-JP",
+    "nameFR": "",
+    "nameEN": "Blazing Vortex (OCG)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BP1",
+    "nameFR": "",
+    "nameEN": "Beginners Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BROL",
+    "nameFR": "",
+    "nameEN": "Brothers of Legend",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CRBR",
+    "nameFR": "",
+    "nameEN": "Crossover Breakers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DASA",
+    "nameFR": "",
+    "nameEN": "Dark Saviors",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DB2",
+    "nameFR": "",
+    "nameEN": "Dark Beginning 2",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DDK",
+    "nameFR": "",
+    "nameEN": "Duel Decks: Sorin vs. Tibalt",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DDP",
+    "nameFR": "",
+    "nameEN": "Duel Decks: Zendikar vs. Eldrazi",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DDY",
+    "nameFR": "",
+    "nameEN": "Starter Deck: Yugi (DDY)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DESO",
+    "nameFR": "",
+    "nameEN": "Destiny Soldiers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DL1-JP",
+    "nameFR": "",
+    "nameEN": "Duelist Legacy Volume 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DLG1",
+    "nameFR": "",
+    "nameEN": "Dark Legends",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DOR",
+    "nameFR": "",
+    "nameEN": "Duelist of the Roses",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DPCT",
+    "nameFR": "",
+    "nameEN": "Duelist Pack Collection Tin 2010",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DPK",
+    "nameFR": "",
+    "nameEN": "Duelist Pack 1&2 Special Edition",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DR1",
+    "nameFR": "",
+    "nameEN": "Dark Revelation 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DR3",
+    "nameFR": "",
+    "nameEN": "Dark Revelation 3",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DRL2",
+    "nameFR": "",
+    "nameEN": "Dragons of Legend 2",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DRL3",
+    "nameFR": "",
+    "nameEN": "Dragons of Legend: Unleashed",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DRLG",
+    "nameFR": "",
+    "nameEN": "Dragons of Legend",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DUDE",
+    "nameFR": "",
+    "nameEN": "Duel Devastator",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DUOV",
+    "nameFR": "",
+    "nameEN": "Duel Overload",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DUPO",
+    "nameFR": "",
+    "nameEN": "Duel Power",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DUSA",
+    "nameFR": "",
+    "nameEN": "Duelist Saga",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "FIGA",
+    "nameFR": "",
+    "nameEN": "Fists of the Gadgets",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "FUEN",
+    "nameFR": "",
+    "nameEN": "Fusion Enforcers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GEIM",
+    "nameFR": "",
+    "nameEN": "Genesis Impact",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GFP2",
+    "nameFR": "",
+    "nameEN": "Ghosts From the Past: The 2nd Haunting",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GFTP",
+    "nameFR": "",
+    "nameEN": "Ghosts From the Past",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GRCR",
+    "nameFR": "",
+    "nameEN": "The Grand Creators",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GX03",
+    "nameFR": "",
+    "nameEN": "GX Spirit Caller",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GX04",
+    "nameFR": "",
+    "nameEN": "GX Tag Force 2",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "HAC1",
+    "nameFR": "",
+    "nameEN": "Hidden Arsenal: Chapter 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "HISU",
+    "nameFR": "",
+    "nameEN": "Hidden Summoners",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "HSRD",
+    "nameFR": "",
+    "nameEN": "High-Speed Riders",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "IGAS-JP",
+    "nameFR": "",
+    "nameEN": "Ignition Assault (OCG)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "INCH",
+    "nameFR": "",
+    "nameEN": "The Infinity Chasers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "IOC-25TH",
+    "nameFR": "",
+    "nameEN": "Invasion of Chaos (25th Anniversary Edition)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "JUSH",
+    "nameFR": "",
+    "nameEN": "Justice Hunters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "KACB",
+    "nameFR": "",
+    "nameEN": "Kaiba's Collector Box",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "KC01",
+    "nameFR": "",
+    "nameEN": "25th Anniversary Ultimate Kaiba Set",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "KICO",
+    "nameFR": "",
+    "nameEN": "King's Court",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LC25",
+    "nameFR": "",
+    "nameEN": "Legendary Collection: 25th Anniversary Edition",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LCGX",
+    "nameFR": "",
+    "nameEN": "Legendary Collection 2: Mega Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LCYW",
+    "nameFR": "",
+    "nameEN": "Legendary Collection 3: Mega Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LDD",
+    "nameFR": "",
+    "nameEN": "Legend of Blue Eyes White Dragon (LDD)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LOD2",
+    "nameFR": "",
+    "nameEN": "Legacy of the Duelist: Link Evolution Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MAMA",
+    "nameFR": "",
+    "nameEN": "Magnificent Mavens",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MAZE",
+    "nameFR": "",
+    "nameEN": "Maze of Memories",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MDM",
+    "nameFR": "",
+    "nameEN": "Spell Ruler (MDM)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MIL1",
+    "nameFR": "",
+    "nameEN": "Millennium Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MRD-25TH",
+    "nameFR": "",
+    "nameEN": "Metal Raiders (25th Anniversary Edition)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MYFI",
+    "nameFR": "",
+    "nameEN": "Mystic Fighters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MZMI",
+    "nameFR": "",
+    "nameEN": "Maze of Millennia",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MZMU",
+    "nameFR": "",
+    "nameEN": "Maze of Muertos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MZTM",
+    "nameFR": "",
+    "nameEN": "Maze of the Master",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "NKRT",
+    "nameFR": "",
+    "nameEN": "Noble Knights of the Round Table Box Set",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "NUMH",
+    "nameFR": "",
+    "nameEN": "Number Hunters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "OP28",
+    "nameFR": "",
+    "nameEN": "OTS Tournament Pack 28",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PEVO",
+    "nameFR": "",
+    "nameEN": "Pendulum Evolution",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PHRE",
+    "nameFR": "",
+    "nameEN": "Phantom Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RA01",
+    "nameFR": "",
+    "nameEN": "25th Anniversary Rarity Collection",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RA02",
+    "nameFR": "",
+    "nameEN": "25th Anniversary Rarity Collection II",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RA03",
+    "nameFR": "",
+    "nameEN": "Quarter Century Bonanza",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RA04",
+    "nameFR": "",
+    "nameEN": "Quarter Century Stampede",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ROD",
+    "nameFR": "",
+    "nameEN": "Reshef of Destruction Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SAAS",
+    "nameFR": "",
+    "nameEN": "Samurai Assault",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBAD",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Attack from the Deep",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBCB",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Battle City Box",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBLS",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Arena of Lost Souls",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBSC",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Scars of Battle",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBTK",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Trials of the Kingdom",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SDP-F",
+    "nameFR": "",
+    "nameEN": "Pharaoh's Servant (SDP)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SESL",
+    "nameFR": "",
+    "nameEN": "Secret Slayers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SGX1",
+    "nameFR": "",
+    "nameEN": "Speed Duel GX: Duel Academy Box",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SGX2",
+    "nameFR": "",
+    "nameEN": "Speed Duel GX: Midterm Paradox",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SGX3",
+    "nameFR": "",
+    "nameEN": "Speed Duel GX: Duelists of Shadows",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SHVA",
+    "nameFR": "",
+    "nameEN": "Shadows in Valhalla",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SP14",
+    "nameFR": "",
+    "nameEN": "Star Pack 2014",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SP15",
+    "nameFR": "",
+    "nameEN": "Star Pack Arc-V",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SP18",
+    "nameFR": "",
+    "nameEN": "Star Pack VRAINS",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SPWA",
+    "nameFR": "",
+    "nameEN": "Spirit Warriors",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SS01",
+    "nameFR": "",
+    "nameEN": "Speed Duel Starter Decks: Destiny Masters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SS03",
+    "nameFR": "",
+    "nameEN": "Speed Duel Starter Decks: Ultimate Predators",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SS04",
+    "nameFR": "",
+    "nameEN": "Speed Duel Starter Decks: Match of the Millennium",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SS05",
+    "nameFR": "",
+    "nameEN": "Speed Duel Starter Decks: Twisted Nightmares",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "STP1",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Tournament Pack 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TAMA",
+    "nameFR": "",
+    "nameEN": "Tactical Masters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TF04",
+    "nameFR": "",
+    "nameEN": "5D's Tag Force 4 Promotional Cards",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "THSF",
+    "nameFR": "",
+    "nameEN": "The Secret Forces",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TOCH",
+    "nameFR": "",
+    "nameEN": "Toon Chaos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "VASM",
+    "nameFR": "",
+    "nameEN": "Valiant Smashers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WC07",
+    "nameFR": "",
+    "nameEN": "World Championship 2007",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WC11",
+    "nameFR": "",
+    "nameEN": "5D's Over the Nexus Promotional Cards",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WIRA",
+    "nameFR": "",
+    "nameEN": "Wing Raiders",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WISU",
+    "nameFR": "",
+    "nameEN": "Wild Survivors",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WSUP",
+    "nameFR": "",
+    "nameEN": "World Superstars",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "YDT1",
+    "nameFR": "",
+    "nameEN": "5D's Duel Transer Promotional Cards",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "YG0X",
+    "nameFR": "",
+    "nameEN": "GX Manga Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ZDC1",
+    "nameFR": "",
+    "nameEN": "ZEXAL World Duel Carnival Promos",
+    "releaseDate": ""
   }
 ]
