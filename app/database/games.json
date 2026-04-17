@@ -18,5 +18,9 @@
   {
     "name": "Lorcana",
     "file": "lorcana.json"
+  },
+  {
+    "name": "Magic-the-gathering",
+    "file": "magic-the-gathering.json"
   }
 ]

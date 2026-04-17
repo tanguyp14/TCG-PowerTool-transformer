@@ -1,0 +1,974 @@
+[
+  {
+    "setCode": "LEA",
+    "nameEN": "Limited Edition Alpha",
+    "nameFR": "Alpha",
+    "releaseDate": "01-08-1993"
+  },
+  {
+    "setCode": "LEB",
+    "nameEN": "Limited Edition Beta",
+    "nameFR": "Beta",
+    "releaseDate": "01-10-1993"
+  },
+  {
+    "setCode": "ARN",
+    "nameEN": "Arabian Nights",
+    "nameFR": "Arabian Nights",
+    "releaseDate": "01-12-1993"
+  },
+  {
+    "setCode": "2ED",
+    "nameEN": "Unlimited",
+    "nameFR": "Unlimited",
+    "releaseDate": "01-12-1993"
+  },
+  {
+    "setCode": "ATQ",
+    "nameEN": "Antiquities",
+    "nameFR": "Antiquities",
+    "releaseDate": "01-03-1994"
+  },
+  {
+    "setCode": "3ED",
+    "nameEN": "Revised Edition",
+    "nameFR": "Revised - 3ème Edition",
+    "releaseDate": "01-04-1994"
+  },
+  {
+    "setCode": "LEG",
+    "nameEN": "Legends",
+    "nameFR": "Legends",
+    "releaseDate": "01-06-1994"
+  },
+  {
+    "setCode": "DRK",
+    "nameEN": "The Dark",
+    "nameFR": "The Dark",
+    "releaseDate": "01-08-1994"
+  },
+  {
+    "setCode": "FEM",
+    "nameEN": "Fallen Empires",
+    "nameFR": "Fallen Empires",
+    "releaseDate": "01-11-1994"
+  },
+  {
+    "setCode": "4ED",
+    "nameEN": "Fourth Edition",
+    "nameFR": "4ème Edition",
+    "releaseDate": "01-05-1995"
+  },
+  {
+    "setCode": "ICE",
+    "nameEN": "Ice Age",
+    "nameFR": "Ère glaciaire",
+    "releaseDate": "01-06-1995"
+  },
+  {
+    "setCode": "CHR",
+    "nameEN": "Chronicles",
+    "nameFR": "Chronicles",
+    "releaseDate": "01-07-1995"
+  },
+  {
+    "setCode": "HML",
+    "nameEN": "Homelands",
+    "nameFR": "Terres natales",
+    "releaseDate": "01-10-1995"
+  },
+  {
+    "setCode": "ALL",
+    "nameEN": "Alliances",
+    "nameFR": "Alliances",
+    "releaseDate": "01-06-1996"
+  },
+  {
+    "setCode": "MIR",
+    "nameEN": "Mirage",
+    "nameFR": "Mirage",
+    "releaseDate": "01-10-1996"
+  },
+  {
+    "setCode": "VIS",
+    "nameEN": "Visions",
+    "nameFR": "Visions",
+    "releaseDate": "01-02-1997"
+  },
+  {
+    "setCode": "5ED",
+    "nameEN": "Fifth Edition",
+    "nameFR": "5ème Edition",
+    "releaseDate": "01-03-1997"
+  },
+  {
+    "setCode": "WTH",
+    "nameEN": "Weatherlight",
+    "nameFR": "Aquilon",
+    "releaseDate": "01-06-1997"
+  },
+  {
+    "setCode": "TMP",
+    "nameEN": "Tempest",
+    "nameFR": "Tempête",
+    "releaseDate": "01-10-1997"
+  },
+  {
+    "setCode": "STH",
+    "nameEN": "Stronghold",
+    "nameFR": "Forteresse",
+    "releaseDate": "01-02-1998"
+  },
+  {
+    "setCode": "EXO",
+    "nameEN": "Exodus",
+    "nameFR": "Exode",
+    "releaseDate": "01-06-1998"
+  },
+  {
+    "setCode": "UGL",
+    "nameEN": "Unglued",
+    "nameFR": "Unglued",
+    "releaseDate": "01-08-1998"
+  },
+  {
+    "setCode": "USG",
+    "nameEN": "Urza's Saga",
+    "nameFR": "Epopée d'Urza",
+    "releaseDate": "01-10-1998"
+  },
+  {
+    "setCode": "ULG",
+    "nameEN": "Urza's Legacy",
+    "nameFR": "Héritage d'Urza",
+    "releaseDate": "01-02-1999"
+  },
+  {
+    "setCode": "6ED",
+    "nameEN": "Sixth Edition",
+    "nameFR": "6ème Edition",
+    "releaseDate": "01-04-1999"
+  },
+  {
+    "setCode": "UDS",
+    "nameEN": "Urza's Destiny",
+    "nameFR": "Destinée d'Urza",
+    "releaseDate": "01-06-1999"
+  },
+  {
+    "setCode": "MMQ",
+    "nameEN": "Mercadian Masques",
+    "nameFR": "Masques de Mercadia",
+    "releaseDate": "01-09-1999"
+  },
+  {
+    "setCode": "NEM",
+    "nameEN": "Nemesis",
+    "nameFR": "Nemesis",
+    "releaseDate": "01-02-2000"
+  },
+  {
+    "setCode": "PCR",
+    "nameEN": "Prophecy",
+    "nameFR": "Prophétie",
+    "releaseDate": "01-06-2000"
+  },
+  {
+    "setCode": "INV",
+    "nameEN": "Invasion",
+    "nameFR": "Invasion",
+    "releaseDate": "01-09-2000"
+  },
+  {
+    "setCode": "BTD",
+    "nameEN": "Beatdown",
+    "nameFR": "Beatdown",
+    "releaseDate": "01-10-2000"
+  },
+  {
+    "setCode": "PLS",
+    "nameEN": "Planeshift",
+    "nameFR": "Planeshift",
+    "releaseDate": "01-01-2001"
+  },
+  {
+    "setCode": "7ED",
+    "nameEN": "Seventh Edition",
+    "nameFR": "7ème Edition",
+    "releaseDate": "01-04-2001"
+  },
+  {
+    "setCode": "APC",
+    "nameEN": "Apocalypse",
+    "nameFR": "Apocalypse",
+    "releaseDate": "01-05-2001"
+  },
+  {
+    "setCode": "ODY",
+    "nameEN": "Odyssey",
+    "nameFR": "Odyssée",
+    "releaseDate": "01-10-2001"
+  },
+  {
+    "setCode": "TOR",
+    "nameEN": "Torment",
+    "nameFR": "Tourment",
+    "releaseDate": "01-02-2002"
+  },
+  {
+    "setCode": "JUD",
+    "nameEN": "Judgment",
+    "nameFR": "Jugement",
+    "releaseDate": "01-05-2002"
+  },
+  {
+    "setCode": "ONS",
+    "nameEN": "Onslaught",
+    "nameFR": "Carnage",
+    "releaseDate": "01-10-2002"
+  },
+  {
+    "setCode": "LGN",
+    "nameEN": "Legions",
+    "nameFR": "Légions",
+    "releaseDate": "01-01-2003"
+  },
+  {
+    "setCode": "SCG",
+    "nameEN": "Scourge",
+    "nameFR": "Fléau",
+    "releaseDate": "01-05-2003"
+  },
+  {
+    "setCode": "8ED",
+    "nameEN": "Eighth Edition",
+    "nameFR": "8ème Edition",
+    "releaseDate": "01-07-2003"
+  },
+  {
+    "setCode": "MRD",
+    "nameEN": "Mirrodin",
+    "nameFR": "Mirrodin",
+    "releaseDate": "01-10-2003"
+  },
+  {
+    "setCode": "DST",
+    "nameEN": "Darksteel",
+    "nameFR": "Sombracier",
+    "releaseDate": "01-02-2004"
+  },
+  {
+    "setCode": "5DN",
+    "nameEN": "Fifth Dawn",
+    "nameFR": "5ème Aube",
+    "releaseDate": "01-06-2004"
+  },
+  {
+    "setCode": "CHK",
+    "nameEN": "Champions of Kamigawa",
+    "nameFR": "Guerriers de Kamigawa",
+    "releaseDate": "01-10-2004"
+  },
+  {
+    "setCode": "UNH",
+    "nameEN": "Unhinged",
+    "nameFR": "Unhinged",
+    "releaseDate": "01-11-2004"
+  },
+  {
+    "setCode": "BOK",
+    "nameEN": "Betrayers of Kamigawa",
+    "nameFR": "Traîtres de Kamigawa",
+    "releaseDate": "01-02-2005"
+  },
+  {
+    "setCode": "SOK",
+    "nameEN": "Saviors of Kamigawa",
+    "nameFR": "Libérateurs de Kamigawa",
+    "releaseDate": "01-06-2005"
+  },
+  {
+    "setCode": "9ED",
+    "nameEN": "Ninth Edition",
+    "nameFR": "9ème Edition",
+    "releaseDate": "01-07-2005"
+  },
+  {
+    "setCode": "RAV",
+    "nameEN": "Ravnica: City of Guilds",
+    "nameFR": "Ravnica : La cité des Guildes",
+    "releaseDate": "01-10-2005"
+  },
+  {
+    "setCode": "GPT",
+    "nameEN": "Guildpact",
+    "nameFR": "Pacte des Guildes",
+    "releaseDate": "01-02-2006"
+  },
+  {
+    "setCode": "DIS",
+    "nameEN": "Dissension",
+    "nameFR": "Discorde",
+    "releaseDate": "01-05-2006"
+  },
+  {
+    "setCode": "CSP",
+    "nameEN": "Coldsnap",
+    "nameFR": "Souffle glaciaire",
+    "releaseDate": "01-07-2006"
+  },
+  {
+    "setCode": "TSP",
+    "nameEN": "Time Spiral",
+    "nameFR": "Spirale temporelle",
+    "releaseDate": "01-10-2006"
+  },
+  {
+    "setCode": "PLC",
+    "nameEN": "Planar Chaos",
+    "nameFR": "Chaos Planaire",
+    "releaseDate": "01-02-2007"
+  },
+  {
+    "setCode": "FUT",
+    "nameEN": "Future Sight",
+    "nameFR": "Vision de l'avenir",
+    "releaseDate": "01-05-2007"
+  },
+  {
+    "setCode": "10E",
+    "nameEN": "Tenth Edition",
+    "nameFR": "10ème édition",
+    "releaseDate": "01-07-2007"
+  },
+  {
+    "setCode": "LRW",
+    "nameEN": "Lorwyn",
+    "nameFR": "Lorwyn",
+    "releaseDate": "01-10-2007"
+  },
+  {
+    "setCode": "MOR",
+    "nameEN": "Morningtide",
+    "nameFR": "Lèveciel",
+    "releaseDate": "01-02-2008"
+  },
+  {
+    "setCode": "SHM",
+    "nameEN": "Shadowmoor",
+    "nameFR": "Sombrelande",
+    "releaseDate": "01-05-2008"
+  },
+  {
+    "setCode": "EVE",
+    "nameEN": "Eventide",
+    "nameFR": "Coucheciel",
+    "releaseDate": "01-06-2008"
+  },
+  {
+    "setCode": "ALA",
+    "nameEN": "Shards of Alara",
+    "nameFR": "Eclats d'Alara",
+    "releaseDate": "01-09-2008"
+  },
+  {
+    "setCode": "CON",
+    "nameEN": "Conflux",
+    "nameFR": "Conflux",
+    "releaseDate": "01-02-2009"
+  },
+  {
+    "setCode": "ARB",
+    "nameEN": "Alara Reborn",
+    "nameFR": "Renaissance d'Alara",
+    "releaseDate": "01-04-2009"
+  },
+  {
+    "setCode": "M10",
+    "nameEN": "Magic 2010",
+    "nameFR": "Magic 2010",
+    "releaseDate": "01-07-2009"
+  },
+  {
+    "setCode": "ZEN",
+    "nameEN": "Zendikar",
+    "nameFR": "Zendikar",
+    "releaseDate": "01-10-2009"
+  },
+  {
+    "setCode": "WWK",
+    "nameEN": "Worldwake",
+    "nameFR": "Worldwake",
+    "releaseDate": "01-02-2010"
+  },
+  {
+    "setCode": "ROE",
+    "nameEN": "Rise of the Eldrazi",
+    "nameFR": "L'ascension des Eldrazi",
+    "releaseDate": "01-04-2010"
+  },
+  {
+    "setCode": "M11",
+    "nameEN": "Magic 2011",
+    "nameFR": "Magic 2011",
+    "releaseDate": "01-07-2010"
+  },
+  {
+    "setCode": "SOM",
+    "nameEN": "Scars of Mirrodin",
+    "nameFR": "Cicatrices de Mirrodin",
+    "releaseDate": "01-10-2010"
+  },
+  {
+    "setCode": "MBS",
+    "nameEN": "Mirrodin Besieged",
+    "nameFR": "Mirrodin Assiégé",
+    "releaseDate": "01-02-2011"
+  },
+  {
+    "setCode": "NPH",
+    "nameEN": "New Phyrexia",
+    "nameFR": "Nouvelle Phyrexia",
+    "releaseDate": "01-05-2011"
+  },
+  {
+    "setCode": "M12",
+    "nameEN": "Magic 2012",
+    "nameFR": "Magic 2012",
+    "releaseDate": "01-07-2011"
+  },
+  {
+    "setCode": "ISD",
+    "nameEN": "Innistrad",
+    "nameFR": "Innistrad",
+    "releaseDate": "01-09-2011"
+  },
+  {
+    "setCode": "DKA",
+    "nameEN": "Dark Ascension",
+    "nameFR": "Obscure Ascension",
+    "releaseDate": "01-02-2012"
+  },
+  {
+    "setCode": "AVR",
+    "nameEN": "Avacyn Restored",
+    "nameFR": "Avacyn ressuscitée",
+    "releaseDate": "01-05-2012"
+  },
+  {
+    "setCode": "M13",
+    "nameEN": "Magic 2013",
+    "nameFR": "Magic 2013",
+    "releaseDate": "01-07-2012"
+  },
+  {
+    "setCode": "RTR",
+    "nameEN": "Return to Ravnica",
+    "nameFR": "Retour sur Ravnica",
+    "releaseDate": "01-10-2012"
+  },
+  {
+    "setCode": "GTC",
+    "nameEN": "Gatecrash",
+    "nameFR": "Insurrection",
+    "releaseDate": "01-02-2013"
+  },
+  {
+    "setCode": "DGM",
+    "nameEN": "Dragon's Maze",
+    "nameFR": "Le Labyrinthe du Dragon",
+    "releaseDate": "01-05-2013"
+  },
+  {
+    "setCode": "MMA",
+    "nameEN": "Modern Masters",
+    "nameFR": "Modern Masters",
+    "releaseDate": "01-06-2013"
+  },
+  {
+    "setCode": "M14",
+    "nameEN": "Magic 2014",
+    "nameFR": "Magic 2014",
+    "releaseDate": "01-07-2013"
+  },
+  {
+    "setCode": "THS",
+    "nameEN": "Theros",
+    "nameFR": "Théros",
+    "releaseDate": "01-09-2013"
+  },
+  {
+    "setCode": "BNG",
+    "nameEN": "Born of the Gods",
+    "nameFR": "Créations Divines",
+    "releaseDate": "01-02-2014"
+  },
+  {
+    "setCode": "JOU",
+    "nameEN": "Journey into Nyx",
+    "nameFR": "Incursion dans Nyx",
+    "releaseDate": "01-05-2014"
+  },
+  {
+    "setCode": "CNS",
+    "nameEN": "Conspiracy",
+    "nameFR": "Conspiracy",
+    "releaseDate": "01-06-2014"
+  },
+  {
+    "setCode": "M15",
+    "nameEN": "Magic 2015",
+    "nameFR": "Magic 2015",
+    "releaseDate": "01-07-2014"
+  },
+  {
+    "setCode": "KTK",
+    "nameEN": "Khans of Tarkir",
+    "nameFR": "Les Khans de Tarkir",
+    "releaseDate": "01-10-2014"
+  },
+  {
+    "setCode": "FRF",
+    "nameEN": "Fate Reforged",
+    "nameFR": "Destin Reforgé",
+    "releaseDate": "01-01-2015"
+  },
+  {
+    "setCode": "DTK",
+    "nameEN": "Dragons of Tarkir",
+    "nameFR": "Les Dragons de Tarkir",
+    "releaseDate": "01-03-2015"
+  },
+  {
+    "setCode": "MM2",
+    "nameEN": "Modern Masters 2015",
+    "nameFR": "Modern Masters 2015",
+    "releaseDate": "01-05-2015"
+  },
+  {
+    "setCode": "ORI",
+    "nameEN": "Magic Origins",
+    "nameFR": "Magic Origines",
+    "releaseDate": "01-07-2015"
+  },
+  {
+    "setCode": "BFZ",
+    "nameEN": "Battle for Zendikar",
+    "nameFR": "La bataille de Zendikar",
+    "releaseDate": "01-10-2015"
+  },
+  {
+    "setCode": "OGW",
+    "nameEN": "Oath of the Gatewatch",
+    "nameFR": "Le Serment des Sentinelles",
+    "releaseDate": "01-01-2016"
+  },
+  {
+    "setCode": "SOI",
+    "nameEN": "Shadows over Innistrad",
+    "nameFR": "Ténèbres sur Innistrad",
+    "releaseDate": "01-04-2016"
+  },
+  {
+    "setCode": "EMA",
+    "nameEN": "Eternal Masters",
+    "nameFR": "Eternal Masters",
+    "releaseDate": "01-06-2016"
+  },
+  {
+    "setCode": "EMN",
+    "nameEN": "Eldritch Moon",
+    "nameFR": "La lune hermétique",
+    "releaseDate": "01-07-2016"
+  },
+  {
+    "setCode": "CN2",
+    "nameEN": "Conspiracy: Take the Crown",
+    "nameFR": "Conspiracy: Take the Crown",
+    "releaseDate": "01-08-2016"
+  },
+  {
+    "setCode": "KLD",
+    "nameEN": "Kaladesh",
+    "nameFR": "Kaladesh",
+    "releaseDate": "01-09-2016"
+  },
+  {
+    "setCode": "AER",
+    "nameEN": "Aether Revolt",
+    "nameFR": "La révolte éthérique",
+    "releaseDate": "01-01-2017"
+  },
+  {
+    "setCode": "MM3",
+    "nameEN": "Modern Masters 2017",
+    "nameFR": "Modern Masters 2017",
+    "releaseDate": "01-03-2017"
+  },
+  {
+    "setCode": "AKH",
+    "nameEN": "Amonkhet",
+    "nameFR": "Amonkhet",
+    "releaseDate": "01-04-2017"
+  },
+  {
+    "setCode": "HOU",
+    "nameEN": "Hour of Devastation",
+    "nameFR": "L'âge de la destruction",
+    "releaseDate": "01-07-2017"
+  },
+  {
+    "setCode": "XLN",
+    "nameEN": "Ixalan",
+    "nameFR": "Ixalan",
+    "releaseDate": "01-09-2017"
+  },
+  {
+    "setCode": "IMA",
+    "nameEN": "Iconic Masters",
+    "nameFR": "Iconic Masters",
+    "releaseDate": "01-11-2017"
+  },
+  {
+    "setCode": "UST",
+    "nameEN": "Unstable",
+    "nameFR": "Unstable",
+    "releaseDate": "01-12-2017"
+  },
+  {
+    "setCode": "RIX",
+    "nameEN": "Rivals of Ixalan",
+    "nameFR": "Les combattants d'Ixalan",
+    "releaseDate": "01-01-2018"
+  },
+  {
+    "setCode": "A25",
+    "nameEN": "Masters 25",
+    "nameFR": "Masters 25",
+    "releaseDate": "01-03-2018"
+  },
+  {
+    "setCode": "DOM",
+    "nameEN": "Dominaria",
+    "nameFR": "Dominaria",
+    "releaseDate": "01-04-2018"
+  },
+  {
+    "setCode": "BBD",
+    "nameEN": "Battlebond",
+    "nameFR": "Battlebond",
+    "releaseDate": "01-06-2018"
+  },
+  {
+    "setCode": "M19",
+    "nameEN": "Core Set 2019",
+    "nameFR": "Édition de base 2019",
+    "releaseDate": "01-07-2018"
+  },
+  {
+    "setCode": "GRN",
+    "nameEN": "Guilds of Ravnica",
+    "nameFR": "Les Guildes de Ravnica",
+    "releaseDate": "01-10-2018"
+  },
+  {
+    "setCode": "UMA",
+    "nameEN": "Ultimate Masters",
+    "nameFR": "Ultimate Masters",
+    "releaseDate": "01-12-2018"
+  },
+  {
+    "setCode": "RNA",
+    "nameEN": "Ravnica Allegiance",
+    "nameFR": "L'allégeance de Ravnica",
+    "releaseDate": "01-01-2019"
+  },
+  {
+    "setCode": "WAR",
+    "nameEN": "War of the Spark",
+    "nameFR": "La Guerre des Planeswalkers",
+    "releaseDate": "01-05-2019"
+  },
+  {
+    "setCode": "MH1",
+    "nameEN": "Modern Horizons",
+    "nameFR": "Horizons du Modern",
+    "releaseDate": "01-06-2019"
+  },
+  {
+    "setCode": "M20",
+    "nameEN": "Core Set 2020",
+    "nameFR": "Édition de base 2020",
+    "releaseDate": "01-07-2019"
+  },
+  {
+    "setCode": "ELD",
+    "nameEN": "Throne of Eldraine",
+    "nameFR": "Le Trône d'Eldraine",
+    "releaseDate": "01-10-2019"
+  },
+  {
+    "setCode": "THB",
+    "nameEN": "Theros: Beyond Death",
+    "nameFR": "Theros Par-delà la Mort",
+    "releaseDate": "01-01-2020"
+  },
+  {
+    "setCode": "IKO",
+    "nameEN": "Ikoria: Lair of Behemoths",
+    "nameFR": "Ikoria La Terre des Béhémoths",
+    "releaseDate": "01-04-2020"
+  },
+  {
+    "setCode": "JMP",
+    "nameEN": "Jumpstart",
+    "nameFR": "Jumpstart",
+    "releaseDate": "01-07-2020"
+  },
+  {
+    "setCode": "M21",
+    "nameEN": "Core Set 2021",
+    "nameFR": "Édition de base 2021",
+    "releaseDate": "01-07-2020"
+  },
+  {
+    "setCode": "2XM",
+    "nameEN": "Double Masters",
+    "nameFR": "Double Masters",
+    "releaseDate": "01-08-2020"
+  },
+  {
+    "setCode": "ZNR",
+    "nameEN": "Zendikar Rising",
+    "nameFR": "Renaissance de Zendikar",
+    "releaseDate": "01-09-2020"
+  },
+  {
+    "setCode": "CMR",
+    "nameEN": "Commander Legends",
+    "nameFR": "Commander Légendes",
+    "releaseDate": "01-11-2020"
+  },
+  {
+    "setCode": "KHM",
+    "nameEN": "Kaldheim",
+    "nameFR": "Kaldheim",
+    "releaseDate": "01-02-2021"
+  },
+  {
+    "setCode": "TSR",
+    "nameEN": "Time Spiral Remastered",
+    "nameFR": "Spirale Temporelle Remastered",
+    "releaseDate": "01-03-2021"
+  },
+  {
+    "setCode": "STX",
+    "nameEN": "Strixhaven: School of Mages",
+    "nameFR": "Strixhaven : l'académie des mages",
+    "releaseDate": "01-04-2021"
+  },
+  {
+    "setCode": "MH2",
+    "nameEN": "Modern Horizons 2",
+    "nameFR": "Horizons du Modern 2",
+    "releaseDate": "01-06-2021"
+  },
+  {
+    "setCode": "AFR",
+    "nameEN": "Adventures in the Forgotten Realms",
+    "nameFR": "D&D : Aventures dans les Royaumes Oubliés",
+    "releaseDate": "01-07-2021"
+  },
+  {
+    "setCode": "MID",
+    "nameEN": "Innistrad: Midnight Hunt",
+    "nameFR": "Innistrad : Chasse de Minuit",
+    "releaseDate": "01-09-2021"
+  },
+  {
+    "setCode": "VOW",
+    "nameEN": "Innistrad: Crimson Vow",
+    "nameFR": "Innistrad : Noce Écarlate",
+    "releaseDate": "01-11-2021"
+  },
+  {
+    "setCode": "NEO",
+    "nameEN": "Kamigawa: Neon Dynasty",
+    "nameFR": "Kamigawa : la dynastie Néon",
+    "releaseDate": "01-02-2022"
+  },
+  {
+    "setCode": "SNC",
+    "nameEN": "Streets of New Capenna",
+    "nameFR": "Les rues de la Nouvelle-Capenna",
+    "releaseDate": "01-04-2022"
+  },
+  {
+    "setCode": "2X2",
+    "nameEN": "Double Masters 2022",
+    "nameFR": "Double Masters 2022",
+    "releaseDate": "01-07-2022"
+  },
+  {
+    "setCode": "DMU",
+    "nameEN": "Dominaria United",
+    "nameFR": "Dominaria Uni",
+    "releaseDate": "02-09-2022"
+  },
+  {
+    "setCode": "BRO",
+    "nameEN": "The Brothers' War",
+    "nameFR": "La Guerre Fratricide",
+    "releaseDate": "18-11-2022"
+  },
+  {
+    "setCode": "J22",
+    "nameEN": "Jumpstart 2022",
+    "nameFR": "Jumpstart 2022",
+    "releaseDate": "02-12-2022"
+  },
+  {
+    "setCode": "DMR",
+    "nameEN": "Dominaria Remastered",
+    "nameFR": "Dominaria Remastered",
+    "releaseDate": "13-01-2023"
+  },
+  {
+    "setCode": "ONE",
+    "nameEN": "Phyrexia: All Will Be One",
+    "nameFR": "Tous Phyrexians",
+    "releaseDate": "10-02-2023"
+  },
+  {
+    "setCode": "MOM",
+    "nameEN": "March of the Machine",
+    "nameFR": "L'Invasion des Machines",
+    "releaseDate": "21-04-2023"
+  },
+  {
+    "setCode": "MAT",
+    "nameEN": "March of the Machine: The Aftermath",
+    "nameFR": "L'Invasion des machines : le jour d'après",
+    "releaseDate": "12-05-2023"
+  },
+  {
+    "setCode": "LTR",
+    "nameEN": "The Lord of the Rings: Tales of Middle-earth",
+    "nameFR": "Le Seigneur des Anneaux : chroniques de la Terre du Milieu",
+    "releaseDate": "23-06-2023"
+  },
+  {
+    "setCode": "WOE",
+    "nameEN": "Wilds of Eldraine",
+    "nameFR": "Les friches d'Eldraine",
+    "releaseDate": "08-09-2023"
+  },
+  {
+    "setCode": "LCI",
+    "nameEN": "The Lost Caverns of Ixalan",
+    "nameFR": "Les cavernes oubliées d'Ixalan",
+    "releaseDate": "17-11-2023"
+  },
+  {
+    "setCode": "RVR",
+    "nameEN": "Ravnica Remastered",
+    "nameFR": "Ravnica Remastered",
+    "releaseDate": "12-01-2024"
+  },
+  {
+    "setCode": "MKM",
+    "nameEN": "Murders at Karlov Manor",
+    "nameFR": "Meurtres au manoir Karlov",
+    "releaseDate": "09-02-2024"
+  },
+  {
+    "setCode": "OTJ",
+    "nameEN": "Outlaws of Thunder Junction",
+    "nameFR": "Les hors-la-loi de Croisetonnerre",
+    "releaseDate": "19-04-2024"
+  },
+  {
+    "setCode": "MH3",
+    "nameEN": "Modern Horizons III",
+    "nameFR": "Horizons du Modern 3",
+    "releaseDate": "14-06-2024"
+  },
+  {
+    "setCode": "ACR",
+    "nameEN": "Assassin's Creed",
+    "nameFR": "Univers Infini : Assassin's Creed",
+    "releaseDate": "05-07-2024"
+  },
+  {
+    "setCode": "BLB",
+    "nameEN": "Bloomburrow",
+    "nameFR": "Bloomburrow",
+    "releaseDate": "02-08-2024"
+  },
+  {
+    "setCode": "DSK",
+    "nameEN": "Duskmourn: House of Horror",
+    "nameFR": "Mornebrune : la Maison de l'horreur",
+    "releaseDate": "27-09-2024"
+  },
+  {
+    "setCode": "FDN",
+    "nameEN": "Foundations",
+    "nameFR": "Fondations de Magic: The Gathering",
+    "releaseDate": "15-11-2024"
+  },
+  {
+    "setCode": "INR",
+    "nameEN": "Innistrad Remastered",
+    "nameFR": "Innistrad Remastered",
+    "releaseDate": "24-01-2025"
+  },
+  {
+    "setCode": "DFT",
+    "nameEN": "Aetherdrift",
+    "nameFR": "Aetherdrift",
+    "releaseDate": "14-02-2025"
+  },
+  {
+    "setCode": "TDM",
+    "nameEN": "Tarkir Dragonstorm",
+    "nameFR": "Tarkir : La Tempête des Dragons",
+    "releaseDate": "11-04-2025"
+  },
+  {
+    "setCode": "FIN",
+    "nameEN": "Final Fantasy",
+    "nameFR": "Final Fantasy",
+    "releaseDate": "13-06-2025"
+  },
+  {
+    "setCode": "EOE",
+    "nameEN": "Edge of Eternities",
+    "nameFR": "Aux portes des Éternités",
+    "releaseDate": "01-08-2025"
+  },
+  {
+    "setCode": "SPM",
+    "nameEN": "Marvel Spider-Man",
+    "nameFR": "Marvel's Spider-Man",
+    "releaseDate": "26-09-2025"
+  },
+  {
+    "setCode": "TLA",
+    "nameEN": "Avatar: The Last Airbender",
+    "nameFR": "Avatar, le dernier maître de l'air",
+    "releaseDate": "21-11-2025"
+  },
+  {
+    "setCode": "ECL",
+    "nameEN": "Lorwyn Eclipsed",
+    "nameFR": "Lorwyn éclipsé",
+    "releaseDate": "23-01-2026"
+  },
+  {
+    "setCode": "TMT",
+    "nameEN": "Teenage Mutant Ninja Turtles",
+    "nameFR": "Teenage Mutant Ninja Turtles",
+    "releaseDate": "06-03-2026"
+  }
+]

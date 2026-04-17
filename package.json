@@ -43,7 +43,11 @@
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "${name}-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "${name}-${version}.${ext}"
     }
   },
   "devDependencies": {

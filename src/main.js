@@ -24,13 +24,16 @@ function ensureDbDir() {
   const dir = getDbPath();
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
-    // First launch: copy seed data
-    const seed = getSeedPath();
-    if (fs.existsSync(seed)) {
-      const files = fs.readdirSync(seed);
-      for (const f of files) {
+  }
+  // Copy any seed files not yet present in userData (handles new games added in updates)
+  const seed = getSeedPath();
+  if (fs.existsSync(seed)) {
+    const files = fs.readdirSync(seed);
+    for (const f of files) {
+      const dest = path.join(dir, f);
+      if (!fs.existsSync(dest)) {
         try {
-          fs.copyFileSync(path.join(seed, f), path.join(dir, f));
+          fs.copyFileSync(path.join(seed, f), dest);
         } catch {}
       }
     }

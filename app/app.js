@@ -46,13 +46,15 @@ function normEntry(s) {
 }
 
 function roundToHalf(p, t = state.roundThreshold) {
+  if (p <= 0)    return 0;
+  if (p <= 0.50) return p;     // 0–0.50€ : garde le prix
+  if (p < 0.75)  return 0.50;  // 0.50–0.75€ : revient à 0.50€
+  if (p < 1)     return 1;     // 0.75–1€ : passe à 1€
   const base = Math.floor(p);
   const dec  = p - base;
-  let result;
-  if (dec >= t)       result = base + 1;    // 0.75 → 1.00
-  else if (dec >= 1 - t) result = base + 0.5; // 0.30 → 0.50
-  else                result = base;         // 0.10 → 0.00
-  return Math.max(result, p > 0 ? 0.5 : 0); // minimum 0.50 si prix > 0
+  if (dec >= t)      return base + 1;
+  if (dec >= 1 - t)  return base + 0.5;
+  return base;
 }
 
 const DATE_PLACEHOLDER = "DATE_NON_DEFINI";
