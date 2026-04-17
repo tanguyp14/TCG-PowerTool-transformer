@@ -1,117 +1,107 @@
-const { app, BrowserWindow, ipcMain, dialog } = require("electron");
+const { app, BrowserWindow, ipcMain, dialog, safeStorage } = require("electron");
 const path = require("path");
 const fs = require("fs");
 
-// ─── Database path ───────────────────────────
-// In production: userData/database/ (writable, persists across updates)
-// In dev: ./app/database/
-function getDbPath() {
-  if (app.isPackaged) {
-    return path.join(app.getPath("userData"), "database");
-  }
-  return path.join(__dirname, "..", "app", "database");
+const API_URL = process.env.API_URL || "http://localhost:3001";
+
+// ─── Token storage (safeStorage) ─────────────
+function tokenPath() {
+  return path.join(app.getPath("userData"), "auth.token");
 }
 
-// Seed: copy default DB from resources on first launch
-function getSeedPath() {
-  if (app.isPackaged) {
-    return path.join(process.resourcesPath, "database");
-  }
-  return path.join(__dirname, "..", "app", "database");
-}
-
-function ensureDbDir() {
-  const dir = getDbPath();
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-  // Copy any seed files not yet present in userData (handles new games added in updates)
-  const seed = getSeedPath();
-  if (fs.existsSync(seed)) {
-    const files = fs.readdirSync(seed);
-    for (const f of files) {
-      const dest = path.join(dir, f);
-      if (!fs.existsSync(dest)) {
-        try {
-          fs.copyFileSync(path.join(seed, f), dest);
-        } catch {}
-      }
-    }
-  }
-  const manifest = path.join(dir, "games.json");
-  if (!fs.existsSync(manifest)) fs.writeFileSync(manifest, "[]", "utf-8");
-  return dir;
-}
-
-// ─── IPC Handlers ────────────────────────────
-
-ipcMain.handle("db:getAll", async () => {
-  const dir = ensureDbDir();
-  const manifest = JSON.parse(fs.readFileSync(path.join(dir, "games.json"), "utf-8"));
-  const db = {};
-  for (const entry of manifest) {
-    const filePath = path.join(dir, entry.file);
-    try {
-      db[entry.name] = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-    } catch {
-      db[entry.name] = [];
-    }
-  }
-  return db;
-});
-
-ipcMain.handle("db:saveGame", async (_event, gameName, sets) => {
-  const dir = ensureDbDir();
-  const fileName = gameName.toLowerCase().replace(/[^a-z0-9àâäéèêëïîôùûüÿç]+/g, "-").replace(/-+$/, "") + ".json";
-  const filePath = path.join(dir, fileName);
-  fs.writeFileSync(filePath, JSON.stringify(sets, null, 2), "utf-8");
-
-  const manifestPath = path.join(dir, "games.json");
-  let manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
-  const existing = manifest.find((m) => m.name === gameName);
-  if (existing) {
-    existing.file = fileName;
+function saveToken(token) {
+  const p = tokenPath();
+  if (safeStorage.isEncryptionAvailable()) {
+    fs.writeFileSync(p, safeStorage.encryptString(token));
   } else {
-    manifest.push({ name: gameName, file: fileName });
+    fs.writeFileSync(p, token, "utf-8");
   }
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
-  return { ok: true, file: fileName };
+}
+
+function loadToken() {
+  const p = tokenPath();
+  if (!fs.existsSync(p)) return null;
+  try {
+    const data = fs.readFileSync(p);
+    if (safeStorage.isEncryptionAvailable()) return safeStorage.decryptString(data);
+    return data.toString("utf-8");
+  } catch { return null; }
+}
+
+function clearToken() {
+  const p = tokenPath();
+  if (fs.existsSync(p)) fs.unlinkSync(p);
+}
+
+// ─── API helper ──────────────────────────────
+async function apiFetch(method, route, body, token) {
+  const res = await fetch(`${API_URL}${route}`, {
+    method,
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || "Erreur API");
+  return data;
+}
+
+// ─── Auth IPC ────────────────────────────────
+ipcMain.handle("auth:getUser", async () => {
+  const token = loadToken();
+  if (!token) return null;
+  try {
+    const payload = JSON.parse(Buffer.from(token.split(".")[1], "base64url").toString());
+    if (payload.exp * 1000 < Date.now()) { clearToken(); return null; }
+    return { user: { id: payload.id, email: payload.email }, token };
+  } catch { clearToken(); return null; }
 });
 
-ipcMain.handle("db:deleteGame", async (_event, gameName) => {
-  const dir = ensureDbDir();
-  const manifestPath = path.join(dir, "games.json");
-  let manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
-  const entry = manifest.find((m) => m.name === gameName);
-  if (entry) {
-    const filePath = path.join(dir, entry.file);
-    if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
-    manifest = manifest.filter((m) => m.name !== gameName);
-    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
-  }
+ipcMain.handle("auth:login", async (_e, email, password) => {
+  const data = await apiFetch("POST", "/auth/login", { email, password });
+  saveToken(data.token);
+  return { user: data.user };
+});
+
+ipcMain.handle("auth:register", async (_e, email, password) => {
+  const data = await apiFetch("POST", "/auth/register", { email, password });
+  saveToken(data.token);
+  return { user: data.user };
+});
+
+ipcMain.handle("auth:logout", () => {
+  clearToken();
   return { ok: true };
 });
 
-ipcMain.handle("db:renameGame", async (_event, oldName, newName) => {
-  const dir = ensureDbDir();
-  const manifestPath = path.join(dir, "games.json");
-  let manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
-  const entry = manifest.find((m) => m.name === oldName);
-  if (entry) {
-    const oldPath = path.join(dir, entry.file);
-    const data = fs.existsSync(oldPath) ? fs.readFileSync(oldPath, "utf-8") : "[]";
-    const newFile = newName.toLowerCase().replace(/[^a-z0-9àâäéèêëïîôùûüÿç]+/g, "-").replace(/-+$/, "") + ".json";
-    fs.writeFileSync(path.join(dir, newFile), data, "utf-8");
-    if (fs.existsSync(oldPath) && entry.file !== newFile) fs.unlinkSync(oldPath);
-    entry.name = newName;
-    entry.file = newFile;
-    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
-  }
-  return { ok: true };
+// ─── DB IPC (→ API) ──────────────────────────
+ipcMain.handle("db:getAll", async () => {
+  const token = loadToken();
+  if (!token) throw new Error("Non authentifié");
+  return apiFetch("GET", "/db/all", undefined, token);
+});
+
+ipcMain.handle("db:saveGame", async (_e, gameName, sets) => {
+  const token = loadToken();
+  if (!token) throw new Error("Non authentifié");
+  return apiFetch("POST", `/db/game/${encodeURIComponent(gameName)}`, { sets }, token);
+});
+
+ipcMain.handle("db:deleteGame", async (_e, gameName) => {
+  const token = loadToken();
+  if (!token) throw new Error("Non authentifié");
+  return apiFetch("DELETE", `/db/game/${encodeURIComponent(gameName)}`, undefined, token);
+});
+
+ipcMain.handle("db:renameGame", async (_e, oldName, newName) => {
+  const token = loadToken();
+  if (!token) throw new Error("Non authentifié");
+  return apiFetch("PUT", "/db/game/rename", { oldName, newName }, token);
 });
 
 ipcMain.handle("db:importJSON", async () => {
-  const dir = ensureDbDir();
   const result = await dialog.showOpenDialog({
     title: "Importer une base de données JSON",
     filters: [{ name: "JSON", extensions: ["json"] }],
@@ -126,25 +116,16 @@ ipcMain.handle("db:importJSON", async () => {
   try {
     const data = JSON.parse(fs.readFileSync(srcPath, "utf-8"));
     if (!Array.isArray(data)) throw new Error("Not an array");
-
-    const fileName = baseName.toLowerCase().replace(/[^a-z0-9]+/g, "-") + ".json";
-    fs.writeFileSync(path.join(dir, fileName), JSON.stringify(data, null, 2), "utf-8");
-
-    const manifestPath = path.join(dir, "games.json");
-    let manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
-    if (!manifest.find((m) => m.name === gameName)) {
-      manifest.push({ name: gameName, file: fileName });
-      fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
-    }
+    const token = loadToken();
+    if (!token) throw new Error("Non authentifié");
+    await apiFetch("POST", `/db/game/${encodeURIComponent(gameName)}`, { sets: data }, token);
     return { name: gameName, sets: data };
-  } catch {
-    return { error: "Fichier JSON invalide" };
+  } catch (err) {
+    return { error: err.message || "Fichier JSON invalide" };
   }
 });
 
-ipcMain.handle("db:getPath", async () => {
-  return getDbPath();
-});
+ipcMain.handle("db:getPath", async () => API_URL);
 
 // ─── Window ──────────────────────────────────
 function createWindow() {
@@ -164,7 +145,6 @@ function createWindow() {
     },
   });
 
-  // __dirname is src/, index.html is in app/ (sibling folder)
   win.loadFile(path.join(__dirname, "..", "app", "index.html"));
 
   if (!app.isPackaged) {

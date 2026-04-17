@@ -1,0 +1,2126 @@
+[
+  {
+    "setCode": "POR",
+    "nameFR": "",
+    "nameEN": "Perfect Order",
+    "releaseDate": "27-03-2026"
+  },
+  {
+    "setCode": "ASC",
+    "nameFR": "",
+    "nameEN": "Ascended Heroes",
+    "releaseDate": "30-01-2026"
+  },
+  {
+    "setCode": "PFL",
+    "nameFR": "",
+    "nameEN": "Phantasmal Flames",
+    "releaseDate": "14-11-2025"
+  },
+  {
+    "setCode": "MEG",
+    "nameFR": "",
+    "nameEN": "Mega Evolution",
+    "releaseDate": "26-09-2025"
+  },
+  {
+    "setCode": "MEE",
+    "nameFR": "",
+    "nameEN": "Mega Evolution Energy",
+    "releaseDate": "25-09-2025"
+  },
+  {
+    "setCode": "MEP",
+    "nameFR": "",
+    "nameEN": "MEP Black Star Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLK",
+    "nameFR": "",
+    "nameEN": "Black Bolt",
+    "releaseDate": "18-07-2025"
+  },
+  {
+    "setCode": "WHT",
+    "nameFR": "",
+    "nameEN": "White Flare",
+    "releaseDate": "18-07-2025"
+  },
+  {
+    "setCode": "DRI",
+    "nameFR": "",
+    "nameEN": "Destined Rivals",
+    "releaseDate": "30-05-2025"
+  },
+  {
+    "setCode": "JTG",
+    "nameFR": "",
+    "nameEN": "Journey Together",
+    "releaseDate": "28-03-2025"
+  },
+  {
+    "setCode": "PRE",
+    "nameFR": "",
+    "nameEN": "Prismatic Evolutions",
+    "releaseDate": "17-01-2025"
+  },
+  {
+    "setCode": "SSP",
+    "nameFR": "",
+    "nameEN": "Surging Sparks",
+    "releaseDate": "08-11-2024"
+  },
+  {
+    "setCode": "SCR",
+    "nameFR": "",
+    "nameEN": "Stellar Crown",
+    "releaseDate": "13-09-2024"
+  },
+  {
+    "setCode": "SFA",
+    "nameFR": "",
+    "nameEN": "Shrouded Fable",
+    "releaseDate": "02-08-2024"
+  },
+  {
+    "setCode": "TWM",
+    "nameFR": "",
+    "nameEN": "Twilight Masquerade",
+    "releaseDate": "24-05-2024"
+  },
+  {
+    "setCode": "TEF",
+    "nameFR": "",
+    "nameEN": "Temporal Forces",
+    "releaseDate": "22-03-2024"
+  },
+  {
+    "setCode": "PAF",
+    "nameFR": "",
+    "nameEN": "Paldean Fates",
+    "releaseDate": "26-01-2024"
+  },
+  {
+    "setCode": "PAR",
+    "nameFR": "",
+    "nameEN": "Paradox Rift",
+    "releaseDate": "03-11-2023"
+  },
+  {
+    "setCode": "MEW",
+    "nameFR": "",
+    "nameEN": "151",
+    "releaseDate": "22-09-2023"
+  },
+  {
+    "setCode": "OBF",
+    "nameFR": "",
+    "nameEN": "Obsidian Flames",
+    "releaseDate": "11-08-2023"
+  },
+  {
+    "setCode": "PAL",
+    "nameFR": "",
+    "nameEN": "Paldea Evolved",
+    "releaseDate": "09-06-2023"
+  },
+  {
+    "setCode": "SVI",
+    "nameFR": "",
+    "nameEN": "Scarlet & Violet",
+    "releaseDate": "31-03-2023"
+  },
+  {
+    "setCode": "SVE",
+    "nameFR": "",
+    "nameEN": "Scarlet & Violet Energy",
+    "releaseDate": "30-03-2023"
+  },
+  {
+    "setCode": "SV-P",
+    "nameFR": "",
+    "nameEN": "Scarlet & Violet Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CRZ",
+    "nameFR": "",
+    "nameEN": "Crown Zenith",
+    "releaseDate": "20-01-2023"
+  },
+  {
+    "setCode": "SIT",
+    "nameFR": "",
+    "nameEN": "Silver Tempest",
+    "releaseDate": "11-11-2022"
+  },
+  {
+    "setCode": "LOR",
+    "nameFR": "",
+    "nameEN": "Lost Origin",
+    "releaseDate": "09-09-2022"
+  },
+  {
+    "setCode": "PGO",
+    "nameFR": "",
+    "nameEN": "Pokémon GO",
+    "releaseDate": "01-07-2022"
+  },
+  {
+    "setCode": "ASR",
+    "nameFR": "",
+    "nameEN": "Astral Radiance",
+    "releaseDate": "27-05-2022"
+  },
+  {
+    "setCode": "BRS",
+    "nameFR": "",
+    "nameEN": "Brilliant Stars",
+    "releaseDate": "25-02-2022"
+  },
+  {
+    "setCode": "FST",
+    "nameFR": "",
+    "nameEN": "Fusion Strike",
+    "releaseDate": "12-11-2021"
+  },
+  {
+    "setCode": "CEL",
+    "nameFR": "",
+    "nameEN": "Celebrations",
+    "releaseDate": "08-10-2021"
+  },
+  {
+    "setCode": "EVS",
+    "nameFR": "",
+    "nameEN": "Evolving Skies",
+    "releaseDate": "27-08-2021"
+  },
+  {
+    "setCode": "CRE",
+    "nameFR": "",
+    "nameEN": "Chilling Reign",
+    "releaseDate": "18-06-2021"
+  },
+  {
+    "setCode": "BST",
+    "nameFR": "",
+    "nameEN": "Battle Styles",
+    "releaseDate": "19-03-2021"
+  },
+  {
+    "setCode": "SHF",
+    "nameFR": "",
+    "nameEN": "Shining Fates",
+    "releaseDate": "19-02-2021"
+  },
+  {
+    "setCode": "VIV",
+    "nameFR": "",
+    "nameEN": "Vivid Voltage",
+    "releaseDate": "13-11-2020"
+  },
+  {
+    "setCode": "CPA",
+    "nameFR": "",
+    "nameEN": "Champion's Path",
+    "releaseDate": "25-09-2020"
+  },
+  {
+    "setCode": "DAA",
+    "nameFR": "",
+    "nameEN": "Darkness Ablaze",
+    "releaseDate": "14-08-2020"
+  },
+  {
+    "setCode": "RCL",
+    "nameFR": "",
+    "nameEN": "Rebel Clash",
+    "releaseDate": "01-05-2020"
+  },
+  {
+    "setCode": "SSH",
+    "nameFR": "",
+    "nameEN": "Sword & Shield",
+    "releaseDate": "07-02-2020"
+  },
+  {
+    "setCode": "SP",
+    "nameFR": "",
+    "nameEN": "Sword & Shield Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CEC",
+    "nameFR": "",
+    "nameEN": "Cosmic Eclipse",
+    "releaseDate": "01-11-2019"
+  },
+  {
+    "setCode": "HIF",
+    "nameFR": "",
+    "nameEN": "Hidden Fates",
+    "releaseDate": "23-08-2019"
+  },
+  {
+    "setCode": "UNM",
+    "nameFR": "",
+    "nameEN": "Unified Minds",
+    "releaseDate": "02-08-2019"
+  },
+  {
+    "setCode": "UNB",
+    "nameFR": "",
+    "nameEN": "Unbroken Bonds",
+    "releaseDate": "03-05-2019"
+  },
+  {
+    "setCode": "DET",
+    "nameFR": "",
+    "nameEN": "Detective Pikachu",
+    "releaseDate": "29-03-2019"
+  },
+  {
+    "setCode": "TEU",
+    "nameFR": "",
+    "nameEN": "Team Up",
+    "releaseDate": "01-02-2019"
+  },
+  {
+    "setCode": "LOT",
+    "nameFR": "",
+    "nameEN": "Lost Thunder",
+    "releaseDate": "02-11-2018"
+  },
+  {
+    "setCode": "DRM",
+    "nameFR": "",
+    "nameEN": "Dragon Majesty",
+    "releaseDate": "07-09-2018"
+  },
+  {
+    "setCode": "CES",
+    "nameFR": "",
+    "nameEN": "Celestial Storm",
+    "releaseDate": "03-08-2018"
+  },
+  {
+    "setCode": "FLI",
+    "nameFR": "",
+    "nameEN": "Forbidden Light",
+    "releaseDate": "04-05-2018"
+  },
+  {
+    "setCode": "UPR",
+    "nameFR": "",
+    "nameEN": "Ultra Prism",
+    "releaseDate": "02-02-2018"
+  },
+  {
+    "setCode": "CIN",
+    "nameFR": "",
+    "nameEN": "Crimson Invasion",
+    "releaseDate": "03-11-2017"
+  },
+  {
+    "setCode": "SLG",
+    "nameFR": "",
+    "nameEN": "Shining Legends",
+    "releaseDate": "06-10-2017"
+  },
+  {
+    "setCode": "BUS",
+    "nameFR": "",
+    "nameEN": "Burning Shadows",
+    "releaseDate": "04-08-2017"
+  },
+  {
+    "setCode": "GRI",
+    "nameFR": "",
+    "nameEN": "Guardians Rising",
+    "releaseDate": "05-05-2017"
+  },
+  {
+    "setCode": "SUM",
+    "nameFR": "",
+    "nameEN": "Sun & Moon",
+    "releaseDate": "03-02-2017"
+  },
+  {
+    "setCode": "SMP",
+    "nameFR": "",
+    "nameEN": "Sun & Moon Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "EVO",
+    "nameFR": "",
+    "nameEN": "Evolutions",
+    "releaseDate": "02-11-2016"
+  },
+  {
+    "setCode": "STS",
+    "nameFR": "",
+    "nameEN": "Steam Siege",
+    "releaseDate": "03-08-2016"
+  },
+  {
+    "setCode": "FCO",
+    "nameFR": "",
+    "nameEN": "Fates Collide",
+    "releaseDate": "02-05-2016"
+  },
+  {
+    "setCode": "GEN",
+    "nameFR": "",
+    "nameEN": "Generations",
+    "releaseDate": "22-02-2016"
+  },
+  {
+    "setCode": "BKP",
+    "nameFR": "",
+    "nameEN": "BREAKpoint",
+    "releaseDate": "03-02-2016"
+  },
+  {
+    "setCode": "BKT",
+    "nameFR": "",
+    "nameEN": "BREAKthrough",
+    "releaseDate": "04-11-2015"
+  },
+  {
+    "setCode": "AOR",
+    "nameFR": "",
+    "nameEN": "Ancient Origins",
+    "releaseDate": "12-08-2015"
+  },
+  {
+    "setCode": "ROS",
+    "nameFR": "",
+    "nameEN": "Roaring Skies",
+    "releaseDate": "06-05-2015"
+  },
+  {
+    "setCode": "DCR",
+    "nameFR": "",
+    "nameEN": "Double Crisis",
+    "releaseDate": "25-03-2015"
+  },
+  {
+    "setCode": "PRC",
+    "nameFR": "",
+    "nameEN": "Primal Clash",
+    "releaseDate": "04-02-2015"
+  },
+  {
+    "setCode": "PHF",
+    "nameFR": "",
+    "nameEN": "Phantom Forces",
+    "releaseDate": "05-11-2014"
+  },
+  {
+    "setCode": "FFI",
+    "nameFR": "",
+    "nameEN": "Furious Fists",
+    "releaseDate": "13-08-2014"
+  },
+  {
+    "setCode": "FLF",
+    "nameFR": "",
+    "nameEN": "Flashfire",
+    "releaseDate": "07-05-2014"
+  },
+  {
+    "setCode": "XY",
+    "nameFR": "",
+    "nameEN": "XY",
+    "releaseDate": "05-02-2014"
+  },
+  {
+    "setCode": "KSS",
+    "nameFR": "",
+    "nameEN": "Kalos Starter Set",
+    "releaseDate": "08-11-2013"
+  },
+  {
+    "setCode": "XY-P",
+    "nameFR": "",
+    "nameEN": "XY Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LTR",
+    "nameFR": "",
+    "nameEN": "Legendary Treasures",
+    "releaseDate": "06-11-2013"
+  },
+  {
+    "setCode": "PLB",
+    "nameFR": "",
+    "nameEN": "Plasma Blast",
+    "releaseDate": "14-08-2013"
+  },
+  {
+    "setCode": "PLF",
+    "nameFR": "",
+    "nameEN": "Plasma Freeze",
+    "releaseDate": "08-05-2013"
+  },
+  {
+    "setCode": "PLS",
+    "nameFR": "",
+    "nameEN": "Plasma Storm",
+    "releaseDate": "06-02-2013"
+  },
+  {
+    "setCode": "BCR",
+    "nameFR": "",
+    "nameEN": "Boundaries Crossed",
+    "releaseDate": "07-11-2012"
+  },
+  {
+    "setCode": "DRV",
+    "nameFR": "",
+    "nameEN": "Dragon Vault",
+    "releaseDate": "05-10-2012"
+  },
+  {
+    "setCode": "DRX",
+    "nameFR": "",
+    "nameEN": "Dragons Exalted",
+    "releaseDate": "15-08-2012"
+  },
+  {
+    "setCode": "DEX",
+    "nameFR": "",
+    "nameEN": "Dark Explorers",
+    "releaseDate": "09-05-2012"
+  },
+  {
+    "setCode": "NXD",
+    "nameFR": "",
+    "nameEN": "Next Destinies",
+    "releaseDate": "08-02-2012"
+  },
+  {
+    "setCode": "NVI",
+    "nameFR": "",
+    "nameEN": "Noble Victories",
+    "releaseDate": "16-11-2011"
+  },
+  {
+    "setCode": "EPO",
+    "nameFR": "",
+    "nameEN": "Emerging Powers",
+    "releaseDate": "31-08-2011"
+  },
+  {
+    "setCode": "BLW",
+    "nameFR": "",
+    "nameEN": "Black & White",
+    "releaseDate": "25-04-2011"
+  },
+  {
+    "setCode": "BWP",
+    "nameFR": "",
+    "nameEN": "Black & White Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CL",
+    "nameFR": "",
+    "nameEN": "Call of Legends",
+    "releaseDate": "09-02-2011"
+  },
+  {
+    "setCode": "TM",
+    "nameFR": "",
+    "nameEN": "Triumphant",
+    "releaseDate": "03-11-2010"
+  },
+  {
+    "setCode": "UD",
+    "nameFR": "",
+    "nameEN": "Undaunted",
+    "releaseDate": "18-08-2010"
+  },
+  {
+    "setCode": "UL",
+    "nameFR": "",
+    "nameEN": "Unleashed",
+    "releaseDate": "12-05-2010"
+  },
+  {
+    "setCode": "HS",
+    "nameFR": "",
+    "nameEN": "HeartGold & SoulSilver",
+    "releaseDate": "10-02-2010"
+  },
+  {
+    "setCode": "HSP",
+    "nameFR": "",
+    "nameEN": "HeartGold & SoulSilver Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RM",
+    "nameFR": "",
+    "nameEN": "Pokémon Rumble",
+    "releaseDate": "02-12-2009"
+  },
+  {
+    "setCode": "AR",
+    "nameFR": "",
+    "nameEN": "Arceus",
+    "releaseDate": "04-11-2009"
+  },
+  {
+    "setCode": "SV",
+    "nameFR": "",
+    "nameEN": "Supreme Victors",
+    "releaseDate": "19-08-2009"
+  },
+  {
+    "setCode": "RR",
+    "nameFR": "",
+    "nameEN": "Rising Rivals",
+    "releaseDate": "20-05-2009"
+  },
+  {
+    "setCode": "P9",
+    "nameFR": "",
+    "nameEN": "POP Series 9",
+    "releaseDate": "01-03-2009"
+  },
+  {
+    "setCode": "PL",
+    "nameFR": "",
+    "nameEN": "Platinum",
+    "releaseDate": "11-02-2009"
+  },
+  {
+    "setCode": "STF",
+    "nameFR": "",
+    "nameEN": "Stormfront",
+    "releaseDate": "05-11-2008"
+  },
+  {
+    "setCode": "P8",
+    "nameFR": "",
+    "nameEN": "POP Series 8",
+    "releaseDate": "01-09-2008"
+  },
+  {
+    "setCode": "LA",
+    "nameFR": "",
+    "nameEN": "Legends Awakened",
+    "releaseDate": "20-08-2008"
+  },
+  {
+    "setCode": "MD",
+    "nameFR": "",
+    "nameEN": "Majestic Dawn",
+    "releaseDate": "21-05-2008"
+  },
+  {
+    "setCode": "POP7",
+    "nameFR": "",
+    "nameEN": "POP Series 7",
+    "releaseDate": "01-03-2008"
+  },
+  {
+    "setCode": "GE",
+    "nameFR": "",
+    "nameEN": "Great Encounters",
+    "releaseDate": "13-02-2008"
+  },
+  {
+    "setCode": "SW",
+    "nameFR": "",
+    "nameEN": "Secret Wonders",
+    "releaseDate": "07-11-2007"
+  },
+  {
+    "setCode": "P6",
+    "nameFR": "",
+    "nameEN": "POP Series 6",
+    "releaseDate": "01-09-2007"
+  },
+  {
+    "setCode": "MT",
+    "nameFR": "",
+    "nameEN": "Mysterious Treasures",
+    "releaseDate": "22-08-2007"
+  },
+  {
+    "setCode": "DP",
+    "nameFR": "",
+    "nameEN": "Diamond & Pearl",
+    "releaseDate": "23-05-2007"
+  },
+  {
+    "setCode": "DPP",
+    "nameFR": "",
+    "nameEN": "Diamond & Pearl Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "P5",
+    "nameFR": "",
+    "nameEN": "POP Series 5",
+    "releaseDate": "01-03-2007"
+  },
+  {
+    "setCode": "PK",
+    "nameFR": "",
+    "nameEN": "EX Power Keepers",
+    "releaseDate": "14-02-2007"
+  },
+  {
+    "setCode": "DF",
+    "nameFR": "",
+    "nameEN": "EX Dragon Frontiers",
+    "releaseDate": "08-11-2006"
+  },
+  {
+    "setCode": "CG",
+    "nameFR": "",
+    "nameEN": "EX Crystal Guardians",
+    "releaseDate": "30-08-2006"
+  },
+  {
+    "setCode": "P4",
+    "nameFR": "",
+    "nameEN": "POP Series 4",
+    "releaseDate": "01-08-2006"
+  },
+  {
+    "setCode": "HP",
+    "nameFR": "",
+    "nameEN": "EX Holon Phantoms",
+    "releaseDate": "03-05-2006"
+  },
+  {
+    "setCode": "P3",
+    "nameFR": "",
+    "nameEN": "POP Series 3",
+    "releaseDate": "01-04-2006"
+  },
+  {
+    "setCode": "LM",
+    "nameFR": "",
+    "nameEN": "EX Legend Maker",
+    "releaseDate": "13-02-2006"
+  },
+  {
+    "setCode": "DS",
+    "nameFR": "",
+    "nameEN": "EX Delta Species",
+    "releaseDate": "31-10-2005"
+  },
+  {
+    "setCode": "UF",
+    "nameFR": "",
+    "nameEN": "EX Unseen Forces",
+    "releaseDate": "22-08-2005"
+  },
+  {
+    "setCode": "P2",
+    "nameFR": "",
+    "nameEN": "POP Series 2",
+    "releaseDate": "01-08-2005"
+  },
+  {
+    "setCode": "EM",
+    "nameFR": "",
+    "nameEN": "EX Emerald",
+    "releaseDate": "09-05-2005"
+  },
+  {
+    "setCode": "DX",
+    "nameFR": "",
+    "nameEN": "EX Deoxys",
+    "releaseDate": "14-02-2005"
+  },
+  {
+    "setCode": "TRR",
+    "nameFR": "",
+    "nameEN": "Team Rocket Returns",
+    "releaseDate": "08-11-2004"
+  },
+  {
+    "setCode": "POP1",
+    "nameFR": "",
+    "nameEN": "POP Series 1",
+    "releaseDate": "01-09-2004"
+  },
+  {
+    "setCode": "RG",
+    "nameFR": "",
+    "nameEN": "FireRed & LeafGreen",
+    "releaseDate": "30-08-2004"
+  },
+  {
+    "setCode": "HL",
+    "nameFR": "",
+    "nameEN": "EX Hidden Legends",
+    "releaseDate": "14-06-2004"
+  },
+  {
+    "setCode": "MA",
+    "nameFR": "",
+    "nameEN": "Team Magma vs Team Aqua",
+    "releaseDate": "15-03-2004"
+  },
+  {
+    "setCode": "DR",
+    "nameFR": "",
+    "nameEN": "EX Dragon",
+    "releaseDate": "24-11-2003"
+  },
+  {
+    "setCode": "SS",
+    "nameFR": "",
+    "nameEN": "EX Sandstorm",
+    "releaseDate": "18-09-2003"
+  },
+  {
+    "setCode": "RS",
+    "nameFR": "",
+    "nameEN": "Ruby & Sapphire",
+    "releaseDate": "18-06-2003"
+  },
+  {
+    "setCode": "NP",
+    "nameFR": "",
+    "nameEN": "Nintendo Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "E3",
+    "nameFR": "",
+    "nameEN": "Skyridge",
+    "releaseDate": "12-05-2003"
+  },
+  {
+    "setCode": "AQ",
+    "nameFR": "",
+    "nameEN": "Aquapolis",
+    "releaseDate": "15-01-2003"
+  },
+  {
+    "setCode": "BG",
+    "nameFR": "",
+    "nameEN": "Best of Game",
+    "releaseDate": "01-12-2002"
+  },
+  {
+    "setCode": "E1",
+    "nameFR": "",
+    "nameEN": "Expedition",
+    "releaseDate": "15-09-2002"
+  },
+  {
+    "setCode": "LC",
+    "nameFR": "",
+    "nameEN": "Legendary Collection",
+    "releaseDate": "24-05-2002"
+  },
+  {
+    "setCode": "NDE",
+    "nameFR": "",
+    "nameEN": "Neo Destiny",
+    "releaseDate": "28-02-2002"
+  },
+  {
+    "setCode": "NR",
+    "nameFR": "",
+    "nameEN": "Neo Revelation",
+    "releaseDate": "21-09-2001"
+  },
+  {
+    "setCode": "SI",
+    "nameFR": "",
+    "nameEN": "Southern Islands",
+    "releaseDate": "31-07-2001"
+  },
+  {
+    "setCode": "NDI",
+    "nameFR": "",
+    "nameEN": "Neo Discovery",
+    "releaseDate": "01-06-2001"
+  },
+  {
+    "setCode": "NG",
+    "nameFR": "",
+    "nameEN": "Neo Genesis",
+    "releaseDate": "16-12-2000"
+  },
+  {
+    "setCode": "G2",
+    "nameFR": "",
+    "nameEN": "Gym Challenge",
+    "releaseDate": "16-10-2000"
+  },
+  {
+    "setCode": "GH",
+    "nameFR": "",
+    "nameEN": "Gym Heroes",
+    "releaseDate": "14-08-2000"
+  },
+  {
+    "setCode": "TR",
+    "nameFR": "",
+    "nameEN": "Team Rocket",
+    "releaseDate": "24-04-2000"
+  },
+  {
+    "setCode": "BS2",
+    "nameFR": "",
+    "nameEN": "Base Set 2",
+    "releaseDate": "24-02-2000"
+  },
+  {
+    "setCode": "FO",
+    "nameFR": "",
+    "nameEN": "Fossil",
+    "releaseDate": "10-10-1999"
+  },
+  {
+    "setCode": "JU",
+    "nameFR": "",
+    "nameEN": "Jungle",
+    "releaseDate": "16-06-1999"
+  },
+  {
+    "setCode": "BS",
+    "nameFR": "",
+    "nameEN": "Base Set",
+    "releaseDate": "09-01-1999"
+  },
+  {
+    "setCode": "WP",
+    "nameFR": "",
+    "nameEN": "WotC Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "11M",
+    "nameFR": "",
+    "nameEN": "11th Movie Commemoration Set",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "20th",
+    "nameFR": "",
+    "nameEN": "BREAK Starter Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ADV1",
+    "nameFR": "",
+    "nameEN": "ADV Expansion Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ADV2",
+    "nameFR": "",
+    "nameEN": "Miracle of the Desert",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ADV3",
+    "nameFR": "",
+    "nameEN": "Rulers of the Heavens",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ADVex1",
+    "nameFR": "",
+    "nameEN": "Magma VS Aqua: Two Ambitions",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "B2",
+    "nameFR": "",
+    "nameEN": "Booster R2",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BKZ",
+    "nameFR": "",
+    "nameEN": "Zekrom EX Battle Strength Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW",
+    "nameFR": "",
+    "nameEN": "BW Black Star Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW-P",
+    "nameFR": "",
+    "nameEN": "BW Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW3p",
+    "nameFR": "",
+    "nameEN": "Psycho Drive",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW4",
+    "nameFR": "",
+    "nameEN": "Dark Rush",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW5e",
+    "nameFR": "",
+    "nameEN": "Dragon Blade",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW5t",
+    "nameFR": "",
+    "nameEN": "Dragon Blast",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW7",
+    "nameFR": "",
+    "nameEN": "Plasma Gale",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW8s",
+    "nameFR": "",
+    "nameEN": "Spiral Force",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW8t",
+    "nameFR": "",
+    "nameEN": "Thunder Knuckle",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BW9",
+    "nameFR": "",
+    "nameEN": "Megalo Cannon",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BXY",
+    "nameFR": "",
+    "nameEN": "The Best of XY",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CBB1C",
+    "nameFR": "",
+    "nameEN": "Gem Pack Vol. 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CBB2C",
+    "nameFR": "",
+    "nameEN": "Gem Pack Vol. 2",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CBB3C",
+    "nameFR": "",
+    "nameEN": "Gem Pack Vol. 3",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CBB4C",
+    "nameFR": "",
+    "nameEN": "Gem Pack Vol. 4",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CGH",
+    "nameFR": "",
+    "nameEN": "Hanada City Gym",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CGK",
+    "nameFR": "",
+    "nameEN": "Kuchiba City Gym",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CGN",
+    "nameFR": "",
+    "nameEN": "Nivi City Gym",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CGT",
+    "nameFR": "",
+    "nameEN": "Card Game Tokens",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CLF",
+    "nameFR": "",
+    "nameEN": "Pokémon Card Game Classic: Venusaur & Lugia ex Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CLK",
+    "nameFR": "",
+    "nameEN": "Pokémon Card Game Classic: Blastoise & Suicune ex Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CLL",
+    "nameFR": "",
+    "nameEN": "Pokémon Card Game Classic: Charizard & Ho-Oh ex Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CP3",
+    "nameFR": "",
+    "nameEN": "PokéKyun Collection",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CP4",
+    "nameFR": "",
+    "nameEN": "Premium Champion Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CP6",
+    "nameFR": "",
+    "nameEN": "Expansion Pack 20th Anniversary",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CS4bC",
+    "nameFR": "",
+    "nameEN": "Nine Colors Gathering - Origin",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CSMAC",
+    "nameFR": "",
+    "nameEN": "Arceus & Dialga & Palkia GX Premium Deck Building Box",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CSMC",
+    "nameFR": "",
+    "nameEN": "Pokémon Card Display Set Gift Box Charizard",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DP-P",
+    "nameFR": "",
+    "nameEN": "DP Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DP1",
+    "nameFR": "",
+    "nameEN": "Duelist Pack: Jaden Yuki",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DP2",
+    "nameFR": "",
+    "nameEN": "Duelist Pack: Chazz Princeton",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DP3",
+    "nameFR": "",
+    "nameEN": "Shining Darkness",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DP4m",
+    "nameFR": "",
+    "nameEN": "Moonlit Pursuit",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DP5c",
+    "nameFR": "",
+    "nameEN": "Cry from the Mysterious",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DP5t",
+    "nameFR": "",
+    "nameEN": "Temple of Anger",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DPPR",
+    "nameFR": "",
+    "nameEN": "DP Black Star Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "EBB",
+    "nameFR": "",
+    "nameEN": "EX Battle Boost",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "EC1",
+    "nameFR": "",
+    "nameEN": "Base Expansion Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "EC2",
+    "nameFR": "",
+    "nameEN": "The Town on No Map",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "EC3",
+    "nameFR": "",
+    "nameEN": "Wind from the Sea",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "EP08",
+    "nameFR": "",
+    "nameEN": "Entry Pack '08",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "EX",
+    "nameFR": "",
+    "nameEN": "EX-R Starter Box",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "EXP",
+    "nameFR": "",
+    "nameEN": "Expansion Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "FL",
+    "nameFR": "",
+    "nameEN": "EX FireRed & LeafGreen",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "G1",
+    "nameFR": "",
+    "nameEN": "Leaders' Stadium",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GTG",
+    "nameFR": "",
+    "nameEN": "Guren Town Gym",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "IFDS",
+    "nameFR": "",
+    "nameEN": "Intense Fight in the Destroyed Sky",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "L1SS",
+    "nameFR": "",
+    "nameEN": "SoulSilver Collection",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "L2",
+    "nameFR": "",
+    "nameEN": "Reviving Legends",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "L3",
+    "nameFR": "",
+    "nameEN": "Limited Edition 3",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "m1L",
+    "nameFR": "",
+    "nameEN": "Mega Brave",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "m1S",
+    "nameFR": "",
+    "nameEN": "Mega Symphonia",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "m2",
+    "nameFR": "",
+    "nameEN": "Inferno X",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "M23",
+    "nameFR": "",
+    "nameEN": "McDonald's Match Battle 2023",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "M24",
+    "nameFR": "",
+    "nameEN": "McDonald's Dragon Discovery",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "m2a",
+    "nameFR": "",
+    "nameEN": "MEGA Dream ex",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "m3",
+    "nameFR": "",
+    "nameEN": "Nihil Zero",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MCD11",
+    "nameFR": "",
+    "nameEN": "McDonald's Collection 2011",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MCD13",
+    "nameFR": "",
+    "nameEN": "McDonald's Collection 2013",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MCD15",
+    "nameFR": "",
+    "nameEN": "McDonald's Collection 2015",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MCD17",
+    "nameFR": "",
+    "nameEN": "McDonald's Collection 2017",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MCD22",
+    "nameFR": "",
+    "nameEN": "McDonald's Match Battle 2022",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MCD25",
+    "nameFR": "",
+    "nameEN": "McDonald's Collection 25th Anniversary",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MCRP",
+    "nameFR": "",
+    "nameEN": "Movie Commemoration Random Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MDB",
+    "nameFR": "",
+    "nameEN": "Master Deck Build Box EX",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MFO",
+    "nameFR": "",
+    "nameEN": "Mystery of the Fossils",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "N1",
+    "nameFR": "",
+    "nameEN": "Gold, Silver, to a New World...",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PCG1",
+    "nameFR": "",
+    "nameEN": "Flight of Legends",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PCG2",
+    "nameFR": "",
+    "nameEN": "Clash of the Blue Sky",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PCG5",
+    "nameFR": "",
+    "nameEN": "Mirage Forest",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PCG7",
+    "nameFR": "",
+    "nameEN": "Holon Phantom",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PCG8",
+    "nameFR": "",
+    "nameEN": "Miracle Crystal",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PCG9",
+    "nameFR": "",
+    "nameEN": "Offense and Defense of the Furthest Ends",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "pcgG",
+    "nameFR": "",
+    "nameEN": "Quick Construction Packs",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "pcgM",
+    "nameFR": "",
+    "nameEN": "Holon Research Tower Fire Quarter Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "pcgS",
+    "nameFR": "",
+    "nameEN": "Imprison! Gardevoir ex Constructed Standard Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PJU",
+    "nameFR": "",
+    "nameEN": "Pokémon Jungle",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PPP-P",
+    "nameFR": "",
+    "nameEN": "PPP Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PPS1",
+    "nameFR": "",
+    "nameEN": "Play! Pokémon Prize Pack Series One",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PPS2",
+    "nameFR": "",
+    "nameEN": "Play! Pokémon Prize Pack Series Two",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PPS3",
+    "nameFR": "",
+    "nameEN": "Play! Pokémon Prize Pack Series Three",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PR",
+    "nameFR": "",
+    "nameEN": "Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "Pt1",
+    "nameFR": "",
+    "nameEN": "Galactic's Conquest",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "Pt2",
+    "nameFR": "",
+    "nameEN": "Bonds to the End of Time",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "Pt4",
+    "nameFR": "",
+    "nameEN": "Advent of Arceus",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PtG",
+    "nameFR": "",
+    "nameEN": "Garchomp SP Half Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PtGL",
+    "nameFR": "",
+    "nameEN": "Gallade SP Half Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PtR",
+    "nameFR": "",
+    "nameEN": "Regigigas LV.X Collection Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PtS",
+    "nameFR": "",
+    "nameEN": "Shaymin LV.X Collection Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ROG",
+    "nameFR": "",
+    "nameEN": "Rocket Gang",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s10a",
+    "nameFR": "",
+    "nameEN": "Dark Phantasma",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s10b",
+    "nameFR": "",
+    "nameEN": "Pokémon GO Enhanced Expansion Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s10P",
+    "nameFR": "",
+    "nameEN": "Space Juggler",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s11",
+    "nameFR": "",
+    "nameEN": "Lost Abyss",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s11a",
+    "nameFR": "",
+    "nameEN": "Incandescent Arcana",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s12",
+    "nameFR": "",
+    "nameEN": "Paradigm Trigger",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s12a",
+    "nameFR": "",
+    "nameEN": "VSTAR Universe",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s3a",
+    "nameFR": "",
+    "nameEN": "Legendary Heartbeat",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s4",
+    "nameFR": "",
+    "nameEN": "Shocking Volt Tackle",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s4a",
+    "nameFR": "",
+    "nameEN": "Shiny Star V",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s5R",
+    "nameFR": "",
+    "nameEN": "Rapid Strike Master",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s6a",
+    "nameFR": "",
+    "nameEN": "Eevee Heroes",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s6h",
+    "nameFR": "",
+    "nameEN": "Silver Lance",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s6k",
+    "nameFR": "",
+    "nameEN": "Jet Black Spirit",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s7D",
+    "nameFR": "",
+    "nameEN": "Towering Perfection",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s7R",
+    "nameFR": "",
+    "nameEN": "Blue Sky Stream",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s8",
+    "nameFR": "",
+    "nameEN": "Fusion Arts",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s8a-P",
+    "nameFR": "",
+    "nameEN": "25th Anniversary Edition",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s8b",
+    "nameFR": "",
+    "nameEN": "VMAX Climax",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s9",
+    "nameFR": "",
+    "nameEN": "Star Birth",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "s9a",
+    "nameFR": "",
+    "nameEN": "Battle Region",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sGI",
+    "nameFR": "",
+    "nameEN": "Inteleon VMAX High-Class Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SHC",
+    "nameFR": "",
+    "nameEN": "Shiny Collection",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sI100",
+    "nameFR": "",
+    "nameEN": "Start Deck 100",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sLD",
+    "nameFR": "",
+    "nameEN": "Sword & Shield Starter Set Darkrai VSTAR",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SM",
+    "nameFR": "",
+    "nameEN": "Spell of Mask",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm10",
+    "nameFR": "",
+    "nameEN": "Double Blaze",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm11",
+    "nameFR": "",
+    "nameEN": "Miracle Twin",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm12",
+    "nameFR": "",
+    "nameEN": "Alter Genesis",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm12a",
+    "nameFR": "",
+    "nameEN": "Tag Team GX: Tag All Stars",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm2+",
+    "nameFR": "",
+    "nameEN": "Facing a New Trial",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm5+",
+    "nameFR": "",
+    "nameEN": "Ultra Force",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm5m",
+    "nameFR": "",
+    "nameEN": "Ultra Moon",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm8",
+    "nameFR": "",
+    "nameEN": "Super-Burst Impact",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm8b",
+    "nameFR": "",
+    "nameEN": "GX Ultra Shiny",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm9",
+    "nameFR": "",
+    "nameEN": "Tag Bolt",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sm9b",
+    "nameFR": "",
+    "nameEN": "Full Metal Wall",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "smA",
+    "nameFR": "",
+    "nameEN": "Sun & Moon Starter Set",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "smI",
+    "nameFR": "",
+    "nameEN": "Eevee GX Starter Sets",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SV-P/CS",
+    "nameFR": "",
+    "nameEN": "Scarlet & Violet Simplified Chinese Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv10",
+    "nameFR": "",
+    "nameEN": "The Glory of Team Rocket",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv11B",
+    "nameFR": "",
+    "nameEN": "Black Bolt JP",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv11W",
+    "nameFR": "",
+    "nameEN": "White Flare JP",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv1a",
+    "nameFR": "",
+    "nameEN": "Triplet Beat",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv1S",
+    "nameFR": "",
+    "nameEN": "Scarlet ex",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv1V",
+    "nameFR": "",
+    "nameEN": "Violet ex",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv2a",
+    "nameFR": "",
+    "nameEN": "Pokémon Card 151",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv2D",
+    "nameFR": "",
+    "nameEN": "Clay Burst",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv2P",
+    "nameFR": "",
+    "nameEN": "Snow Hazard",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv3",
+    "nameFR": "",
+    "nameEN": "Ruler of the Black Flame",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv3a",
+    "nameFR": "",
+    "nameEN": "Raging Surf",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv4a",
+    "nameFR": "",
+    "nameEN": "Shiny Treasure ex",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv4K",
+    "nameFR": "",
+    "nameEN": "Ancient Roar",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv4M",
+    "nameFR": "",
+    "nameEN": "Future Flash",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv5a",
+    "nameFR": "",
+    "nameEN": "Crimson Haze",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv5K",
+    "nameFR": "",
+    "nameEN": "Wild Force",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv5M",
+    "nameFR": "",
+    "nameEN": "Cyber Judge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv6",
+    "nameFR": "",
+    "nameEN": "Mask of Change",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv6a",
+    "nameFR": "",
+    "nameEN": "Night Wanderer",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv7",
+    "nameFR": "",
+    "nameEN": "Stellar Miracle",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv7a",
+    "nameFR": "",
+    "nameEN": "Paradise Dragona",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv8",
+    "nameFR": "",
+    "nameEN": "Super Electric Breaker",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv8a",
+    "nameFR": "",
+    "nameEN": "Terastal Festival ex",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv9",
+    "nameFR": "",
+    "nameEN": "Battle Partners",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "sv9a",
+    "nameFR": "",
+    "nameEN": "Heat Wave Arena",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "svAL",
+    "nameFR": "",
+    "nameEN": "ex Starter Set Fuecoco & Ampharos ex",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "svLN",
+    "nameFR": "",
+    "nameEN": "Stellar Tera Type Starter Set Sylveon ex",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SVP",
+    "nameFR": "",
+    "nameEN": "SV Black Star Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "svP1",
+    "nameFR": "",
+    "nameEN": "Scarlet & Violet ex Special Set",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SWSH",
+    "nameFR": "",
+    "nameEN": "SWSH Black Star Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TK1",
+    "nameFR": "",
+    "nameEN": "EX Trainer Kit",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TK2",
+    "nameFR": "",
+    "nameEN": "EX Trainer Kit 2",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TK3",
+    "nameFR": "",
+    "nameEN": "DP Trainer Kit",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TK5",
+    "nameFR": "",
+    "nameEN": "BW Trainer Kit",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TK8",
+    "nameFR": "",
+    "nameEN": "XY Trainer Kit: Latias & Latios",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TK9",
+    "nameFR": "",
+    "nameEN": "XY Trainer Kit: Pikachu Libre & Suicune",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "UNP",
+    "nameFR": "",
+    "nameEN": "Unnumbered Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "xASC",
+    "nameFR": "",
+    "nameEN": "Ascended Heroes: Additionals",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "xBLK",
+    "nameFR": "",
+    "nameEN": "Black Bolt: Additionals",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "xDRI",
+    "nameFR": "",
+    "nameEN": "Destined Rivals: Additionals",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "xJTG",
+    "nameFR": "",
+    "nameEN": "Journey Together: Additionals",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "xPRE",
+    "nameFR": "",
+    "nameEN": "Prismatic Evolutions: Additionals",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "xsv11B",
+    "nameFR": "",
+    "nameEN": "Black Bolt JP: Additionals",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "xsv11W",
+    "nameFR": "",
+    "nameEN": "White Flare JP: Additionals",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "xWHT",
+    "nameFR": "",
+    "nameEN": "White Flare: Additionals",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY10",
+    "nameFR": "",
+    "nameEN": "Awakening Psychic King",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY11c",
+    "nameFR": "",
+    "nameEN": "Cruel Traitor",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY1x",
+    "nameFR": "",
+    "nameEN": "Collection X",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY1y",
+    "nameFR": "",
+    "nameEN": "Collection Y",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY2",
+    "nameFR": "",
+    "nameEN": "Wild Blaze",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY3",
+    "nameFR": "",
+    "nameEN": "Rising Fist",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY4",
+    "nameFR": "",
+    "nameEN": "Phantom Gate",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY5g",
+    "nameFR": "",
+    "nameEN": "Gaia Volcano",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY5t",
+    "nameFR": "",
+    "nameEN": "Tidal Storm",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY6",
+    "nameFR": "",
+    "nameEN": "Emerald Break",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY7",
+    "nameFR": "",
+    "nameEN": "Bandit Ring",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY8r",
+    "nameFR": "",
+    "nameEN": "Red Flash",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XY9",
+    "nameFR": "",
+    "nameEN": "Rage of the Broken Heavens",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XYa",
+    "nameFR": "",
+    "nameEN": "MCharizard EX Mega Battle Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XYb",
+    "nameFR": "",
+    "nameEN": "Hyper Metal Chain Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XYc",
+    "nameFR": "",
+    "nameEN": "Super Legend Set: Xerneas EX & Yveltal EX",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XYd",
+    "nameFR": "",
+    "nameEN": "MRayquaza EX Mega Battle Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XYf",
+    "nameFR": "",
+    "nameEN": "Golduck BREAK + Palkia EX Combo Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XYg",
+    "nameFR": "",
+    "nameEN": "Zygarde EX Perfect Battle Deck",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "XYPR",
+    "nameFR": "",
+    "nameEN": "XY Black Star Promos",
+    "releaseDate": ""
+  }
+]

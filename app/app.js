@@ -19,6 +19,7 @@ const T = {
 
 // ─── State ───────────────────────────────────
 let state = {
+  user: null,
   db: {},
   selectedGame: "",
   tab: "db", // "db" | "csv"
@@ -204,8 +205,9 @@ function renderHeader() {
         <button class="tab-btn" data-tab="db" style="${tabStyle(state.tab === 'db')}">Base de données</button>
         <button class="tab-btn" data-tab="csv" style="${tabStyle(state.tab === 'csv')}">Traitement CSV</button>
       </div>
-      <div style="margin-left:auto;display:flex;gap:8px;-webkit-app-region:no-drag;">
-        <button id="btn-dbpath" style="${btnStyle(false)}font-size:10px;">📁 Dossier DB</button>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:12px;-webkit-app-region:no-drag;">
+        <span style="font-size:11px;color:${T.dim};">${esc(state.user?.email || "")}</span>
+        <button id="btn-logout" style="${btnStyle(false)}font-size:10px;color:${T.red};">Déconnexion</button>
       </div>
     </div>
   `;
@@ -744,12 +746,13 @@ function bindEvents() {
     };
   }
 
-  // DB path
-  const dbPathBtn = document.getElementById("btn-dbpath");
-  if (dbPathBtn) {
-    dbPathBtn.onclick = async () => {
-      const p = await window.api.getDbPath();
-      toast(`📁 ${p}`);
+  // Logout
+  const logoutBtn = document.getElementById("btn-logout");
+  if (logoutBtn) {
+    logoutBtn.onclick = async () => {
+      await window.api.auth.logout();
+      state.user = null;
+      renderLogin();
     };
   }
 
@@ -1207,14 +1210,69 @@ function downloadCSV() {
   toast("CSV téléchargé ⬇");
 }
 
-// ─── Boot ────────────────────────────────────
-(async function init() {
+// ─── Login screen ────────────────────────────
+function renderLogin(errorMsg = "") {
+  const root = document.getElementById("root");
+  root.innerHTML = `
+    <div style="height:100vh;display:flex;align-items:center;justify-content:center;background:${T.bg};-webkit-app-region:drag;">
+      <div style="-webkit-app-region:no-drag;background:${T.surface};border:1px solid ${T.brd};border-radius:12px;padding:40px;width:360px;display:flex;flex-direction:column;gap:20px;">
+        <div style="font-size:16px;font-weight:700;color:${T.accent};text-align:center;letter-spacing:-0.5px;">◈ CSV POWERTOOL</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div>
+            <label style="${labelStyle()}">Email</label>
+            <input id="auth-email" type="email" placeholder="vous@exemple.com" style="${inputStyle()}width:100%;padding:10px 12px;">
+          </div>
+          <div>
+            <label style="${labelStyle()}">Mot de passe</label>
+            <input id="auth-password" type="password" placeholder="••••••••" style="${inputStyle()}width:100%;padding:10px 12px;">
+          </div>
+          ${errorMsg ? `<div style="color:${T.red};font-size:11px;text-align:center;">${esc(errorMsg)}</div>` : ""}
+          <button id="auth-submit" style="margin-top:4px;padding:10px;background:${T.accent};border:none;border-radius:8px;color:#fff;font-family:${T.font};font-size:13px;font-weight:700;cursor:pointer;">Se connecter</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("auth-submit").onclick = () => submitAuth();
+  document.getElementById("auth-password").onkeydown = (e) => { if (e.key === "Enter") submitAuth(); };
+}
+
+async function submitAuth() {
+  const email = document.getElementById("auth-email").value.trim();
+  const password = document.getElementById("auth-password").value;
+  if (!email || !password) return renderLogin("Remplis tous les champs.");
+  showSpinner("Connexion…");
+  try {
+    const result = await window.api.auth.login(email, password);
+    state.user = result.user;
+    hideSpinner();
+    await loadApp();
+  } catch (err) {
+    hideSpinner();
+    renderLogin(err.message || "Erreur de connexion");
+  }
+}
+
+async function loadApp() {
+  showSpinner("Chargement…");
   try {
     state.db = await window.api.getAll();
   } catch {
-    state.db = { "Pokémon": [] };
+    state.db = {};
   }
+  hideSpinner();
   const games = Object.keys(state.db);
   state.selectedGame = games[0] || "";
   render();
+}
+
+// ─── Boot ────────────────────────────────────
+(async function init() {
+  const session = await window.api.auth.getUser();
+  if (session) {
+    state.user = session.user;
+    await loadApp();
+  } else {
+    renderLogin();
+  }
 })();

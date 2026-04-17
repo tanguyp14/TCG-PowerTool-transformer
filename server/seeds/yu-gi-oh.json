@@ -1,0 +1,3026 @@
+[
+  {
+    "setCode": "BPRO",
+    "nameFR": "Protocole d'Explosion",
+    "nameEN": "Burst Protocol",
+    "releaseDate": "05-02-2026"
+  },
+  {
+    "setCode": "DOOD",
+    "nameFR": "Le désastre des dimensions",
+    "nameEN": "Doom of Dimensions",
+    "releaseDate": "25-09-2025"
+  },
+  {
+    "setCode": "DUAD",
+    "nameFR": "L'Évolution du Duelliste",
+    "nameEN": "Duelist’s Advance",
+    "releaseDate": "03-07-2025"
+  },
+  {
+    "setCode": "ALIN",
+    "nameFR": "Intuition d'Alliance",
+    "nameEN": "Alliance Insight",
+    "releaseDate": "01-05-2025"
+  },
+  {
+    "setCode": "SUDA",
+    "nameFR": "Les Ténèbres Suprêmes",
+    "nameEN": "Supreme Darkness",
+    "releaseDate": "23-01-2025"
+  },
+  {
+    "setCode": "ROTA",
+    "nameFR": "La Rage des Abysses",
+    "nameEN": "Rage of the Abyss",
+    "releaseDate": "10-10-2024"
+  },
+  {
+    "setCode": "INFO",
+    "nameFR": "L'infini Interdit",
+    "nameEN": "The Infinite Forbidden",
+    "releaseDate": "18-07-2024"
+  },
+  {
+    "setCode": "LEDE",
+    "nameFR": "Héritage de la Destruction",
+    "nameEN": "Legacy of Destruction",
+    "releaseDate": "25-04-2024"
+  },
+  {
+    "setCode": "PHNI",
+    "nameFR": "Cauchemar Fantôme",
+    "nameEN": "Phantom Nightmare",
+    "releaseDate": "08-02-2024"
+  },
+  {
+    "setCode": "AGOV",
+    "nameFR": "L'Ère du Seigneur Suprême",
+    "nameEN": "Age of Overlord",
+    "releaseDate": "19-10-2023"
+  },
+  {
+    "setCode": "DUNE",
+    "nameFR": "Nexus du Duelliste",
+    "nameEN": "Duelist Nexus",
+    "releaseDate": "23-07-2023"
+  },
+  {
+    "setCode": "CYAC",
+    "nameFR": "Accès à la Cyber-Tempête",
+    "nameEN": "Cyberstorm Access",
+    "releaseDate": "05-05-2023"
+  },
+  {
+    "setCode": "PHHY",
+    "nameFR": "Hypernova Photon",
+    "nameEN": "Photon Hypernova",
+    "releaseDate": "09-02-2023"
+  },
+  {
+    "setCode": "DABL",
+    "nameFR": "Explosion de l'Aile des Ténèbres",
+    "nameEN": "Darkwing Blast",
+    "releaseDate": "20-10-2022"
+  },
+  {
+    "setCode": "POTE",
+    "nameFR": "Le Pouvoir des Éléments",
+    "nameEN": "Power of the Elements",
+    "releaseDate": "04-08-2022"
+  },
+  {
+    "setCode": "DIFO",
+    "nameFR": "Force Dimensionnelle",
+    "nameEN": "Dimension Force",
+    "releaseDate": "19-05-2022"
+  },
+  {
+    "setCode": "BACH",
+    "nameFR": "La Bataille du Chaos",
+    "nameEN": "Battle of Chaos",
+    "releaseDate": "10-02-2022"
+  },
+  {
+    "setCode": "BODE",
+    "nameFR": "Explosion de la Destinée",
+    "nameEN": "Burst of Destiny",
+    "releaseDate": "04-11-2021"
+  },
+  {
+    "setCode": "DAMA",
+    "nameFR": "L'Aube de Majesté",
+    "nameEN": "Dawn of Majesty",
+    "releaseDate": "12-08-2021"
+  },
+  {
+    "setCode": "LIOV",
+    "nameFR": "Foudre Amplifiée",
+    "nameEN": "Lightning Overdrive",
+    "releaseDate": "03-06-2021"
+  },
+  {
+    "setCode": "BLVO",
+    "nameFR": "Vortex Embrasé",
+    "nameEN": "Blazing Vortex",
+    "releaseDate": "04-02-2021"
+  },
+  {
+    "setCode": "PHRA",
+    "nameFR": "La Rage Fantôme",
+    "nameEN": "Phantom Rage",
+    "releaseDate": "05-11-2020"
+  },
+  {
+    "setCode": "ROTD",
+    "nameFR": "L'Ascension du Duelliste",
+    "nameEN": "Rise of the Duelist",
+    "releaseDate": "06-08-2020"
+  },
+  {
+    "setCode": "ETCO",
+    "nameFR": "Le Code de l'Éternité",
+    "nameEN": "Eternity Code",
+    "releaseDate": "30-04-2020"
+  },
+  {
+    "setCode": "IGAS",
+    "nameFR": "L'Assaut de l'Ignition",
+    "nameEN": "Ignition Assault",
+    "releaseDate": "30-01-2020"
+  },
+  {
+    "setCode": "CHIM",
+    "nameFR": "Impact du Chaos",
+    "nameEN": "Chaos Impact",
+    "releaseDate": "24-10-2019"
+  },
+  {
+    "setCode": "RIRA",
+    "nameFR": "Le Soulèvement de la Fureur",
+    "nameEN": "Rising Rampage",
+    "releaseDate": "25-07-2019"
+  },
+  {
+    "setCode": "DANE",
+    "nameFR": "Néotempête des Ténèbres",
+    "nameEN": "Dark Neostorm",
+    "releaseDate": "02-05-2019"
+  },
+  {
+    "setCode": "SAST",
+    "nameFR": "L'attaque sauvage",
+    "nameEN": "Savage Strike",
+    "releaseDate": "31-01-2019"
+  },
+  {
+    "setCode": "SOFU",
+    "nameFR": "Fusion de l'Âme",
+    "nameEN": "Soul Fusion",
+    "releaseDate": "19-10-2018"
+  },
+  {
+    "setCode": "CYHO",
+    "nameFR": "Horizon Cybernétique",
+    "nameEN": "Cybernetic Horizon",
+    "releaseDate": "26-07-2018"
+  },
+  {
+    "setCode": "FLOD",
+    "nameFR": "Les Flammes de la Destruction",
+    "nameEN": "Flames of Destruction",
+    "releaseDate": "03-05-2018"
+  },
+  {
+    "setCode": "EXFO",
+    "nameFR": "Force Extrême",
+    "nameEN": "Extreme Force",
+    "releaseDate": "01-02-2018"
+  },
+  {
+    "setCode": "CIBR",
+    "nameFR": "Le Coupe-Circuit",
+    "nameEN": "Circuit Break",
+    "releaseDate": "19-10-2017"
+  },
+  {
+    "setCode": "COTD",
+    "nameFR": "Le Code du Duelliste",
+    "nameEN": "Code of the Duelist",
+    "releaseDate": "03-08-2017"
+  },
+  {
+    "setCode": "MACR",
+    "nameFR": "La Crise Maximale",
+    "nameEN": "Maximum Crisis",
+    "releaseDate": "04-05-2017"
+  },
+  {
+    "setCode": "RATE",
+    "nameFR": "Tempête de Rage",
+    "nameEN": "Raging Tempest",
+    "releaseDate": "09-02-2017"
+  },
+  {
+    "setCode": "INOV",
+    "nameFR": "Invasion : Vengeance",
+    "nameEN": "Invasion: Vengeance",
+    "releaseDate": "03-11-2016"
+  },
+  {
+    "setCode": "TDIL",
+    "nameFR": "L'Illusion des Ténèbres",
+    "nameEN": "The Dark Illusion",
+    "releaseDate": "04-08-2016"
+  },
+  {
+    "setCode": "SHVI",
+    "nameFR": "Les Victoires Scintillantes",
+    "nameEN": "Shining Victories",
+    "releaseDate": "05-05-2016"
+  },
+  {
+    "setCode": "BOSH",
+    "nameFR": "Les Destructeurs de l'Ombre",
+    "nameEN": "Breakers of Shadow",
+    "releaseDate": "14-01-2016"
+  },
+  {
+    "setCode": "DOCS",
+    "nameFR": "La Dimension du Chaos",
+    "nameEN": "Dimension of Chaos",
+    "releaseDate": "05-11-2015"
+  },
+  {
+    "setCode": "CORE",
+    "nameFR": "Le Choc des Rébellions",
+    "nameEN": "Clash of Rebellions",
+    "releaseDate": "06-08-2015"
+  },
+  {
+    "setCode": "CROS",
+    "nameFR": "Les Âmes Croisées",
+    "nameEN": "Crossed Souls",
+    "releaseDate": "14-05-2015"
+  },
+  {
+    "setCode": "SECE",
+    "nameFR": "Les Secrets de l'Éternité",
+    "nameEN": "Secrets of Eternity",
+    "releaseDate": "15-01-2015"
+  },
+  {
+    "setCode": "NECH",
+    "nameFR": "Les Nouveaux Challengers",
+    "nameEN": "The New Challengers",
+    "releaseDate": "06-11-2014"
+  },
+  {
+    "setCode": "DUEA",
+    "nameFR": "L'Alliance des Duellistes",
+    "nameEN": "Duelist Alliance",
+    "releaseDate": "14-08-2014"
+  },
+  {
+    "setCode": "PRIO",
+    "nameFR": "Origine Primitive",
+    "nameEN": "Primal Origin",
+    "releaseDate": "15-05-2014"
+  },
+  {
+    "setCode": "LVAL",
+    "nameFR": "L'Heritage des Braves",
+    "nameEN": "Legacy of the Valiant",
+    "releaseDate": "23-01-2014"
+  },
+  {
+    "setCode": "SHSP",
+    "nameFR": "Spectres de l'Ombre",
+    "nameEN": "Shadow Specters",
+    "releaseDate": "02-11-2013"
+  },
+  {
+    "setCode": "JOTL",
+    "nameFR": "Le Jugement de la Lumière",
+    "nameEN": "Judgment of the Light",
+    "releaseDate": "03-08-2013"
+  },
+  {
+    "setCode": "LTGY",
+    "nameFR": "Le Seigneur de la Galaxie Tachyon",
+    "nameEN": "Lord of the Tachyon Galaxy",
+    "releaseDate": "16-05-2013"
+  },
+  {
+    "setCode": "CBLZ",
+    "nameFR": "Le Feu du Cosmos",
+    "nameEN": "Cosmo Blazer",
+    "releaseDate": "24-01-2013"
+  },
+  {
+    "setCode": "ABYR",
+    "nameFR": "L'Ascension des Abysses",
+    "nameEN": "Abyss Rising",
+    "releaseDate": "03-11-2012"
+  },
+  {
+    "setCode": "REDU",
+    "nameFR": "Le Retour du Duelliste",
+    "nameEN": "Return of the Duelist",
+    "releaseDate": "18-08-2012"
+  },
+  {
+    "setCode": "GAOV",
+    "nameFR": "Le Seigneur de la Galaxie",
+    "nameEN": "Galactic Overlord",
+    "releaseDate": "08-05-2012"
+  },
+  {
+    "setCode": "ORCS",
+    "nameFR": "L'ordre du Chaos",
+    "nameEN": "Order of Chaos",
+    "releaseDate": "24-01-2012"
+  },
+  {
+    "setCode": "PHSW",
+    "nameFR": "Onde de Choc du Photon",
+    "nameEN": "Photon Shockwave",
+    "releaseDate": "10-11-2011"
+  },
+  {
+    "setCode": "GENF",
+    "nameFR": "La Force des Générations",
+    "nameEN": "Generation Force",
+    "releaseDate": "01-08-2011"
+  },
+  {
+    "setCode": "EXVC",
+    "nameFR": "Victoire Absolue",
+    "nameEN": "Extreme Victory",
+    "releaseDate": "05-04-2011"
+  },
+  {
+    "setCode": "STOR",
+    "nameFR": "La Tempête de Ragnarök",
+    "nameEN": "Storm of Ragnarok",
+    "releaseDate": "08-02-2011"
+  },
+  {
+    "setCode": "STBL",
+    "nameFR": "Explosion des Etoiles",
+    "nameEN": "Starstrike Blast",
+    "releaseDate": "16-11-2010"
+  },
+  {
+    "setCode": "DREV",
+    "nameFR": "Révolution des Duellistes",
+    "nameEN": "Duelist Revolution",
+    "releaseDate": "17-08-2010"
+  },
+  {
+    "setCode": "TSHD",
+    "nameFR": "Les Ténèbres Scintillantes",
+    "nameEN": "The Shining Darkness",
+    "releaseDate": "11-05-2010"
+  },
+  {
+    "setCode": "ABPF",
+    "nameFR": "Puissance Absolue",
+    "nameEN": "Absolute Powerforce",
+    "releaseDate": "16-02-2010"
+  },
+  {
+    "setCode": "SOVR",
+    "nameFR": "Pouvoir de la Poussière d'Etoile",
+    "nameEN": "Stardust Overdrive",
+    "releaseDate": "17-11-2009"
+  },
+  {
+    "setCode": "ANPR",
+    "nameFR": "Ancienne Prophétie",
+    "nameEN": "Ancient Prophecy",
+    "releaseDate": "01-09-2009"
+  },
+  {
+    "setCode": "RGBT",
+    "nameFR": "La Rage des Guerriers",
+    "nameEN": "Raging Battle",
+    "releaseDate": "06-08-2009"
+  },
+  {
+    "setCode": "CRMS",
+    "nameFR": "La Crise Ecarlate",
+    "nameEN": "Crimson Crisis",
+    "releaseDate": "03-03-2009"
+  },
+  {
+    "setCode": "CSOC",
+    "nameFR": "La Croisée du Chaos",
+    "nameEN": "Crossroads of Chaos",
+    "releaseDate": "01-11-2008"
+  },
+  {
+    "setCode": "TDGS",
+    "nameFR": "Génèse du Duelliste",
+    "nameEN": "The Duelist Genesis",
+    "releaseDate": "02-09-2008"
+  },
+  {
+    "setCode": "LODT",
+    "nameFR": "Lumière de la Destruction",
+    "nameEN": "Light of Destruction",
+    "releaseDate": "13-05-2008"
+  },
+  {
+    "setCode": "PTDN",
+    "nameFR": "Ténèbres Fantômes",
+    "nameEN": "Phantom Darkness",
+    "releaseDate": "13-02-2008"
+  },
+  {
+    "setCode": "GLAS",
+    "nameFR": "Assaut du Gladiateur",
+    "nameEN": "Gladiator's Assault",
+    "releaseDate": "03-11-2007"
+  },
+  {
+    "setCode": "TAEV",
+    "nameFR": "Evolution Tactique",
+    "nameEN": "Tactical Evolution",
+    "releaseDate": "15-08-2007"
+  },
+  {
+    "setCode": "FOTB",
+    "nameFR": "Force du Destructeur",
+    "nameEN": "Force of the Breaker",
+    "releaseDate": "16-05-2007"
+  },
+  {
+    "setCode": "STON",
+    "nameFR": "L'Attaque de Néos",
+    "nameEN": "Strike of Neos",
+    "releaseDate": "28-02-2007"
+  },
+  {
+    "setCode": "EOJ",
+    "nameFR": "Ennemi du bien",
+    "nameEN": "",
+    "releaseDate": "11-01-2007"
+  },
+  {
+    "setCode": "CDIP",
+    "nameFR": "Impact des Cyberténèbres",
+    "nameEN": "Cyberdark Impact",
+    "releaseDate": "15-11-2006"
+  },
+  {
+    "setCode": "POTD",
+    "nameFR": "Puissance du duelliste",
+    "nameEN": "Power of the Duelist",
+    "releaseDate": "16-08-2006"
+  },
+  {
+    "setCode": "SOI",
+    "nameFR": "L'Ombre de l'Infini",
+    "nameEN": "Shadows over Innistrad",
+    "releaseDate": "18-02-2006"
+  },
+  {
+    "setCode": "EEN",
+    "nameFR": "Energie élémentaire",
+    "nameEN": "Elemental Energy",
+    "releaseDate": "05-11-2005"
+  },
+  {
+    "setCode": "CRV",
+    "nameFR": "Révolution Cybernétique",
+    "nameEN": "Cybernetic Revolution",
+    "releaseDate": "06-08-2005"
+  },
+  {
+    "setCode": "TLM",
+    "nameFR": "Le Millénaire Perdu",
+    "nameEN": "The Lost Millennium",
+    "releaseDate": "01-06-2005"
+  },
+  {
+    "setCode": "FET",
+    "nameFR": "Eternité Brûlante",
+    "nameEN": "Flaming Eternity",
+    "releaseDate": "01-03-2005"
+  },
+  {
+    "setCode": "RDS",
+    "nameFR": "Avènement du Destin",
+    "nameEN": "Rise of Destiny",
+    "releaseDate": "01-12-2004"
+  },
+  {
+    "setCode": "SOD",
+    "nameFR": "L'Âme du Duelliste",
+    "nameEN": "Soul of the Duelist",
+    "releaseDate": "01-10-2004"
+  },
+  {
+    "setCode": "IOC",
+    "nameFR": "Invasion des Ténèbres",
+    "nameEN": "Invasion of Chaos",
+    "releaseDate": "12-07-2004"
+  },
+  {
+    "setCode": "AST",
+    "nameFR": "Sanctuaire Ancestral",
+    "nameEN": "Ancient Sanctuary",
+    "releaseDate": "01-06-2004"
+  },
+  {
+    "setCode": "DCR",
+    "nameFR": "La Crise des Ténèbres",
+    "nameEN": "Dark Crisis",
+    "releaseDate": "01-12-2003"
+  },
+  {
+    "setCode": "MFC",
+    "nameFR": "Magician's Force",
+    "nameEN": "",
+    "releaseDate": "10-10-2003"
+  },
+  {
+    "setCode": "PGD",
+    "nameFR": "Pharaonic Guardian",
+    "nameEN": "",
+    "releaseDate": "18-07-2003"
+  },
+  {
+    "setCode": "LOD",
+    "nameFR": "Legacy of Darkness",
+    "nameEN": "",
+    "releaseDate": "06-06-2003"
+  },
+  {
+    "setCode": "LON",
+    "nameFR": "Labyrinthe des Cauchemards",
+    "nameEN": "",
+    "releaseDate": "01-03-2003"
+  },
+  {
+    "setCode": "PSV",
+    "nameFR": "Serviteur du Pharaon",
+    "nameEN": "",
+    "releaseDate": "20-10-2002"
+  },
+  {
+    "setCode": "MRL",
+    "nameFR": "Maître des Magies",
+    "nameEN": "Magic Ruler",
+    "releaseDate": "16-09-2002"
+  },
+  {
+    "setCode": "MRD",
+    "nameFR": "Metal Raider",
+    "nameEN": "Mirrodin",
+    "releaseDate": "26-06-2002"
+  },
+  {
+    "setCode": "LOB",
+    "nameFR": "Légende du Dragon Blanc aux yeux bleus",
+    "nameEN": "",
+    "releaseDate": "08-03-2002"
+  },
+  {
+    "setCode": "STAS",
+    "nameFR": "Kit de Démarrage pour 2 Joueurs",
+    "nameEN": "",
+    "releaseDate": "25-01-2024"
+  },
+  {
+    "setCode": "YS18",
+    "nameFR": "Deck de Démarrage : Briseur de Code",
+    "nameEN": "Starter Deck: Codebreaker",
+    "releaseDate": "12-07-2018"
+  },
+  {
+    "setCode": "YS17",
+    "nameFR": "Deck de Démarrage : L'Attaque du Lien",
+    "nameEN": "Starter Deck: Link Strike",
+    "releaseDate": "20-07-2017"
+  },
+  {
+    "setCode": "YS16",
+    "nameFR": "Deck de Démarrage : Yuya",
+    "nameEN": "Starter Deck: Yuya",
+    "releaseDate": "26-05-2016"
+  },
+  {
+    "setCode": "YS15",
+    "nameFR": "Deck de Démarrage pour 2 Joueurs Yuya & Declan",
+    "nameEN": "2-Player Starter Deck Yuya & Declan",
+    "releaseDate": "28-05-2015"
+  },
+  {
+    "setCode": "YS14",
+    "nameFR": "Super Deck de Démarrage : La Confrontation de l'Espace-Temps",
+    "nameEN": "",
+    "releaseDate": "10-07-2014"
+  },
+  {
+    "setCode": "YSYR",
+    "nameFR": "Deck de Démarrage Yugi Revient",
+    "nameEN": "Starter Deck: Yugi Reloaded",
+    "releaseDate": "06-12-2013"
+  },
+  {
+    "setCode": "YSKR",
+    "nameFR": "Deck de Démarrage Kaiba Revient",
+    "nameEN": "",
+    "releaseDate": "06-12-2013"
+  },
+  {
+    "setCode": "YS13",
+    "nameFR": "Super Deck de Démarrage: V pour Victoire",
+    "nameEN": "Super Starter: V for Victory",
+    "releaseDate": "13-06-2013"
+  },
+  {
+    "setCode": "YS12",
+    "nameFR": "Deck de Démarrage : Symphonie Xyz",
+    "nameEN": "Starter Deck: Xyz Symphony",
+    "releaseDate": "17-04-2012"
+  },
+  {
+    "setCode": "YS11",
+    "nameFR": "Deck de Démarrage Avènement des Xyz",
+    "nameEN": "Starter Deck: Dawn of the Xyz",
+    "releaseDate": "12-07-2011"
+  },
+  {
+    "setCode": "5DS3",
+    "nameFR": "Deck de Démarrage 2010",
+    "nameEN": "Starter Deck: Duelist Toolbox",
+    "releaseDate": "28-05-2010"
+  },
+  {
+    "setCode": "5DS2",
+    "nameFR": "Deck de démarrage 5D's 2009",
+    "nameEN": "",
+    "releaseDate": "01-03-2009"
+  },
+  {
+    "setCode": "5DS1",
+    "nameFR": "Deck de démarrage 5D's",
+    "nameEN": "Starter Deck: Yu-Gi-Oh! 5D's",
+    "releaseDate": "01-08-2008"
+  },
+  {
+    "setCode": "YSDJ",
+    "nameFR": "Deck de démarrage Jaden Yuki",
+    "nameEN": "Starter Deck: Jaden Yuki",
+    "releaseDate": "01-08-2007"
+  },
+  {
+    "setCode": "YSDS",
+    "nameFR": "Deck de démarrage Syrus Truesdale",
+    "nameEN": "Starter Deck: Syrus",
+    "releaseDate": "01-08-2007"
+  },
+  {
+    "setCode": "YSD",
+    "nameFR": "Deck de démarrage GX",
+    "nameEN": "Starter Deck: GX 2006",
+    "releaseDate": "01-04-2006"
+  },
+  {
+    "setCode": "SYE",
+    "nameFR": "Deck de démarrage Yugi Evolution",
+    "nameEN": "Starter Deck: Yugi Evolution",
+    "releaseDate": "01-03-2004"
+  },
+  {
+    "setCode": "SKE",
+    "nameFR": "Deck de démarrage Kaiba Evolution",
+    "nameEN": "",
+    "releaseDate": "01-03-2004"
+  },
+  {
+    "setCode": "SDP",
+    "nameFR": "Deck de démarrage Pegasus",
+    "nameEN": "Starter Deck: Pegasus",
+    "releaseDate": "30-03-2003"
+  },
+  {
+    "setCode": "SDJ",
+    "nameFR": "Deck de démarrage Joey",
+    "nameEN": "",
+    "releaseDate": "30-03-2003"
+  },
+  {
+    "setCode": "SDK",
+    "nameFR": "Deck de démarrage Kaiba",
+    "nameEN": "",
+    "releaseDate": "29-03-2002"
+  },
+  {
+    "setCode": "SDY",
+    "nameFR": "Deck de démarrage Yugi",
+    "nameEN": "",
+    "releaseDate": "01-03-2002"
+  },
+  {
+    "setCode": "CH02",
+    "nameFR": "Le Deck des Chroniques : Les Charmeuses Spirituelles",
+    "nameEN": "",
+    "releaseDate": "22-01-2026"
+  },
+  {
+    "setCode": "CH01",
+    "nameFR": "Le Deck des Chroniques Le Déchu et la Vertueuse",
+    "nameEN": "THE CHRONICLES DECK: The Fallen & The Virtuous (All-Foil Edition)",
+    "releaseDate": "23-10-2025"
+  },
+  {
+    "setCode": "SDWD",
+    "nameFR": "Deck de structure : La Destinée Blanche aux Yeux Bleus",
+    "nameEN": "Structure Deck: Blue-Eyes White Destiny",
+    "releaseDate": "13-02-2025"
+  },
+  {
+    "setCode": "SR14",
+    "nameFR": "Deck de Structure : Les Rois du Feu",
+    "nameEN": "Structure Deck: Fire Kings",
+    "releaseDate": "07-12-2023"
+  },
+  {
+    "setCode": "SDCK",
+    "nameFR": "Deck de Structure : Le Roi Cramoisi",
+    "nameEN": "Structure Deck: The Crimson King",
+    "releaseDate": "21-09-2023"
+  },
+  {
+    "setCode": "SDBT",
+    "nameFR": "Deck de Structure : Attention aux Traptrix",
+    "nameEN": "Structure Deck: Beware of Traptrix",
+    "releaseDate": "23-02-2023"
+  },
+  {
+    "setCode": "SR13",
+    "nameFR": "Deck de Structure : Monde Ténébreux",
+    "nameEN": "Structure Deck: Dark World",
+    "releaseDate": "01-12-2022"
+  },
+  {
+    "setCode": "SDCB",
+    "nameFR": "Deck de Structure: La Légende des Bêtes Cristallines",
+    "nameEN": "Structure Deck: Legend of the Crystal Beasts",
+    "releaseDate": "29-09-2022"
+  },
+  {
+    "setCode": "SDAZ",
+    "nameFR": "Deck de Structure : L'Assaut d'Albaz",
+    "nameEN": "Structure Deck: Albaz Strike",
+    "releaseDate": "14-04-2022"
+  },
+  {
+    "setCode": "SDCS",
+    "nameFR": "Deck de Structure : Assaut Cyber",
+    "nameEN": "Structure Deck: Cyber Strike",
+    "releaseDate": "14-10-2021"
+  },
+  {
+    "setCode": "EGO1",
+    "nameFR": "Deck des Dieux Egyptiens : Obélisk le Tourmenteur",
+    "nameEN": "",
+    "releaseDate": "17-06-2021"
+  },
+  {
+    "setCode": "EGS1",
+    "nameFR": "Deck des Dieux Egyptiens : Slifer, le Dragon Céleste",
+    "nameEN": "Egyptian God Deck: Slifer the Sky Dragon",
+    "releaseDate": "17-06-2021"
+  },
+  {
+    "setCode": "SDFC",
+    "nameFR": "Deck de Structure : Les Chaînes Glaciales",
+    "nameEN": "Structure Deck: Freezing Chains",
+    "releaseDate": "18-02-2021"
+  },
+  {
+    "setCode": "SDCH",
+    "nameFR": "Deck de Structure : Les Charmeuses Spirituelles",
+    "nameEN": "Structure Deck: Spirit Charmers",
+    "releaseDate": "22-10-2020"
+  },
+  {
+    "setCode": "SDSA",
+    "nameFR": "Deck de Structure : Les Bêtes Sacrées",
+    "nameEN": "Structure Deck: Sacred Beasts",
+    "releaseDate": "09-07-2020"
+  },
+  {
+    "setCode": "SR10",
+    "nameFR": "Deck de Structure : La Folie Mécanisée",
+    "nameEN": "Structure Deck: Mechanized Madness",
+    "releaseDate": "16-04-2020"
+  },
+  {
+    "setCode": "SDSH",
+    "nameFR": "Deck de Structure : La Confrontation des Marionnettes de l'Ombre",
+    "nameEN": "Structure Deck: Shaddoll Showdown",
+    "releaseDate": "13-02-2020"
+  },
+  {
+    "setCode": "SDRR",
+    "nameFR": "Deck de Structure : La Revolte Rokkette",
+    "nameEN": "Structure Deck: Rokket Revolt",
+    "releaseDate": "15-08-2019"
+  },
+  {
+    "setCode": "SR08",
+    "nameFR": "Deck de Structure : La Confrérie des Magiciens",
+    "nameEN": "Structure Deck: Order of the Spellcasters",
+    "releaseDate": "25-04-2019"
+  },
+  {
+    "setCode": "SDSB",
+    "nameFR": "Deck de Structure : Soulburner",
+    "nameEN": "Structure Deck: Soulburner",
+    "releaseDate": "14-02-2019"
+  },
+  {
+    "setCode": "SR07",
+    "nameFR": "Deck de Structure : La Horde de Zombies",
+    "nameEN": "Structure Deck: Zombie Horde",
+    "releaseDate": "01-11-2018"
+  },
+  {
+    "setCode": "SDPL",
+    "nameFR": "Deck de Structure : Lien Pouvoircodeur",
+    "nameEN": "Structure Deck: Powercode Link",
+    "releaseDate": "09-08-2018"
+  },
+  {
+    "setCode": "SR06",
+    "nameFR": "Deck de Structure : L'Antre des Ténèbres",
+    "nameEN": "Structure Deck: Lair of Darkness",
+    "releaseDate": "19-04-2018"
+  },
+  {
+    "setCode": "SR05",
+    "nameFR": "Deck de Structure : Onde de Lumière",
+    "nameEN": "Structure Deck: Wave of Light",
+    "releaseDate": "18-01-2018"
+  },
+  {
+    "setCode": "SDCL",
+    "nameFR": "Deck de Structure : Lien Cyberse",
+    "nameEN": "Structure Deck: Cyberse Link",
+    "releaseDate": "02-11-2017"
+  },
+  {
+    "setCode": "SR03",
+    "nameFR": "Deck de Structure : Le Reacteur des Machines",
+    "nameEN": "Structure Deck: Machine Reactor",
+    "releaseDate": "13-04-2017"
+  },
+  {
+    "setCode": "SR04",
+    "nameFR": "Deck de Structure : La Rage du Dinobroyeur",
+    "nameEN": "Structure Deck: Dinosmasher's Fury",
+    "releaseDate": "13-04-2017"
+  },
+  {
+    "setCode": "SDPD",
+    "nameFR": "Deck de Structure : Domination des Pendules",
+    "nameEN": "Structure Deck: Pendulum Domination",
+    "releaseDate": "19-01-2017"
+  },
+  {
+    "setCode": "SDKS",
+    "nameFR": "Deck de Structure : Seto Kaiba",
+    "nameEN": "Structure Deck: Seto Kaiba",
+    "releaseDate": "20-10-2016"
+  },
+  {
+    "setCode": "SDMY",
+    "nameFR": "Deck de Structure : Yugi Muto",
+    "nameEN": "",
+    "releaseDate": "20-10-2016"
+  },
+  {
+    "setCode": "SR02",
+    "nameFR": "Deck de Structure : La Résurrection des Véritables Dragons",
+    "nameEN": "Structure Deck: Rise of the True Dragons",
+    "releaseDate": "07-07-2016"
+  },
+  {
+    "setCode": "SR01",
+    "nameFR": "Deck de Structure : Empereur des Ombres",
+    "nameEN": "",
+    "releaseDate": "28-01-2016"
+  },
+  {
+    "setCode": "SDMP",
+    "nameFR": "Deck de Structure : Maitre des Pendules",
+    "nameEN": "Structure Deck: Master of Pendulum",
+    "releaseDate": "03-12-2015"
+  },
+  {
+    "setCode": "SDSE",
+    "nameFR": "Deck de Structure : Synchronique Extrême",
+    "nameEN": "Structure Deck: Synchron Extreme",
+    "releaseDate": "27-08-2015"
+  },
+  {
+    "setCode": "SDHS",
+    "nameFR": "Deck de Structure : L'Assaut des HÉROS",
+    "nameEN": "Structure Deck: HERO Strike",
+    "releaseDate": "29-01-2015"
+  },
+  {
+    "setCode": "SDGR",
+    "nameFR": "Deck de Structure : Déchaînement Geargia",
+    "nameEN": "",
+    "releaseDate": "16-10-2014"
+  },
+  {
+    "setCode": "SDLI",
+    "nameFR": "Deck de Structure : Royaume de Lumière",
+    "nameEN": "Structure Deck: The Realm of Light",
+    "releaseDate": "27-06-2014"
+  },
+  {
+    "setCode": "SDCR",
+    "nameFR": "Deck de Structure : Révolution Cyber Dragon",
+    "nameEN": "Structure Deck: Cyber Dragon Revolution",
+    "releaseDate": "06-02-2014"
+  },
+  {
+    "setCode": "SDBE",
+    "nameFR": "Deck de Structure: La Saga du Dragon Blanc aux Yeux Bleus",
+    "nameEN": "Structure Deck: Saga of Blue-Eyes White Dragon",
+    "releaseDate": "12-09-2013"
+  },
+  {
+    "setCode": "SDOK",
+    "nameFR": "Deck de Structure : Assaut des Rois du Feu",
+    "nameEN": "Structure Deck: Onslaught of the Fire Kings",
+    "releaseDate": "08-02-2013"
+  },
+  {
+    "setCode": "SDRE",
+    "nameFR": "Deck de Structure: Le Royaume de l'Empereur des Mers",
+    "nameEN": "Structure Deck: Realm of the Sea Emperor",
+    "releaseDate": "10-10-2012"
+  },
+  {
+    "setCode": "SDWA",
+    "nameFR": "Deck de Structure : Seigneur de Guerre Samouraï",
+    "nameEN": "Structure Deck: Samurai Warlords",
+    "releaseDate": "26-06-2012"
+  },
+  {
+    "setCode": "SDDC",
+    "nameFR": "Deck de Structure : Le Choc des dragons",
+    "nameEN": "Structure Deck: Dragons Collide",
+    "releaseDate": "07-02-2012"
+  },
+  {
+    "setCode": "SDGU",
+    "nameFR": "Deck de Structure : Portail du Monde Ténébreux",
+    "nameEN": "Structure Deck: Gates of the Underworld",
+    "releaseDate": "13-10-2011"
+  },
+  {
+    "setCode": "SDLS",
+    "nameFR": "Deck de Structure : Le Sanctuaire Perdu",
+    "nameEN": "Structure Deck: Lost Sanctuary",
+    "releaseDate": "09-06-2011"
+  },
+  {
+    "setCode": "SDDL",
+    "nameFR": "Deck de Structure : Légion Dragunité",
+    "nameEN": "Structure Deck: Dragunity Legion",
+    "releaseDate": "03-03-2011"
+  },
+  {
+    "setCode": "SDMA",
+    "nameFR": "Deck de Structure : Marik",
+    "nameEN": "Structure Deck: Marik",
+    "releaseDate": "19-10-2010"
+  },
+  {
+    "setCode": "SDMM",
+    "nameFR": "Deck de Structure : Mechabot",
+    "nameEN": "Structure Deck: Machina Mayhem",
+    "releaseDate": "23-02-2010"
+  },
+  {
+    "setCode": "SDWS",
+    "nameFR": "Deck de Structure : Attaque des Guerriers",
+    "nameEN": "Structure Deck: Warrior's Strike",
+    "releaseDate": "23-10-2009"
+  },
+  {
+    "setCode": "SDSC",
+    "nameFR": "Deck de Structure : Ordre du Magicien",
+    "nameEN": "Structure Deck: Spellcaster's Command",
+    "releaseDate": "30-03-2009"
+  },
+  {
+    "setCode": "SDZW",
+    "nameFR": "Deck de Structure 15 : Monde des Zombies",
+    "nameEN": "Structure Deck: Zombie World",
+    "releaseDate": "01-10-2008"
+  },
+  {
+    "setCode": "SDDE",
+    "nameFR": "Deck de Structure : L'Empereur des Ténèbres",
+    "nameEN": "Structure Deck: The Dark Emperor",
+    "releaseDate": "01-04-2008"
+  },
+  {
+    "setCode": "SDRL",
+    "nameFR": "Deck de Structure : Resurrection des Grands Dragons",
+    "nameEN": "Structure Deck: Rise of the Dragon Lords",
+    "releaseDate": "01-10-2007"
+  },
+  {
+    "setCode": "SD10",
+    "nameFR": "Deck de Structure 10 : Re-Volt des Machines",
+    "nameEN": "Structure Deck: Machine Re-Volt",
+    "releaseDate": "01-01-2007"
+  },
+  {
+    "setCode": "SD09",
+    "nameFR": "Deck de Structure 9 : La Rage du Dinosaure",
+    "nameEN": "",
+    "releaseDate": "01-10-2006"
+  },
+  {
+    "setCode": "SD8",
+    "nameFR": "Deck de Structure 8 : Seigneur des Tempêtes",
+    "nameEN": "Structure Deck: Lord of the Storm",
+    "releaseDate": "01-08-2006"
+  },
+  {
+    "setCode": "SD7",
+    "nameFR": "Deck de Structure 7 : Forteresse Invincible",
+    "nameEN": "",
+    "releaseDate": "01-05-2006"
+  },
+  {
+    "setCode": "SD6",
+    "nameFR": "Deck de Structure 6 : Le Jugement du Magicien",
+    "nameEN": "",
+    "releaseDate": "01-01-2006"
+  },
+  {
+    "setCode": "SD5",
+    "nameFR": "Deck de Structure 5 : Triomphe du Guerrier",
+    "nameEN": "Structure Deck: Warrior's Triumph",
+    "releaseDate": "01-11-2005"
+  },
+  {
+    "setCode": "SD4",
+    "nameFR": "Deck de Structure 4 : Fureur des Profondeurs",
+    "nameEN": "",
+    "releaseDate": "01-10-2004"
+  },
+  {
+    "setCode": "SD3",
+    "nameFR": "Deck de Structure 3 : Soufle de Destruction",
+    "nameEN": "",
+    "releaseDate": "01-10-2004"
+  },
+  {
+    "setCode": "SD2",
+    "nameFR": "Deck de Structure 2 : Folie Zombie",
+    "nameEN": "Structure Deck: Zombie Madness",
+    "releaseDate": "01-10-2002"
+  },
+  {
+    "setCode": "SD1",
+    "nameFR": "Deck de Structure 1 : Rugissement des Dragons",
+    "nameEN": "",
+    "releaseDate": "01-10-2002"
+  },
+  {
+    "setCode": "LD10",
+    "nameFR": "Duellistes Légendaires : Volcan Brûleur d'Âmes",
+    "nameEN": "Legendary Duelists: Soulburning Volcano",
+    "releaseDate": "10-08-2023"
+  },
+  {
+    "setCode": "LDS3",
+    "nameFR": "Duellistes Legendaires : Saison 3",
+    "nameEN": "Legendary Duelists: Season 3",
+    "releaseDate": "21-07-2022"
+  },
+  {
+    "setCode": "LED9",
+    "nameFR": "Duellistes Légendaires : Duels des Profondeurs",
+    "nameEN": "Legendary Duelists: Duels From the Deep",
+    "releaseDate": "16-06-2022"
+  },
+  {
+    "setCode": "LED8",
+    "nameFR": "Duellistes Légendaires : La Tempête Synchro",
+    "nameEN": "Legendary Duelists: Synchro Storm",
+    "releaseDate": "28-10-2021"
+  },
+  {
+    "setCode": "LDS2",
+    "nameFR": "Duellistes Légendaires : Saison 2",
+    "nameEN": "Legendary Duelists: Season 2",
+    "releaseDate": "21-01-2021"
+  },
+  {
+    "setCode": "LED7",
+    "nameFR": "Duellistes Légendaires : La Rage de Râ",
+    "nameEN": "Legendary Duelists: Rage of Ra",
+    "releaseDate": "24-09-2020"
+  },
+  {
+    "setCode": "LDS1",
+    "nameFR": "Duellistes Légendaires : Saison 1",
+    "nameEN": "Legendary Duelists: Season 1",
+    "releaseDate": "02-07-2020"
+  },
+  {
+    "setCode": "LED6",
+    "nameFR": "Duellistes Légendaires : Le Héros Magique",
+    "nameEN": "Legendary Duelists: Magical Hero",
+    "releaseDate": "16-01-2020"
+  },
+  {
+    "setCode": "LED5",
+    "nameFR": "Duellistes Légendaires : Destinee Immortelle",
+    "nameEN": "Legendary Duelists: Immortal Destiny",
+    "releaseDate": "26-09-2019"
+  },
+  {
+    "setCode": "LED4",
+    "nameFR": "Duellistes Légendaires : Les sœurs de la rose",
+    "nameEN": "Legendary Duelists: Sisters of the Rose",
+    "releaseDate": "10-01-2019"
+  },
+  {
+    "setCode": "LED3",
+    "nameFR": "Duellistes Légendaires : Le Dragon Blanc des Abysses",
+    "nameEN": "Legendary Duelists: White Dragon Abyss",
+    "releaseDate": "27-09-2018"
+  },
+  {
+    "setCode": "LED2",
+    "nameFR": "Duellistes Légendaires : Ancien Millenaire",
+    "nameEN": "Legendary Duelists: Ancient Millennium",
+    "releaseDate": "23-02-2018"
+  },
+  {
+    "setCode": "LEDU",
+    "nameFR": "Pack du Duelliste : Duellistes Légendaires",
+    "nameEN": "Legendary Duelists",
+    "releaseDate": "07-09-2017"
+  },
+  {
+    "setCode": "DPDG",
+    "nameFR": "Pack du Duelliste - Gardiens Dimensionnels",
+    "nameEN": "Duelist Pack: Dimensional Guardians",
+    "releaseDate": "25-05-2017"
+  },
+  {
+    "setCode": "DPRP",
+    "nameFR": "Pack du Duelliste : les Rivaux du Pharaon",
+    "nameEN": "Duelist Pack: Rivals of the Pharaoh",
+    "releaseDate": "15-09-2016"
+  },
+  {
+    "setCode": "DPBC",
+    "nameFR": "Pack du Duelliste - Bataille-Ville",
+    "nameEN": "",
+    "releaseDate": "10-12-2015"
+  },
+  {
+    "setCode": "DP11",
+    "nameFR": "Pack Du Duelliste Crow",
+    "nameEN": "",
+    "releaseDate": "26-05-2011"
+  },
+  {
+    "setCode": "DP10",
+    "nameFR": "Pack du Duelliste 10 : Yusei 3",
+    "nameEN": "Duelist Pack: Yusei Fudo 3",
+    "releaseDate": "24-04-2010"
+  },
+  {
+    "setCode": "DPKB",
+    "nameFR": "Pack du Duelliste Kaiba",
+    "nameEN": "Duelist Pack: Kaiba",
+    "releaseDate": "15-04-2010"
+  },
+  {
+    "setCode": "DP09",
+    "nameFR": "Pack du Duelliste 9 : Yusei Fudo 2",
+    "nameEN": "Duelist Pack: Yusei Fudo 2",
+    "releaseDate": "15-01-2010"
+  },
+  {
+    "setCode": "DPYG",
+    "nameFR": "Pack du Duelliste : Yugi",
+    "nameEN": "Duelist Pack: Yugi",
+    "releaseDate": "07-07-2009"
+  },
+  {
+    "setCode": "DP08",
+    "nameFR": "Pack du Duelliste 8 : Yusei",
+    "nameEN": "Duelist Pack: Yusei Fudo",
+    "releaseDate": "24-02-2009"
+  },
+  {
+    "setCode": "DP06",
+    "nameFR": "Pack du Duelliste 6 : Jaden Yuki 3",
+    "nameEN": "Duelist Pack: Jaden Yuki 3",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "DP07",
+    "nameFR": "Pack du Duelliste 7 : Jesse Anderson",
+    "nameEN": "Duelist Pack: Jesse Anderson",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "DP04",
+    "nameFR": "Pack du Duelliste 4 : Zen Truesdale",
+    "nameEN": "Duelist Pack: Zane Truesdale",
+    "releaseDate": "01-03-2007"
+  },
+  {
+    "setCode": "DP05",
+    "nameFR": "Pack du Duelliste 5 : Aster Phoenix",
+    "nameEN": "Duelist Pack: Aster Phoenix",
+    "releaseDate": "01-02-2007"
+  },
+  {
+    "setCode": "DP03",
+    "nameFR": "Pack du Duelliste 3 : Jaden Yuki 2",
+    "nameEN": "Duelist Pack: Jaden Yuki 2",
+    "releaseDate": "01-02-2007"
+  },
+  {
+    "setCode": "DP1",
+    "nameFR": "Pack du Duelliste 1 : Jaden Yuki",
+    "nameEN": "Duelist Pack: Jaden Yuki",
+    "releaseDate": "01-03-2006"
+  },
+  {
+    "setCode": "DP2",
+    "nameFR": "Pack du Duelliste 2 : Chazz Princeton",
+    "nameEN": "Duelist Pack: Chazz Princeton",
+    "releaseDate": "01-03-2006"
+  },
+  {
+    "setCode": "PP02",
+    "nameFR": "Paquet Premium 2",
+    "nameEN": "Premium Pack 2",
+    "releaseDate": "01-07-2008"
+  },
+  {
+    "setCode": "PP01",
+    "nameFR": "Paquet Premium",
+    "nameEN": "Premium Pack 1",
+    "releaseDate": "01-10-2007"
+  },
+  {
+    "setCode": "EP1",
+    "nameFR": "Pack Exclusif",
+    "nameEN": "",
+    "releaseDate": "01-12-2005"
+  },
+  {
+    "setCode": "OP27",
+    "nameFR": "OTS Pack de Tournoi 27",
+    "nameEN": "OTS Tournament Pack 27",
+    "releaseDate": "26-02-2025"
+  },
+  {
+    "setCode": "OP26",
+    "nameFR": "OTS Pack de Tournoi 26",
+    "nameEN": "OTS Tournament Pack 26",
+    "releaseDate": "17-10-2024"
+  },
+  {
+    "setCode": "OP25",
+    "nameFR": "OTS Pack de Tournoi 25",
+    "nameEN": "OTS Tournament Pack 25",
+    "releaseDate": "12-06-2024"
+  },
+  {
+    "setCode": "OP24",
+    "nameFR": "OTS Pack de Tournoi 24",
+    "nameEN": "OTS Tournament Pack 24",
+    "releaseDate": "14-02-2024"
+  },
+  {
+    "setCode": "OP23",
+    "nameFR": "OTS Pack de Tournoi 23",
+    "nameEN": "OTS Tournament Pack 23",
+    "releaseDate": "25-10-2023"
+  },
+  {
+    "setCode": "OP22",
+    "nameFR": "OTS Pack de Tournoi 22",
+    "nameEN": "OTS Tournament Pack 22",
+    "releaseDate": "19-07-2023"
+  },
+  {
+    "setCode": "OP21",
+    "nameFR": "OTS Pack de Tournoi 21",
+    "nameEN": "OTS Tournament Pack 21",
+    "releaseDate": "09-02-2023"
+  },
+  {
+    "setCode": "OP20",
+    "nameFR": "OTS Pack de Tournoi 20",
+    "nameEN": "OTS Tournament Pack 20",
+    "releaseDate": "20-10-2022"
+  },
+  {
+    "setCode": "OP19",
+    "nameFR": "OTS Pack de Tournoi 19",
+    "nameEN": "OTS Tournament Pack 19",
+    "releaseDate": "16-06-2022"
+  },
+  {
+    "setCode": "OP18",
+    "nameFR": "OTS Pack de Tournoi 18",
+    "nameEN": "OTS Tournament Pack 18",
+    "releaseDate": "17-02-2022"
+  },
+  {
+    "setCode": "OP17",
+    "nameFR": "OTS Pack de Tournoi 17",
+    "nameEN": "OTS Tournament Pack 17",
+    "releaseDate": "07-10-2021"
+  },
+  {
+    "setCode": "OP16",
+    "nameFR": "OTS Pack de Tournoi 16",
+    "nameEN": "OTS Tournament Pack 16",
+    "releaseDate": "10-06-2021"
+  },
+  {
+    "setCode": "OP15",
+    "nameFR": "OTS Pack de Tournoi 15",
+    "nameEN": "OTS Tournament Pack 15",
+    "releaseDate": "18-02-2021"
+  },
+  {
+    "setCode": "OP14",
+    "nameFR": "OTS Pack de Tournoi 14",
+    "nameEN": "OTS Tournament Pack 14",
+    "releaseDate": "08-10-2020"
+  },
+  {
+    "setCode": "OP13",
+    "nameFR": "OTS Pack de Tournoi 13",
+    "nameEN": "OTS Tournament Pack 13",
+    "releaseDate": "15-06-2020"
+  },
+  {
+    "setCode": "OP12",
+    "nameFR": "OTS Pack de Tournoi 12",
+    "nameEN": "OTS Tournament Pack 12",
+    "releaseDate": "05-12-2019"
+  },
+  {
+    "setCode": "OP11",
+    "nameFR": "OTS Pack de Tournoi 11",
+    "nameEN": "OTS Tournament Pack 11",
+    "releaseDate": "15-08-2019"
+  },
+  {
+    "setCode": "OP10",
+    "nameFR": "OTS Pack de Tournoi 10",
+    "nameEN": "OTS Tournament Pack 10",
+    "releaseDate": "18-04-2019"
+  },
+  {
+    "setCode": "OP09",
+    "nameFR": "OTS Pack de Tournoi 9",
+    "nameEN": "OTS Tournament Pack 9",
+    "releaseDate": "06-12-2018"
+  },
+  {
+    "setCode": "OP08",
+    "nameFR": "OTS Tournament Pack 8",
+    "nameEN": "",
+    "releaseDate": "17-08-2018"
+  },
+  {
+    "setCode": "OP07",
+    "nameFR": "OTS Tournament Pack 7",
+    "nameEN": "",
+    "releaseDate": "12-04-2018"
+  },
+  {
+    "setCode": "OP06",
+    "nameFR": "OTS Tournament Pack 6",
+    "nameEN": "",
+    "releaseDate": "01-12-2017"
+  },
+  {
+    "setCode": "OP05",
+    "nameFR": "OTS Tournament Pack 5",
+    "nameEN": "",
+    "releaseDate": "03-08-2017"
+  },
+  {
+    "setCode": "OP04",
+    "nameFR": "OTS Tournament Pack 4",
+    "nameEN": "",
+    "releaseDate": "01-04-2017"
+  },
+  {
+    "setCode": "OP03",
+    "nameFR": "OTS Tournament Pack 3",
+    "nameEN": "",
+    "releaseDate": "17-11-2016"
+  },
+  {
+    "setCode": "OP02",
+    "nameFR": "OTS Pack de Tournoi 2",
+    "nameEN": "OTS Tournament Pack 2",
+    "releaseDate": "21-07-2016"
+  },
+  {
+    "setCode": "OP01",
+    "nameFR": "OTS Tournament Pack 1",
+    "nameEN": "",
+    "releaseDate": "18-03-2016"
+  },
+  {
+    "setCode": "WP11",
+    "nameFR": "World Championship 2011 Card Pack",
+    "nameEN": "",
+    "releaseDate": "01-08-2011"
+  },
+  {
+    "setCode": "WCPP",
+    "nameFR": "World Championship 2010 Card Pack",
+    "nameEN": "",
+    "releaseDate": "14-08-2010"
+  },
+  {
+    "setCode": "SP2",
+    "nameFR": "Sneak Peek Participation Cards : Series 2",
+    "nameEN": "",
+    "releaseDate": "13-10-2008"
+  },
+  {
+    "setCode": "SP1",
+    "nameFR": "Sneak Peek Participation Cards : Series 1",
+    "nameEN": "",
+    "releaseDate": "13-10-2008"
+  },
+  {
+    "setCode": "SJC",
+    "nameFR": "Shonen Jump Championship Series Prize Cards",
+    "nameEN": "",
+    "releaseDate": "13-10-2007"
+  },
+  {
+    "setCode": "TP8",
+    "nameFR": "Pack de Tournoi 8",
+    "nameEN": "",
+    "releaseDate": "01-08-2007"
+  },
+  {
+    "setCode": "TP7",
+    "nameFR": "Pack de Tournoi 7",
+    "nameEN": "",
+    "releaseDate": "01-07-2007"
+  },
+  {
+    "setCode": "TP6",
+    "nameFR": "Pack de Tournoi 6",
+    "nameEN": "",
+    "releaseDate": "01-06-2007"
+  },
+  {
+    "setCode": "TP5",
+    "nameFR": "Pack de Tournoi 5",
+    "nameEN": "",
+    "releaseDate": "01-07-2006"
+  },
+  {
+    "setCode": "TP4",
+    "nameFR": "Pack de Tournoi 4",
+    "nameEN": "",
+    "releaseDate": "01-07-2005"
+  },
+  {
+    "setCode": "TP3",
+    "nameFR": "Pack de Tournoi 3",
+    "nameEN": "",
+    "releaseDate": "01-07-2004"
+  },
+  {
+    "setCode": "TP2",
+    "nameFR": "Pack de Tournoi 2",
+    "nameEN": "",
+    "releaseDate": "01-07-2003"
+  },
+  {
+    "setCode": "TP1",
+    "nameFR": "Pack de Tournoi 1",
+    "nameEN": "",
+    "releaseDate": "01-07-2002"
+  },
+  {
+    "setCode": "CP08",
+    "nameFR": "Paquet du Champion 08",
+    "nameEN": "",
+    "releaseDate": "20-03-2009"
+  },
+  {
+    "setCode": "CP07",
+    "nameFR": "Paquet du Champion 07",
+    "nameEN": "",
+    "releaseDate": "01-10-2008"
+  },
+  {
+    "setCode": "CP06",
+    "nameFR": "Paquet du Champion 06",
+    "nameEN": "",
+    "releaseDate": "01-06-2008"
+  },
+  {
+    "setCode": "CP05",
+    "nameFR": "Paquet du Champion 05",
+    "nameEN": "",
+    "releaseDate": "01-03-2008"
+  },
+  {
+    "setCode": "CP04",
+    "nameFR": "Paquet du Champion 04",
+    "nameEN": "",
+    "releaseDate": "01-11-2007"
+  },
+  {
+    "setCode": "CP03",
+    "nameFR": "Paquet du Champion 03",
+    "nameEN": "",
+    "releaseDate": "01-08-2007"
+  },
+  {
+    "setCode": "CP02",
+    "nameFR": "Paquet du Champion 02",
+    "nameEN": "",
+    "releaseDate": "01-06-2007"
+  },
+  {
+    "setCode": "CP01",
+    "nameFR": "Paquet du Champion 01",
+    "nameEN": "",
+    "releaseDate": "01-02-2007"
+  },
+  {
+    "setCode": "MP25",
+    "nameFR": "2025 Mega-Pack Tin",
+    "nameEN": "",
+    "releaseDate": "04-09-2025"
+  },
+  {
+    "setCode": "MP24",
+    "nameFR": "Boîte du 25e Anniversaire : Les Miroirs du Duel",
+    "nameEN": "25th Anniversary Tin: Dueling Mirrors",
+    "releaseDate": "24-09-2024"
+  },
+  {
+    "setCode": "MP23",
+    "nameFR": "Boîte du 25e anniversaire : Les Héros du Duel Méga-Pack",
+    "nameEN": "25th Anniversary Tin: Dueling Heroes Mega Pack",
+    "releaseDate": "07-09-2023"
+  },
+  {
+    "setCode": "TN23",
+    "nameFR": "Boîte du 25e anniversaire : Les Héros du Duel",
+    "nameEN": "25th Anniversary Tin: Dueling Heroes",
+    "releaseDate": "07-09-2023"
+  },
+  {
+    "setCode": "MP22",
+    "nameFR": "Boîte des Dieux du Pharaon 2022",
+    "nameEN": "2022 Tin of the Pharaoh's Gods",
+    "releaseDate": "15-09-2022"
+  },
+  {
+    "setCode": "MP21",
+    "nameFR": "Boîte des Batailles Anciennes 2021",
+    "nameEN": "2021 Tin of Ancient Battles",
+    "releaseDate": "30-09-2021"
+  },
+  {
+    "setCode": "MP20",
+    "nameFR": "Boîte des Mémoires Perdues 2020",
+    "nameEN": "2020 Tin of Lost Memories Mega Pack",
+    "releaseDate": "27-08-2020"
+  },
+  {
+    "setCode": "TN19",
+    "nameFR": "Boîte Sarcophage Doré 2019",
+    "nameEN": "2019 Gold Sarcophagus Tin",
+    "releaseDate": "29-08-2019"
+  },
+  {
+    "setCode": "MP19",
+    "nameFR": "Méga-Pack 2019 Le Sarcophage Doré",
+    "nameEN": "2019 Gold Sarcophagus Tin Mega Pack",
+    "releaseDate": "29-08-2019"
+  },
+  {
+    "setCode": "CT15",
+    "nameFR": "Méga Boîte 2018",
+    "nameEN": "2018 Mega-Tins",
+    "releaseDate": "30-08-2018"
+  },
+  {
+    "setCode": "MP18",
+    "nameFR": "Méga-Boîte 2018 Méga Pack",
+    "nameEN": "2018 Mega-Tin Mega Pack",
+    "releaseDate": "30-08-2018"
+  },
+  {
+    "setCode": "CT14",
+    "nameFR": "Méga Boîte 2017",
+    "nameEN": "2017 Mega-Tins",
+    "releaseDate": "24-08-2017"
+  },
+  {
+    "setCode": "MP17",
+    "nameFR": "Méga Boîte 2017 Méga-Pack",
+    "nameEN": "2017 Mega-Tin Mega Pack",
+    "releaseDate": "24-08-2017"
+  },
+  {
+    "setCode": "CT13",
+    "nameFR": "Méga-Boîte 2016",
+    "nameEN": "2016 Mega-Tins",
+    "releaseDate": "01-09-2016"
+  },
+  {
+    "setCode": "MP16",
+    "nameFR": "2016 Méga-Boîte Méga-Pack",
+    "nameEN": "2016 Mega-Tin Mega Pack",
+    "releaseDate": "01-09-2016"
+  },
+  {
+    "setCode": "MP15",
+    "nameFR": "2015 Méga-Boîte Méga-Pack",
+    "nameEN": "2015 Mega-Tin Mega Pack",
+    "releaseDate": "17-09-2015"
+  },
+  {
+    "setCode": "CT12",
+    "nameFR": "Mega-Tin 2015",
+    "nameEN": "2015 Mega-Tins",
+    "releaseDate": "17-09-2015"
+  },
+  {
+    "setCode": "CT11",
+    "nameFR": "Collector Tin : Series 11",
+    "nameEN": "2014 Mega-Tins",
+    "releaseDate": "29-08-2014"
+  },
+  {
+    "setCode": "MP14",
+    "nameFR": "Méga Boîte 2014",
+    "nameEN": "2014 Mega-Tins Mega-Pack",
+    "releaseDate": "28-08-2014"
+  },
+  {
+    "setCode": "CT10",
+    "nameFR": "Collectors Tins 2013",
+    "nameEN": "Collector's Tins 2013",
+    "releaseDate": "30-08-2013"
+  },
+  {
+    "setCode": "ZTIN",
+    "nameFR": "Boîte Collection Zexal",
+    "nameEN": "2013 Zexal Collection Tin",
+    "releaseDate": "07-03-2013"
+  },
+  {
+    "setCode": "CT09",
+    "nameFR": "Collector Tin : Series 9",
+    "nameEN": "Collector's Tins 2012",
+    "releaseDate": "14-08-2012"
+  },
+  {
+    "setCode": "PRC1",
+    "nameFR": "Collection Tin : 2012 Premium",
+    "nameEN": "Premium Collection",
+    "releaseDate": "20-03-2012"
+  },
+  {
+    "setCode": "CT08",
+    "nameFR": "Collector Tin : Series 8",
+    "nameEN": "Collector's Tins 2011",
+    "releaseDate": "30-08-2011"
+  },
+  {
+    "setCode": "CT07",
+    "nameFR": "Collector Tin : Series 7",
+    "nameEN": "Collector's Tins 2010",
+    "releaseDate": "31-08-2010"
+  },
+  {
+    "setCode": "CT06",
+    "nameFR": "Collector Tin : Series 6",
+    "nameEN": "Collector's Tins 2009",
+    "releaseDate": "18-08-2009"
+  },
+  {
+    "setCode": "CT05",
+    "nameFR": "Collector Tin : Series 5",
+    "nameEN": "Collector's Tins 2008",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "CT04",
+    "nameFR": "Collector Tin : Series 4",
+    "nameEN": "Collector's Tins 2007",
+    "releaseDate": "01-01-2007"
+  },
+  {
+    "setCode": "CT03",
+    "nameFR": "Collector Tin : Series 3",
+    "nameEN": "Collector's Tins 2006",
+    "releaseDate": "01-01-2006"
+  },
+  {
+    "setCode": "CT2",
+    "nameFR": "Collector Tin : Series 2",
+    "nameEN": "",
+    "releaseDate": "01-01-2005"
+  },
+  {
+    "setCode": "CT1",
+    "nameFR": "Collector Tin : Series 1",
+    "nameEN": "",
+    "releaseDate": "01-01-2004"
+  },
+  {
+    "setCode": "L5DD",
+    "nameFR": "Decks Légendaires 5D's",
+    "nameEN": "Legendary 5D's Decks",
+    "releaseDate": "06-11-2025"
+  },
+  {
+    "setCode": "DLCS",
+    "nameFR": "Les Dragons de Légende : La Série Complète",
+    "nameEN": "Dragons of Legend: The Complete Series",
+    "releaseDate": "10-09-2020"
+  },
+  {
+    "setCode": "LEHD",
+    "nameFR": "Decks du Héro Légendaire",
+    "nameEN": "Legendary Hero Decks",
+    "releaseDate": "04-10-2018"
+  },
+  {
+    "setCode": "LC06",
+    "nameFR": "Collection Légendaire Kaiba",
+    "nameEN": "Legendary Collection Kaiba",
+    "releaseDate": "08-03-2018"
+  },
+  {
+    "setCode": "LCKC",
+    "nameFR": "Collection Légendaire Kaiba Mega-Pack",
+    "nameEN": "Legendary Collection Kaiba Mega Pack",
+    "releaseDate": "08-03-2018"
+  },
+  {
+    "setCode": "LEDD",
+    "nameFR": "Decks Du Dragon Légendaire",
+    "nameEN": "Legendary Dragon Decks",
+    "releaseDate": "05-10-2017"
+  },
+  {
+    "setCode": "LDK2",
+    "nameFR": "Decks Legendaires II",
+    "nameEN": "Legendary Decks II",
+    "releaseDate": "06-10-2016"
+  },
+  {
+    "setCode": "YGLD",
+    "nameFR": "Decks Légendaires de Yugi",
+    "nameEN": "Yugi's Legendary Decks",
+    "releaseDate": "12-11-2015"
+  },
+  {
+    "setCode": "LC05",
+    "nameFR": "Collection Légendaire 5D's",
+    "nameEN": "",
+    "releaseDate": "23-10-2014"
+  },
+  {
+    "setCode": "LC5D",
+    "nameFR": "Collection Légendaire 5D's Méga Pack",
+    "nameEN": "Legendary Collection 5D's: Mega Pack",
+    "releaseDate": "23-10-2014"
+  },
+  {
+    "setCode": "LCJW",
+    "nameFR": "Collection Légendaire 4 Méga-Pack",
+    "nameEN": "Legendary Collection 4: Mega Pack",
+    "releaseDate": "10-10-2013"
+  },
+  {
+    "setCode": "LC04",
+    "nameFR": "Collection Légendaire 4 : Le Monde de Joey",
+    "nameEN": "Legendary Collection 4: Joey's World",
+    "releaseDate": "10-10-2013"
+  },
+  {
+    "setCode": "LC03",
+    "nameFR": "Legendary Collection 3: Yugi's World",
+    "nameEN": "",
+    "releaseDate": "27-09-2012"
+  },
+  {
+    "setCode": "RYMP",
+    "nameFR": "Méga-Pack Jaune Râ",
+    "nameEN": "Ra Yellow Mega Pack",
+    "releaseDate": "21-02-2012"
+  },
+  {
+    "setCode": "LC02",
+    "nameFR": "Legendary Collection 2: The Duel Academy Years",
+    "nameEN": "",
+    "releaseDate": "21-10-2011"
+  },
+  {
+    "setCode": "LC01",
+    "nameFR": "Legendary Collection",
+    "nameEN": "",
+    "releaseDate": "30-09-2010"
+  },
+  {
+    "setCode": "MGED",
+    "nameFR": "Or Maximum : Eldorado",
+    "nameEN": "Maximum Gold: El Dorado",
+    "releaseDate": "18-11-2021"
+  },
+  {
+    "setCode": "MAGO",
+    "nameFR": "Or Maximum",
+    "nameEN": "Maximum Gold",
+    "releaseDate": "12-11-2020"
+  },
+  {
+    "setCode": "PGL3",
+    "nameFR": "Gold Premium : Or Infini",
+    "nameEN": "Premium Gold: Infinite Gold",
+    "releaseDate": "17-03-2016"
+  },
+  {
+    "setCode": "PGL2",
+    "nameFR": "Gold Premium 2",
+    "nameEN": "Premium Gold 2",
+    "releaseDate": "19-03-2015"
+  },
+  {
+    "setCode": "PGLD",
+    "nameFR": "Gold Premium",
+    "nameEN": "Premium Gold",
+    "releaseDate": "27-03-2014"
+  },
+  {
+    "setCode": "GLD5",
+    "nameFR": "Séries Gold 5 : La Mine Hantée",
+    "nameEN": "",
+    "releaseDate": "12-06-2012"
+  },
+  {
+    "setCode": "GLD4",
+    "nameFR": "Séries GOLD 4 : Pyramides",
+    "nameEN": "Gold Series 4: Pyramids Edition",
+    "releaseDate": "01-07-2011"
+  },
+  {
+    "setCode": "GLD3",
+    "nameFR": "Series GOLD 3 : 2010",
+    "nameEN": "Gold Series 3",
+    "releaseDate": "17-06-2010"
+  },
+  {
+    "setCode": "GLD2",
+    "nameFR": "Series GOLD 2 : 2009",
+    "nameEN": "Gold Series 2",
+    "releaseDate": "27-05-2009"
+  },
+  {
+    "setCode": "GLD1",
+    "nameFR": "Séries GOLD",
+    "nameEN": "Gold Series 1",
+    "releaseDate": "01-04-2008"
+  },
+  {
+    "setCode": "HA07",
+    "nameFR": "Arsenal Mystérieux 7 : Chevalier des Étoiles",
+    "nameEN": "Hidden Arsenal 7",
+    "releaseDate": "25-04-2013"
+  },
+  {
+    "setCode": "HA06",
+    "nameFR": "Arsenal Mystérieux 6",
+    "nameEN": "Hidden Arsenal 6",
+    "releaseDate": "24-07-2012"
+  },
+  {
+    "setCode": "HA05",
+    "nameFR": "Arsenal Mystérieux 5",
+    "nameEN": "Hidden Arsenal 5",
+    "releaseDate": "06-12-2011"
+  },
+  {
+    "setCode": "HASE",
+    "nameFR": "Arsenal Mystérieux : Édition Spéciale",
+    "nameEN": "Hidden Arsenal: Special Edition",
+    "releaseDate": "22-07-2011"
+  },
+  {
+    "setCode": "HA04",
+    "nameFR": "Arsenal Mystérieux 4",
+    "nameEN": "Hidden Arsenal 4",
+    "releaseDate": "04-04-2011"
+  },
+  {
+    "setCode": "HA03",
+    "nameFR": "Arsenal Mystérieux 3",
+    "nameEN": "Hidden Arsenal 3",
+    "releaseDate": "02-12-2010"
+  },
+  {
+    "setCode": "HA02",
+    "nameFR": "Arsenal Mystérieux 2",
+    "nameEN": "Hidden Arsenal 2",
+    "releaseDate": "15-07-2010"
+  },
+  {
+    "setCode": "HA01",
+    "nameFR": "Arsenal Mystérieux 1",
+    "nameEN": "Hidden Arsenal",
+    "releaseDate": "05-11-2009"
+  },
+  {
+    "setCode": "RP02",
+    "nameFR": "Retro Pack 2",
+    "nameEN": "",
+    "releaseDate": "28-07-2009"
+  },
+  {
+    "setCode": "RP01",
+    "nameFR": "Retro Pack",
+    "nameEN": "",
+    "releaseDate": "01-07-2008"
+  },
+  {
+    "setCode": "MVP1",
+    "nameFR": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+    "nameEN": "The Dark Side of Dimensions Movie Pack",
+    "releaseDate": "21-07-2016"
+  },
+  {
+    "setCode": "YMP1",
+    "nameFR": "Yu-Gi-Oh! 3D Bonds Beyond Time",
+    "nameEN": "3D Bonds Beyond Time Movie Pack",
+    "releaseDate": "22-02-2011"
+  },
+  {
+    "setCode": "MOV",
+    "nameFR": "Yu-Gi-Oh! Le Film : Pyramide de Lumière",
+    "nameEN": "",
+    "releaseDate": "13-08-2004"
+  },
+  {
+    "setCode": "BP03",
+    "nameFR": "Battle Pack 3: La Ligue des Monstres",
+    "nameEN": "Battle Pack 3: Monster League",
+    "releaseDate": "31-07-2014"
+  },
+  {
+    "setCode": "WGRT",
+    "nameFR": "Battle Pack 2 : La Guerre des Géants Recommence",
+    "nameEN": "War of the Giants Reinforcements",
+    "releaseDate": "17-01-2014"
+  },
+  {
+    "setCode": "BP02",
+    "nameFR": "Battle Pack 2: La Guerre des Géants",
+    "nameEN": "Battle Pack 2: War of the Giants",
+    "releaseDate": "27-06-2013"
+  },
+  {
+    "setCode": "BATT",
+    "nameFR": "Battle Pack Tournament Prize Cards",
+    "nameEN": "",
+    "releaseDate": "29-05-2012"
+  },
+  {
+    "setCode": "BP01",
+    "nameFR": "Battle Pack : L'Aube Épique",
+    "nameEN": "Battle Pack: Epic Dawn",
+    "releaseDate": "28-05-2012"
+  },
+  {
+    "setCode": "DL18",
+    "nameFR": "Duelist League 18",
+    "nameEN": "",
+    "releaseDate": "27-06-2014"
+  },
+  {
+    "setCode": "DL17",
+    "nameFR": "Duelist League 17",
+    "nameEN": "",
+    "releaseDate": "13-12-2013"
+  },
+  {
+    "setCode": "DL16",
+    "nameFR": "Duelist League 16",
+    "nameEN": "",
+    "releaseDate": "01-07-2013"
+  },
+  {
+    "setCode": "DL15",
+    "nameFR": "Duelist League 15",
+    "nameEN": "",
+    "releaseDate": "15-12-2012"
+  },
+  {
+    "setCode": "DL14",
+    "nameFR": "Duelist League 14",
+    "nameEN": "",
+    "releaseDate": "01-06-2012"
+  },
+  {
+    "setCode": "DL13",
+    "nameFR": "Duelist League 13",
+    "nameEN": "",
+    "releaseDate": "01-12-2011"
+  },
+  {
+    "setCode": "DL12",
+    "nameFR": "Duelist League 3 : 2011 Prize Cards",
+    "nameEN": "",
+    "releaseDate": "02-01-2011"
+  },
+  {
+    "setCode": "DL11",
+    "nameFR": "Duelist League 2 : 2011 Prize Cards",
+    "nameEN": "",
+    "releaseDate": "01-01-2011"
+  },
+  {
+    "setCode": "DL09",
+    "nameFR": "Duelist League 1 : 2010 Prize Cards",
+    "nameEN": "",
+    "releaseDate": "01-01-2010"
+  },
+  {
+    "setCode": "DLDI",
+    "nameFR": "Duelist League Demo 2010",
+    "nameEN": "",
+    "releaseDate": "01-08-2009"
+  },
+  {
+    "setCode": "DLPC",
+    "nameFR": "Duelist League Participation Cards",
+    "nameEN": "",
+    "releaseDate": "01-01-2009"
+  },
+  {
+    "setCode": "DL10",
+    "nameFR": "Duelist League Series 10",
+    "nameEN": "",
+    "releaseDate": "28-04-2006"
+  },
+  {
+    "setCode": "DL9",
+    "nameFR": "Duelist League Series 9",
+    "nameEN": "",
+    "releaseDate": "03-01-2006"
+  },
+  {
+    "setCode": "DL8",
+    "nameFR": "Duelist League Series 8",
+    "nameEN": "",
+    "releaseDate": "30-06-2005"
+  },
+  {
+    "setCode": "DL7",
+    "nameFR": "Duelist League Series 7",
+    "nameEN": "",
+    "releaseDate": "01-05-2005"
+  },
+  {
+    "setCode": "DL6",
+    "nameFR": "Duelist League Series 6",
+    "nameEN": "",
+    "releaseDate": "01-12-2004"
+  },
+  {
+    "setCode": "DL5",
+    "nameFR": "Duelist League Series 5",
+    "nameEN": "",
+    "releaseDate": "01-01-2004"
+  },
+  {
+    "setCode": "DL4",
+    "nameFR": "Duelist League Series 4",
+    "nameEN": "",
+    "releaseDate": "01-02-2003"
+  },
+  {
+    "setCode": "DL3",
+    "nameFR": "Duelist League Series 3",
+    "nameEN": "",
+    "releaseDate": "01-01-2003"
+  },
+  {
+    "setCode": "DL2",
+    "nameFR": "Duelist League Series 2",
+    "nameEN": "",
+    "releaseDate": "01-02-2002"
+  },
+  {
+    "setCode": "DL1",
+    "nameFR": "Duelist League Series 1",
+    "nameEN": "",
+    "releaseDate": "01-01-2002"
+  },
+  {
+    "setCode": "TU08",
+    "nameFR": "Turbo Pack : Booster 8",
+    "nameEN": "",
+    "releaseDate": "01-06-2012"
+  },
+  {
+    "setCode": "TU07",
+    "nameFR": "Turbo Pack : Booster 7",
+    "nameEN": "Turbo Pack: Booster Seven",
+    "releaseDate": "01-01-2012"
+  },
+  {
+    "setCode": "TU06",
+    "nameFR": "Turbo Pack : Booster 6",
+    "nameEN": "",
+    "releaseDate": "04-08-2011"
+  },
+  {
+    "setCode": "TU05",
+    "nameFR": "Turbo Pack : Booster 5",
+    "nameEN": "",
+    "releaseDate": "09-04-2011"
+  },
+  {
+    "setCode": "TU04",
+    "nameFR": "Turbo Pack : Booster 4",
+    "nameEN": "",
+    "releaseDate": "19-11-2010"
+  },
+  {
+    "setCode": "TU03",
+    "nameFR": "Turbo Pack : Booster 3",
+    "nameEN": "Turbo Pack: Booster Three",
+    "releaseDate": "12-07-2010"
+  },
+  {
+    "setCode": "TU02",
+    "nameFR": "Turbo Pack : Booster 2",
+    "nameEN": "",
+    "releaseDate": "09-01-2010"
+  },
+  {
+    "setCode": "TU01",
+    "nameFR": "Turbo Pack : Booster 1",
+    "nameEN": "Turbo Pack",
+    "releaseDate": "15-08-2009"
+  },
+  {
+    "setCode": "HL07",
+    "nameFR": "Hobby League Participation Cards: Series 7",
+    "nameEN": "Hobby League 7",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "HL06",
+    "nameFR": "Hobby League Participation Cards: Series 6",
+    "nameEN": "",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "HL05",
+    "nameFR": "Hobby League Participation Cards: Series 5",
+    "nameEN": "",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "HL04",
+    "nameFR": "Hobby League Participation Cards: Series 4",
+    "nameEN": "Hobby League 4",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "HL03",
+    "nameFR": "Hobby League Participation Cards: Series 3",
+    "nameEN": "",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "HL2",
+    "nameFR": "Hobby League Participation Cards: Series 2",
+    "nameEN": "",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "HL1",
+    "nameFR": "Hobby League Participation Cards: Series 1",
+    "nameEN": "",
+    "releaseDate": "01-01-2008"
+  },
+  {
+    "setCode": "LART",
+    "nameFR": "The Lost Art Promotion",
+    "nameEN": "Lost Art Promos",
+    "releaseDate": "31-08-2018"
+  },
+  {
+    "setCode": "YUCB",
+    "nameFR": "Yugi's Collector Box",
+    "nameEN": "",
+    "releaseDate": "15-09-2017"
+  },
+  {
+    "setCode": "DEM3",
+    "nameFR": "Demo deck 2016",
+    "nameEN": "",
+    "releaseDate": "14-01-2016"
+  },
+  {
+    "setCode": "TKN4",
+    "nameFR": "Battle City Tournament Kit",
+    "nameEN": "",
+    "releaseDate": "01-01-2014"
+  },
+  {
+    "setCode": "YZ01",
+    "nameFR": "Yu-Gi-Oh! Zexal Volumes",
+    "nameEN": "",
+    "releaseDate": "21-06-2013"
+  },
+  {
+    "setCode": "YF01",
+    "nameFR": "Yu-Gi-Oh! 5D's Volumes",
+    "nameEN": "",
+    "releaseDate": "06-07-2011"
+  },
+  {
+    "setCode": "MOV2",
+    "nameFR": "Yu-Gi-Oh! 3D Bonds Beyond Time DVD",
+    "nameEN": "",
+    "releaseDate": "09-05-2011"
+  },
+  {
+    "setCode": "XSPU",
+    "nameFR": "X-Saber Power-Up",
+    "nameEN": "",
+    "releaseDate": "23-11-2010"
+  },
+  {
+    "setCode": "JUMP",
+    "nameFR": "JUMP",
+    "nameEN": "Shonen Jump Magazine",
+    "releaseDate": "01-06-2010"
+  },
+  {
+    "setCode": "YCSW",
+    "nameFR": "Yu-Gi-Oh! Championship Series Prize Cards",
+    "nameEN": "",
+    "releaseDate": "15-05-2010"
+  },
+  {
+    "setCode": "TWED",
+    "nameFR": "Edition du Crépuscule",
+    "nameEN": "",
+    "releaseDate": "14-01-2010"
+  },
+  {
+    "setCode": "25LP",
+    "nameFR": "",
+    "nameEN": "Limited Pack World Championship 2025",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AC19",
+    "nameFR": "",
+    "nameEN": "Advent Calendar 2019",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AMDE",
+    "nameFR": "",
+    "nameEN": "Amazing Defenders",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ANGU",
+    "nameFR": "",
+    "nameEN": "Ancient Guardians",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP04",
+    "nameFR": "",
+    "nameEN": "Astral Pack Four",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP05",
+    "nameFR": "",
+    "nameEN": "Astral Pack Five",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP06",
+    "nameFR": "",
+    "nameEN": "Astral Pack Six",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP07",
+    "nameFR": "",
+    "nameEN": "Astral Pack Seven",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "AP08",
+    "nameFR": "",
+    "nameEN": "Astral Pack Eight",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLAR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Armageddon",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLC1",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Chapter 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLCR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Crystal Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLHR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Hero's Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLLR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Light's Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLMM",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Monster Mayhem",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLMR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Monstrous Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLRR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Relentless Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLTR",
+    "nameFR": "",
+    "nameEN": "Battles of Legend: Terminal Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BLVO-JP",
+    "nameFR": "",
+    "nameEN": "Blazing Vortex (OCG)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BP1",
+    "nameFR": "",
+    "nameEN": "Beginners Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "BROL",
+    "nameFR": "",
+    "nameEN": "Brothers of Legend",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "CRBR",
+    "nameFR": "",
+    "nameEN": "Crossover Breakers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DASA",
+    "nameFR": "",
+    "nameEN": "Dark Saviors",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DB2",
+    "nameFR": "",
+    "nameEN": "Dark Beginning 2",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DDK",
+    "nameFR": "",
+    "nameEN": "Duel Decks: Sorin vs. Tibalt",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DDP",
+    "nameFR": "",
+    "nameEN": "Duel Decks: Zendikar vs. Eldrazi",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DDY",
+    "nameFR": "",
+    "nameEN": "Starter Deck: Yugi (DDY)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DESO",
+    "nameFR": "",
+    "nameEN": "Destiny Soldiers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DL1-JP",
+    "nameFR": "",
+    "nameEN": "Duelist Legacy Volume 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DLG1",
+    "nameFR": "",
+    "nameEN": "Dark Legends",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DOR",
+    "nameFR": "",
+    "nameEN": "Duelist of the Roses",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DPCT",
+    "nameFR": "",
+    "nameEN": "Duelist Pack Collection Tin 2010",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DPK",
+    "nameFR": "",
+    "nameEN": "Duelist Pack 1&2 Special Edition",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DR1",
+    "nameFR": "",
+    "nameEN": "Dark Revelation 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DR3",
+    "nameFR": "",
+    "nameEN": "Dark Revelation 3",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DRL2",
+    "nameFR": "",
+    "nameEN": "Dragons of Legend 2",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DRL3",
+    "nameFR": "",
+    "nameEN": "Dragons of Legend: Unleashed",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DRLG",
+    "nameFR": "",
+    "nameEN": "Dragons of Legend",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DUDE",
+    "nameFR": "",
+    "nameEN": "Duel Devastator",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DUOV",
+    "nameFR": "",
+    "nameEN": "Duel Overload",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DUPO",
+    "nameFR": "",
+    "nameEN": "Duel Power",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "DUSA",
+    "nameFR": "",
+    "nameEN": "Duelist Saga",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "FIGA",
+    "nameFR": "",
+    "nameEN": "Fists of the Gadgets",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "FUEN",
+    "nameFR": "",
+    "nameEN": "Fusion Enforcers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GEIM",
+    "nameFR": "",
+    "nameEN": "Genesis Impact",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GFP2",
+    "nameFR": "",
+    "nameEN": "Ghosts From the Past: The 2nd Haunting",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GFTP",
+    "nameFR": "",
+    "nameEN": "Ghosts From the Past",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GRCR",
+    "nameFR": "",
+    "nameEN": "The Grand Creators",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GX03",
+    "nameFR": "",
+    "nameEN": "GX Spirit Caller",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "GX04",
+    "nameFR": "",
+    "nameEN": "GX Tag Force 2",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "HAC1",
+    "nameFR": "",
+    "nameEN": "Hidden Arsenal: Chapter 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "HISU",
+    "nameFR": "",
+    "nameEN": "Hidden Summoners",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "HSRD",
+    "nameFR": "",
+    "nameEN": "High-Speed Riders",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "IGAS-JP",
+    "nameFR": "",
+    "nameEN": "Ignition Assault (OCG)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "INCH",
+    "nameFR": "",
+    "nameEN": "The Infinity Chasers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "IOC-25TH",
+    "nameFR": "",
+    "nameEN": "Invasion of Chaos (25th Anniversary Edition)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "JUSH",
+    "nameFR": "",
+    "nameEN": "Justice Hunters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "KACB",
+    "nameFR": "",
+    "nameEN": "Kaiba's Collector Box",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "KC01",
+    "nameFR": "",
+    "nameEN": "25th Anniversary Ultimate Kaiba Set",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "KICO",
+    "nameFR": "",
+    "nameEN": "King's Court",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LC25",
+    "nameFR": "",
+    "nameEN": "Legendary Collection: 25th Anniversary Edition",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LCGX",
+    "nameFR": "",
+    "nameEN": "Legendary Collection 2: Mega Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LCYW",
+    "nameFR": "",
+    "nameEN": "Legendary Collection 3: Mega Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LDD",
+    "nameFR": "",
+    "nameEN": "Legend of Blue Eyes White Dragon (LDD)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "LOD2",
+    "nameFR": "",
+    "nameEN": "Legacy of the Duelist: Link Evolution Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MAMA",
+    "nameFR": "",
+    "nameEN": "Magnificent Mavens",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MAZE",
+    "nameFR": "",
+    "nameEN": "Maze of Memories",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MDM",
+    "nameFR": "",
+    "nameEN": "Spell Ruler (MDM)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MIL1",
+    "nameFR": "",
+    "nameEN": "Millennium Pack",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MRD-25TH",
+    "nameFR": "",
+    "nameEN": "Metal Raiders (25th Anniversary Edition)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MYFI",
+    "nameFR": "",
+    "nameEN": "Mystic Fighters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MZMI",
+    "nameFR": "",
+    "nameEN": "Maze of Millennia",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MZMU",
+    "nameFR": "",
+    "nameEN": "Maze of Muertos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "MZTM",
+    "nameFR": "",
+    "nameEN": "Maze of the Master",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "NKRT",
+    "nameFR": "",
+    "nameEN": "Noble Knights of the Round Table Box Set",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "NUMH",
+    "nameFR": "",
+    "nameEN": "Number Hunters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "OP28",
+    "nameFR": "",
+    "nameEN": "OTS Tournament Pack 28",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PEVO",
+    "nameFR": "",
+    "nameEN": "Pendulum Evolution",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "PHRE",
+    "nameFR": "",
+    "nameEN": "Phantom Revenge",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RA01",
+    "nameFR": "",
+    "nameEN": "25th Anniversary Rarity Collection",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RA02",
+    "nameFR": "",
+    "nameEN": "25th Anniversary Rarity Collection II",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RA03",
+    "nameFR": "",
+    "nameEN": "Quarter Century Bonanza",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "RA04",
+    "nameFR": "",
+    "nameEN": "Quarter Century Stampede",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ROD",
+    "nameFR": "",
+    "nameEN": "Reshef of Destruction Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SAAS",
+    "nameFR": "",
+    "nameEN": "Samurai Assault",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBAD",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Attack from the Deep",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBCB",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Battle City Box",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBLS",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Arena of Lost Souls",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBSC",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Scars of Battle",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SBTK",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Trials of the Kingdom",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SDP-F",
+    "nameFR": "",
+    "nameEN": "Pharaoh's Servant (SDP)",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SESL",
+    "nameFR": "",
+    "nameEN": "Secret Slayers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SGX1",
+    "nameFR": "",
+    "nameEN": "Speed Duel GX: Duel Academy Box",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SGX2",
+    "nameFR": "",
+    "nameEN": "Speed Duel GX: Midterm Paradox",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SGX3",
+    "nameFR": "",
+    "nameEN": "Speed Duel GX: Duelists of Shadows",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SHVA",
+    "nameFR": "",
+    "nameEN": "Shadows in Valhalla",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SP14",
+    "nameFR": "",
+    "nameEN": "Star Pack 2014",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SP15",
+    "nameFR": "",
+    "nameEN": "Star Pack Arc-V",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SP18",
+    "nameFR": "",
+    "nameEN": "Star Pack VRAINS",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SPWA",
+    "nameFR": "",
+    "nameEN": "Spirit Warriors",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SS01",
+    "nameFR": "",
+    "nameEN": "Speed Duel Starter Decks: Destiny Masters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SS03",
+    "nameFR": "",
+    "nameEN": "Speed Duel Starter Decks: Ultimate Predators",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SS04",
+    "nameFR": "",
+    "nameEN": "Speed Duel Starter Decks: Match of the Millennium",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "SS05",
+    "nameFR": "",
+    "nameEN": "Speed Duel Starter Decks: Twisted Nightmares",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "STP1",
+    "nameFR": "",
+    "nameEN": "Speed Duel: Tournament Pack 1",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TAMA",
+    "nameFR": "",
+    "nameEN": "Tactical Masters",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TF04",
+    "nameFR": "",
+    "nameEN": "5D's Tag Force 4 Promotional Cards",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "THSF",
+    "nameFR": "",
+    "nameEN": "The Secret Forces",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "TOCH",
+    "nameFR": "",
+    "nameEN": "Toon Chaos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "VASM",
+    "nameFR": "",
+    "nameEN": "Valiant Smashers",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WC07",
+    "nameFR": "",
+    "nameEN": "World Championship 2007",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WC11",
+    "nameFR": "",
+    "nameEN": "5D's Over the Nexus Promotional Cards",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WIRA",
+    "nameFR": "",
+    "nameEN": "Wing Raiders",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WISU",
+    "nameFR": "",
+    "nameEN": "Wild Survivors",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "WSUP",
+    "nameFR": "",
+    "nameEN": "World Superstars",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "YDT1",
+    "nameFR": "",
+    "nameEN": "5D's Duel Transer Promotional Cards",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "YG0X",
+    "nameFR": "",
+    "nameEN": "GX Manga Promos",
+    "releaseDate": ""
+  },
+  {
+    "setCode": "ZDC1",
+    "nameFR": "",
+    "nameEN": "ZEXAL World Duel Carnival Promos",
+    "releaseDate": ""
+  }
+]
