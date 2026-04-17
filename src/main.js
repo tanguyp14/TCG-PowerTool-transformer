@@ -2,7 +2,9 @@ const { app, BrowserWindow, ipcMain, dialog, safeStorage } = require("electron")
 const path = require("path");
 const fs = require("fs");
 
-const API_URL = process.env.API_URL || "http://localhost:3001";
+const API_URL = process.env.API_URL || (app.isPackaged
+  ? "https://csv-api-production-953b.up.railway.app"
+  : "http://localhost:3001");
 
 // ─── Token storage (safeStorage) ─────────────
 function tokenPath() {
@@ -55,18 +57,12 @@ ipcMain.handle("auth:getUser", async () => {
   try {
     const payload = JSON.parse(Buffer.from(token.split(".")[1], "base64url").toString());
     if (payload.exp * 1000 < Date.now()) { clearToken(); return null; }
-    return { user: { id: payload.id, email: payload.email }, token };
+    return { user: { id: payload.id, username: payload.username }, token };
   } catch { clearToken(); return null; }
 });
 
-ipcMain.handle("auth:login", async (_e, email, password) => {
-  const data = await apiFetch("POST", "/auth/login", { email, password });
-  saveToken(data.token);
-  return { user: data.user };
-});
-
-ipcMain.handle("auth:register", async (_e, email, password) => {
-  const data = await apiFetch("POST", "/auth/register", { email, password });
+ipcMain.handle("auth:login", async (_e, username, password) => {
+  const data = await apiFetch("POST", "/auth/login", { username, password });
   saveToken(data.token);
   return { user: data.user };
 });
@@ -77,6 +73,12 @@ ipcMain.handle("auth:logout", () => {
 });
 
 // ─── DB IPC (→ API) ──────────────────────────
+ipcMain.handle("db:ping", async () => {
+  const token = loadToken();
+  if (!token) throw new Error("Non authentifié");
+  return apiFetch("GET", "/db/ping", undefined, token);
+});
+
 ipcMain.handle("db:getAll", async () => {
   const token = loadToken();
   if (!token) throw new Error("Non authentifié");

@@ -21,15 +21,11 @@
       "app/**/*",
       "!app/database/**/*"
     ],
-    "extraResources": [
-      {
-        "from": "app/database",
-        "to": "database",
-        "filter": ["**/*"]
-      }
-    ],
     "win": {
-      "target": ["nsis", "portable"],
+      "target": [
+        { "target": "nsis", "arch": ["x64", "arm64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ],
       "icon": "build/icon.ico"
     },
     "mac": {

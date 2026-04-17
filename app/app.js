@@ -206,7 +206,7 @@ function renderHeader() {
         <button class="tab-btn" data-tab="csv" style="${tabStyle(state.tab === 'csv')}">Traitement CSV</button>
       </div>
       <div style="margin-left:auto;display:flex;align-items:center;gap:12px;-webkit-app-region:no-drag;">
-        <span style="font-size:11px;color:${T.dim};">${esc(state.user?.email || "")}</span>
+        <span style="font-size:11px;color:${T.dim};">${esc(state.user?.username || "")}</span>
         <button id="btn-logout" style="${btnStyle(false)}font-size:10px;color:${T.red};">Déconnexion</button>
       </div>
     </div>
@@ -614,7 +614,7 @@ function bindEvents() {
         const name = input.value.trim();
         if (!name || state.db[name]) return;
         state.db[name] = [];
-        await window.api.saveGame(name, []);
+        await saveGame(name, []);
         state.selectedGame = name;
         render();
         toast(`Jeu "${name}" créé + fichier JSON`);
@@ -729,7 +729,7 @@ function bindEvents() {
           const games = bundle.version === 1 ? bundle.games : null;
           if (!Array.isArray(games)) throw new Error("Format invalide");
           for (const { name, sets } of games) {
-            await window.api.saveGame(name, sets);
+            await saveGame(name, sets);
             state.db[name] = sets;
           }
           state.selectedGame = state.selectedGame || games[0]?.name || "";
@@ -782,7 +782,7 @@ function bindEvents() {
       const entry = normEntry(sets[state.editingRow]);
       fields.forEach(f => { entry[f.dataset.field] = f.value; });
       sets[state.editingRow] = entry;
-      await window.api.saveGame(state.selectedGame, sets);
+      await saveGame(state.selectedGame, sets);
       state.editingRow = null;
       render();
       toast("Modifié ✓");
@@ -794,7 +794,7 @@ function bindEvents() {
     btn.onclick = async () => {
       const idx = parseInt(btn.dataset.idx);
       state.db[state.selectedGame].splice(idx, 1);
-      await window.api.saveGame(state.selectedGame, state.db[state.selectedGame]);
+      await saveGame(state.selectedGame, state.db[state.selectedGame]);
       render();
       toast("Extension supprimée");
     };
@@ -810,7 +810,7 @@ function bindEvents() {
       const date   = document.getElementById("new-date").value.trim();
       if (!code || (!nameFR && !nameEN)) return;
       state.db[state.selectedGame].push({ setCode: code, nameFR, nameEN, releaseDate: date });
-      await window.api.saveGame(state.selectedGame, state.db[state.selectedGame]);
+      await saveGame(state.selectedGame, state.db[state.selectedGame]);
       render();
       toast("Extension ajoutée ✓");
     };
@@ -826,7 +826,7 @@ function bindEvents() {
         const e = normEntry(entry);
         e.nameFR = name;
         Object.assign(entry, e);
-        await window.api.saveGame(state.selectedGame, sets);
+        await saveGame(state.selectedGame, sets);
         state.csv.nameMismatches = state.csv.nameMismatches.filter(m => m.setCode !== code);
         render();
         toast(`Nom FR "${code}" mis à jour ✓`);
@@ -844,7 +844,7 @@ function bindEvents() {
         const e = normEntry(entry);
         e.nameEN = name;
         Object.assign(entry, e);
-        await window.api.saveGame(state.selectedGame, sets);
+        await saveGame(state.selectedGame, sets);
         state.csv.nameMismatches = state.csv.nameMismatches.filter(m => m.setCode !== code);
         render();
         toast(`Nom EN "${code}" mis à jour ✓`);
@@ -869,7 +869,7 @@ function bindEvents() {
         const entry = sets.find(s => s.setCode === setCode);
         if (entry) { const e = normEntry(entry); e.nameFR = csvName; Object.assign(entry, e); }
       });
-      await window.api.saveGame(state.selectedGame, sets);
+      await saveGame(state.selectedGame, sets);
       state.csv.nameMismatches = [];
       render();
       toast("Tous les noms FR mis à jour ✓");
@@ -885,7 +885,7 @@ function bindEvents() {
         const entry = sets.find(s => s.setCode === setCode);
         if (entry) { const e = normEntry(entry); e.nameEN = csvName; Object.assign(entry, e); }
       });
-      await window.api.saveGame(state.selectedGame, sets);
+      await saveGame(state.selectedGame, sets);
       state.csv.nameMismatches = [];
       render();
       toast("Tous les noms EN mis à jour ✓");
@@ -929,7 +929,7 @@ function bindEvents() {
       const entry = sets.find(s => s.setCode === dbcode);
       if (entry) {
         entry.setCode = csvcode;
-        await window.api.saveGame(state.selectedGame, sets);
+        await saveGame(state.selectedGame, sets);
         state.csv.codeMismatches = state.csv.codeMismatches.filter(m => m.csvCode !== csvcode);
         state.csv.missingSets = state.csv.missingSets.filter(m => m.code !== csvcode);
         render();
@@ -956,7 +956,7 @@ function bindEvents() {
         const entry = sets.find(s => s.setCode === dbCode);
         if (entry) { entry.setCode = csvCode; updatedCsvCodes.add(csvCode); }
       });
-      await window.api.saveGame(state.selectedGame, sets);
+      await saveGame(state.selectedGame, sets);
       state.csv.missingSets = state.csv.missingSets.filter(m => !updatedCsvCodes.has(m.code));
       state.csv.codeMismatches = [];
       render();
@@ -983,7 +983,7 @@ function bindEvents() {
         const csvName = (csvRow && sni >= 0) ? csvRow[sni] : "";
         sets.push({ setCode: code, nameFR: "", nameEN: csvName, releaseDate: "" });
       });
-      await window.api.saveGame(state.selectedGame, sets);
+      await saveGame(state.selectedGame, sets);
       state.db[state.selectedGame] = sets;
       const count = state.csv.missingSets.length;
       state.csv.missingSets = [];
@@ -1006,7 +1006,7 @@ function bindEvents() {
       const sni = state.csv.headers.indexOf(state.colMap.setName);
       const csvName = (csvRow && sni >= 0) ? csvRow[sni] : "";
       sets.push({ setCode: code, nameFR: "", nameEN: csvName, releaseDate: "" });
-      await window.api.saveGame(state.selectedGame, sets);
+      await saveGame(state.selectedGame, sets);
       state.db[state.selectedGame] = sets;
       state.csv.missingSets = state.csv.missingSets.filter(m => m.code !== code);
       render();
@@ -1219,12 +1219,15 @@ function renderLogin(errorMsg = "") {
         <div style="font-size:16px;font-weight:700;color:${T.accent};text-align:center;letter-spacing:-0.5px;">◈ CSV POWERTOOL</div>
         <div style="display:flex;flex-direction:column;gap:12px;">
           <div>
-            <label style="${labelStyle()}">Email</label>
-            <input id="auth-email" type="email" placeholder="vous@exemple.com" style="${inputStyle()}width:100%;padding:10px 12px;">
+            <label style="${labelStyle()}">Identifiant</label>
+            <input id="auth-username" type="text" placeholder="Tylt" style="${inputStyle()}width:100%;padding:10px 12px;">
           </div>
           <div>
             <label style="${labelStyle()}">Mot de passe</label>
-            <input id="auth-password" type="password" placeholder="••••••••" style="${inputStyle()}width:100%;padding:10px 12px;">
+            <div style="position:relative;">
+              <input id="auth-password" type="password" placeholder="••••••••" style="${inputStyle()}width:100%;padding:10px 36px 10px 12px;">
+              <button id="toggle-password" type="button" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:${T.dim};font-size:14px;padding:2px 4px;">👁</button>
+            </div>
           </div>
           ${errorMsg ? `<div style="color:${T.red};font-size:11px;text-align:center;">${esc(errorMsg)}</div>` : ""}
           <button id="auth-submit" style="margin-top:4px;padding:10px;background:${T.accent};border:none;border-radius:8px;color:#fff;font-family:${T.font};font-size:13px;font-weight:700;cursor:pointer;">Se connecter</button>
@@ -1234,16 +1237,21 @@ function renderLogin(errorMsg = "") {
   `;
 
   document.getElementById("auth-submit").onclick = () => submitAuth();
+  document.getElementById("auth-username").onkeydown = (e) => { if (e.key === "Enter") document.getElementById("auth-password").focus(); };
   document.getElementById("auth-password").onkeydown = (e) => { if (e.key === "Enter") submitAuth(); };
+  document.getElementById("toggle-password").onclick = () => {
+    const input = document.getElementById("auth-password");
+    input.type = input.type === "password" ? "text" : "password";
+  };
 }
 
 async function submitAuth() {
-  const email = document.getElementById("auth-email").value.trim();
+  const username = document.getElementById("auth-username").value.trim();
   const password = document.getElementById("auth-password").value;
-  if (!email || !password) return renderLogin("Remplis tous les champs.");
+  if (!username || !password) return renderLogin("Remplis tous les champs.");
   showSpinner("Connexion…");
   try {
-    const result = await window.api.auth.login(email, password);
+    const result = await window.api.auth.login(username, password);
     state.user = result.user;
     hideSpinner();
     await loadApp();
@@ -1264,6 +1272,34 @@ async function loadApp() {
   const games = Object.keys(state.db);
   state.selectedGame = games[0] || "";
   render();
+  startPolling();
+}
+
+let _lastPing = null;
+let _pollInterval = null;
+
+async function saveGame(name, sets) {
+  await saveGame(name, sets);
+  try { const { last } = await window.api.ping(); _lastPing = last; } catch {}
+}
+
+function startPolling() {
+  if (_pollInterval) clearInterval(_pollInterval);
+  _pollInterval = setInterval(async () => {
+    try {
+      const { last } = await window.api.ping();
+      if (last && last !== _lastPing) {
+        if (_lastPing !== null) {
+          state.db = await window.api.getAll();
+          const games = Object.keys(state.db);
+          if (!state.db[state.selectedGame]) state.selectedGame = games[0] || "";
+          render();
+          toast("Base mise à jour ↺");
+        }
+        _lastPing = last;
+      }
+    } catch { /* silencieux si offline */ }
+  }, 30000);
 }
 
 // ─── Boot ────────────────────────────────────

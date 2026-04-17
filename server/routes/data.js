@@ -4,6 +4,19 @@ const { pool } = require("../db");
 
 router.use(requireAuth);
 
+// GET /db/ping — timestamp de la dernière modification
+router.get("/ping", async (req, res) => {
+  try {
+    const result = await pool.query(
+      "SELECT MAX(updated_at) as last FROM game_data WHERE user_id = $1",
+      [req.user.id]
+    );
+    res.json({ last: result.rows[0].last || null });
+  } catch {
+    res.status(500).json({ error: "Erreur serveur" });
+  }
+});
+
 // GET /db/all — toutes les parties du user
 router.get("/all", async (req, res) => {
   try {
