@@ -206,6 +206,8 @@ function renderHeader() {
         <button class="tab-btn" data-tab="csv" style="${tabStyle(state.tab === 'csv')}">Traitement CSV</button>
       </div>
       <div style="margin-left:auto;display:flex;align-items:center;gap:12px;-webkit-app-region:no-drag;">
+        <span id="last-update" style="font-size:10px;color:${T.dim};">${esc(_lastUpdateText)}</span>
+        <button id="btn-refresh" style="${btnStyle(false)}font-size:10px;" title="Actualiser">↺</button>
         <span style="font-size:11px;color:${T.dim};">${esc(state.user?.username || "")}</span>
         <button id="btn-logout" style="${btnStyle(false)}font-size:10px;color:${T.red};">Déconnexion</button>
       </div>
@@ -614,7 +616,7 @@ function bindEvents() {
         const name = input.value.trim();
         if (!name || state.db[name]) return;
         state.db[name] = [];
-        await saveGame(name, []);
+        await window.api.saveGame(name, []);
         state.selectedGame = name;
         render();
         toast(`Jeu "${name}" créé + fichier JSON`);
@@ -729,7 +731,7 @@ function bindEvents() {
           const games = bundle.version === 1 ? bundle.games : null;
           if (!Array.isArray(games)) throw new Error("Format invalide");
           for (const { name, sets } of games) {
-            await saveGame(name, sets);
+            await window.api.saveGame(name, sets);
             state.db[name] = sets;
           }
           state.selectedGame = state.selectedGame || games[0]?.name || "";
@@ -743,6 +745,19 @@ function bindEvents() {
         bundleInput.value = "";
       };
       reader.readAsText(file);
+    };
+  }
+
+  // Refresh manuel
+  const refreshBtn = document.getElementById("btn-refresh");
+  if (refreshBtn) {
+    refreshBtn.onclick = async () => {
+      state.db = await window.api.getAll();
+      const games = Object.keys(state.db);
+      if (!state.db[state.selectedGame]) state.selectedGame = games[0] || "";
+      render();
+      updateLastUpdateLabel();
+      toast("Base actualisée ↺");
     };
   }
 
@@ -782,7 +797,7 @@ function bindEvents() {
       const entry = normEntry(sets[state.editingRow]);
       fields.forEach(f => { entry[f.dataset.field] = f.value; });
       sets[state.editingRow] = entry;
-      await saveGame(state.selectedGame, sets);
+      await window.api.saveGame(state.selectedGame, sets);
       state.editingRow = null;
       render();
       toast("Modifié ✓");
@@ -794,7 +809,7 @@ function bindEvents() {
     btn.onclick = async () => {
       const idx = parseInt(btn.dataset.idx);
       state.db[state.selectedGame].splice(idx, 1);
-      await saveGame(state.selectedGame, state.db[state.selectedGame]);
+      await window.api.saveGame(state.selectedGame, state.db[state.selectedGame]);
       render();
       toast("Extension supprimée");
     };
@@ -810,7 +825,7 @@ function bindEvents() {
       const date   = document.getElementById("new-date").value.trim();
       if (!code || (!nameFR && !nameEN)) return;
       state.db[state.selectedGame].push({ setCode: code, nameFR, nameEN, releaseDate: date });
-      await saveGame(state.selectedGame, state.db[state.selectedGame]);
+      await window.api.saveGame(state.selectedGame, state.db[state.selectedGame]);
       render();
       toast("Extension ajoutée ✓");
     };
@@ -826,7 +841,7 @@ function bindEvents() {
         const e = normEntry(entry);
         e.nameFR = name;
         Object.assign(entry, e);
-        await saveGame(state.selectedGame, sets);
+        await window.api.saveGame(state.selectedGame, sets);
         state.csv.nameMismatches = state.csv.nameMismatches.filter(m => m.setCode !== code);
         render();
         toast(`Nom FR "${code}" mis à jour ✓`);
@@ -844,7 +859,7 @@ function bindEvents() {
         const e = normEntry(entry);
         e.nameEN = name;
         Object.assign(entry, e);
-        await saveGame(state.selectedGame, sets);
+        await window.api.saveGame(state.selectedGame, sets);
         state.csv.nameMismatches = state.csv.nameMismatches.filter(m => m.setCode !== code);
         render();
         toast(`Nom EN "${code}" mis à jour ✓`);
@@ -869,7 +884,7 @@ function bindEvents() {
         const entry = sets.find(s => s.setCode === setCode);
         if (entry) { const e = normEntry(entry); e.nameFR = csvName; Object.assign(entry, e); }
       });
-      await saveGame(state.selectedGame, sets);
+      await window.api.saveGame(state.selectedGame, sets);
       state.csv.nameMismatches = [];
       render();
       toast("Tous les noms FR mis à jour ✓");
@@ -885,7 +900,7 @@ function bindEvents() {
         const entry = sets.find(s => s.setCode === setCode);
         if (entry) { const e = normEntry(entry); e.nameEN = csvName; Object.assign(entry, e); }
       });
-      await saveGame(state.selectedGame, sets);
+      await window.api.saveGame(state.selectedGame, sets);
       state.csv.nameMismatches = [];
       render();
       toast("Tous les noms EN mis à jour ✓");
@@ -929,7 +944,7 @@ function bindEvents() {
       const entry = sets.find(s => s.setCode === dbcode);
       if (entry) {
         entry.setCode = csvcode;
-        await saveGame(state.selectedGame, sets);
+        await window.api.saveGame(state.selectedGame, sets);
         state.csv.codeMismatches = state.csv.codeMismatches.filter(m => m.csvCode !== csvcode);
         state.csv.missingSets = state.csv.missingSets.filter(m => m.code !== csvcode);
         render();
@@ -956,7 +971,7 @@ function bindEvents() {
         const entry = sets.find(s => s.setCode === dbCode);
         if (entry) { entry.setCode = csvCode; updatedCsvCodes.add(csvCode); }
       });
-      await saveGame(state.selectedGame, sets);
+      await window.api.saveGame(state.selectedGame, sets);
       state.csv.missingSets = state.csv.missingSets.filter(m => !updatedCsvCodes.has(m.code));
       state.csv.codeMismatches = [];
       render();
@@ -983,7 +998,7 @@ function bindEvents() {
         const csvName = (csvRow && sni >= 0) ? csvRow[sni] : "";
         sets.push({ setCode: code, nameFR: "", nameEN: csvName, releaseDate: "" });
       });
-      await saveGame(state.selectedGame, sets);
+      await window.api.saveGame(state.selectedGame, sets);
       state.db[state.selectedGame] = sets;
       const count = state.csv.missingSets.length;
       state.csv.missingSets = [];
@@ -1006,7 +1021,7 @@ function bindEvents() {
       const sni = state.csv.headers.indexOf(state.colMap.setName);
       const csvName = (csvRow && sni >= 0) ? csvRow[sni] : "";
       sets.push({ setCode: code, nameFR: "", nameEN: csvName, releaseDate: "" });
-      await saveGame(state.selectedGame, sets);
+      await window.api.saveGame(state.selectedGame, sets);
       state.db[state.selectedGame] = sets;
       state.csv.missingSets = state.csv.missingSets.filter(m => m.code !== code);
       render();
@@ -1272,16 +1287,27 @@ async function loadApp() {
   const games = Object.keys(state.db);
   state.selectedGame = games[0] || "";
   render();
+  updateLastUpdateLabel();
   startPolling();
 }
 
 let _lastPing = null;
 let _pollInterval = null;
+let _lastUpdateText = "";
 
-async function saveGame(name, sets) {
-  await saveGame(name, sets);
-  try { const { last } = await window.api.ping(); _lastPing = last; } catch {}
+
+function updateLastUpdateLabel(text) {
+  if (text !== undefined) _lastUpdateText = text;
+  else {
+    const now = new Date();
+    const pad = n => String(n).padStart(2, "0");
+    _lastUpdateText = `Sync ${pad(now.getDate())}/${pad(now.getMonth()+1)}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+  }
+  const el = document.getElementById("last-update");
+  if (el) el.textContent = _lastUpdateText;
 }
+
+
 
 function startPolling() {
   if (_pollInterval) clearInterval(_pollInterval);
@@ -1297,6 +1323,7 @@ function startPolling() {
           toast("Base mise à jour ↺");
         }
         _lastPing = last;
+        updateLastUpdateLabel();
       }
     } catch { /* silencieux si offline */ }
   }, 30000);
