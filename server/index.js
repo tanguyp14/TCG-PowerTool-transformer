@@ -7,7 +7,7 @@ const { initSchema } = require("./db");
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "..", "app")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/auth", require("./routes/auth"));
 app.use("/db", require("./routes/data"));
