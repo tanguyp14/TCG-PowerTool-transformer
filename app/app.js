@@ -738,9 +738,9 @@ function bindEvents() {
           render();
           hideSpinner();
           toast(`${games.length} jeux importés ✓`);
-        } catch {
+        } catch (err) {
           hideSpinner();
-          toast("❌ Fichier bundle invalide");
+          toast("❌ " + (err?.message || "Fichier bundle invalide"));
         }
         bundleInput.value = "";
       };
@@ -1194,7 +1194,15 @@ function processCSV() {
     });
 
     if (si >= 0) {
-      processed.sort((a, b) => (a[si] || "").localeCompare(b[si] || ""));
+      processed.sort((a, b) => {
+        const setCmp = (a[si] || "").localeCompare(b[si] || "");
+        if (setCmp !== 0) return setCmp;
+        if (ni < 0) return 0;
+        const ca = a[ni] || "", cb = b[ni] || "";
+        const na = parseFloat(ca), nb = parseFloat(cb);
+        if (!isNaN(na) && !isNaN(nb)) return na - nb;
+        return ca.localeCompare(cb, undefined, { numeric: true, sensitivity: "base" });
+      });
     }
 
     state.csv.missingSets = Object.entries(missingMap).map(([code, count]) => ({ code, count })).sort((a, b) => a.code.localeCompare(b.code));

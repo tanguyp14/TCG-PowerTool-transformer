@@ -1,6 +1,20 @@
 const { app, BrowserWindow, ipcMain, dialog, safeStorage } = require("electron");
 const path = require("path");
 const fs = require("fs");
+const { spawn } = require("child_process");
+
+let serverProcess = null;
+
+function startLocalServer() {
+  if (app.isPackaged) return;
+  const serverDir = path.join(__dirname, "..", "server");
+  serverProcess = spawn("node", ["index.js"], { cwd: serverDir, stdio: "ignore" });
+  serverProcess.on("error", () => {});
+}
+
+app.on("will-quit", () => {
+  if (serverProcess) { serverProcess.kill(); serverProcess = null; }
+});
 
 const API_URL = process.env.API_URL || (app.isPackaged
   ? "https://csv-api-production-953b.up.railway.app"
@@ -147,13 +161,17 @@ function createWindow() {
     },
   });
 
-  win.loadFile(path.join(__dirname, "..", "app", "index.html"));
+  if (app.isPackaged) {
+    win.loadURL("https://csv-api-production-953b.up.railway.app");
+  } else {
+    win.loadFile(path.join(__dirname, "..", "app", "index.html"));
+  }
 
   if (!app.isPackaged) {
     win.webContents.openDevTools({ mode: "detach" });
   }
 }
 
-app.whenReady().then(createWindow);
+app.whenReady().then(() => { startLocalServer(); createWindow(); });
 app.on("window-all-closed", () => { if (process.platform !== "darwin") app.quit(); });
 app.on("activate", () => { if (BrowserWindow.getAllWindows().length === 0) createWindow(); });
